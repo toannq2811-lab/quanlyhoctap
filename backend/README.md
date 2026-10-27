@@ -38,7 +38,7 @@ Không đặt `DATABASE_URL` thì dùng file SQLite `dev.db`. Build app trỏ v�
    set DATABASE_URL=mysql+pymysql://...
    .venv\Scripts\python scripts\migrate_from_supabase.py --admin admin:MAT_KHAU_ADMIN --keep dienxinhgai:MAT_KHAU --keep admin:MAT_KHAU_ADMIN
    ```
-4. Địa chỉ API mặc định của app: `https://studyforyou-api.onrender.com` (sửa ở `shared/lib/config.dart` nếu khác).
+4. Địa chỉ API mặc định của app: `https://quanlyhoctap-svtj.onrender.com` (sửa ở `shared/lib/config.dart` nếu khác).
 
 Render bản free ngủ sau 15 phút không có request; dùng UptimeRobot ping `https://<api>/` mỗi 5 phút
 để giữ máy chủ thức.
