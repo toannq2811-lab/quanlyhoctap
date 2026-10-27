@@ -8,7 +8,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from . import models  # noqa: F401  (registers the tables)
-from .config import CORS_ORIGINS
+from .config import CORS_ORIGIN_REGEX, CORS_ORIGINS
 from .db import Base, engine
 from .routers import admin, auth, content, progress
 
@@ -23,6 +23,7 @@ app = FastAPI(title='Study For You API', lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=CORS_ORIGINS,
+    allow_origin_regex=CORS_ORIGIN_REGEX,
     allow_methods=['*'],
     allow_headers=['*'],
 )

@@ -20,4 +20,7 @@ CORS_ORIGINS = [
     if o.strip()
 ]
 
+# Any Netlify site (the apps are hosted there); requests still need a login token.
+CORS_ORIGIN_REGEX = os.environ.get('CORS_ORIGIN_REGEX', r'https://[a-z0-9-]+\.netlify\.app')
+
 MAX_AVATAR_BYTES = 2 * 1024 * 1024

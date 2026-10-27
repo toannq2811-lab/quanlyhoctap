@@ -6,4 +6,4 @@ const apiBaseUrl = String.fromEnvironment(
 );
 
 /// Where the admin website is deployed (its own Netlify site).
-const adminSiteUrl = 'https://dienham-admin.netlify.app';
+const adminSiteUrl = 'https://admin-dien.netlify.app';
