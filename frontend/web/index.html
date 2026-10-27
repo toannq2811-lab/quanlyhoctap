@@ -127,28 +127,43 @@
       dispose: function (id) { var w = this.writers[id]; if (w) w.cancelQuiz(); delete this.writers[id]; },
       canListen: function () { return !!(window.SpeechRecognition || window.webkitSpeechRecognition); },
       // Listens once in Mandarin; onResult gets the guesses joined by newlines.
+      // Listens once in Mandarin. Uses interim results because iOS Safari often never
+      // sends a final one: settles 1.2 s after the last words, after 8 s at most,
+      // or at once when stopListening() is called. onResult gets guesses joined by \n.
       listen: function (onResult, onError) {
         var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
         if (!SR) { onError('unsupported'); return; }
-        if (this.rec) { try { this.rec.abort(); } catch (e) {} }
-        var r = new SR();
+        if (this.stopNow) this.stopNow();
+        var self = this, r = new SR(), done = false, best = null, quiet = null, hard = null;
         r.lang = 'zh-CN';
-        r.interimResults = false;
+        r.interimResults = true;
         r.continuous = false;
         r.maxAlternatives = 5;
-        var done = false;
+        function settle(code) {
+          if (done) return;
+          done = true;
+          clearTimeout(quiet); clearTimeout(hard);
+          self.stopNow = null;
+          try { r.abort(); } catch (e) {}
+          if (best) onResult(best); else onError(code || 'no-speech');
+        }
         r.onresult = function (e) {
-          if (done) return; done = true;
-          var res = e.results[0], alts = [];
+          var res = e.results[e.results.length - 1], alts = [];
           for (var i = 0; i < res.length; i++) alts.push(res[i].transcript);
-          onResult(alts.join(String.fromCharCode(10)));
+          best = alts.join(String.fromCharCode(10));
+          clearTimeout(quiet);
+          if (res.isFinal) settle(); else quiet = setTimeout(settle, 1200);
         };
-        r.onerror = function (e) { if (done) return; done = true; onError(e.error || 'error'); };
-        r.onend = function () { if (done) return; done = true; onError('no-speech'); };
-        this.rec = r;
-        try { r.start(); } catch (e) { done = true; onError('busy'); }
+        r.onerror = function (e) {
+          var code = e.error || 'error';
+          settle(code === 'aborted' ? 'no-speech' : code);
+        };
+        r.onend = function () { settle(); };
+        hard = setTimeout(settle, 8000);
+        this.stopNow = settle;
+        try { r.start(); } catch (e) { settle('busy'); }
       },
-      stopListening: function () { if (this.rec) { try { this.rec.stop(); } catch (e) {} } }
+      stopListening: function () { if (this.stopNow) this.stopNow(); }
     };
   </script>
   <script src="flutter_bootstrap.js" async></script>

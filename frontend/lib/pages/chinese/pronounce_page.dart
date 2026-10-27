@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../chinese/chinese_store.dart';
 import '../../chinese/pronunciation.dart';
+import '../../pwa.dart';
 import '../../chinese/tones.dart';
 import 'package:study_shared/vocab.dart';
 import '../../chinese/zh_bridge.dart';
@@ -67,7 +68,12 @@ class _PronouncePageState extends State<PronouncePage> with SingleTickerProvider
     });
     _pulse.repeat(reverse: true);
     try {
-      final guesses = await listenChinese();
+      // The page script settles within 8 s; this guards against a browser that
+      // never calls back at all.
+      final guesses = await listenChinese().timeout(const Duration(seconds: 12), onTimeout: () {
+        stopListeningChinese();
+        throw 'no-speech';
+      });
       final result = judgePronunciation(_w.hanzi, guesses, _charPinyin);
       widget.zh.store.bumpActivity();
       if (!mounted) return;
@@ -81,7 +87,10 @@ class _PronouncePageState extends State<PronouncePage> with SingleTickerProvider
       setState(() => _error = switch (code) {
             'not-allowed' || 'service-not-allowed' =>
               'Chưa cho phép dùng micro. Bấm biểu tượng 🔒 trên thanh địa chỉ → cho phép Micro.',
-            'no-speech' => 'Chưa nghe thấy gì, bấm mic rồi đọc to hơn chút nhé.',
+            'no-speech' => Pwa.platform == 'ios' && Pwa.isStandalone
+                ? 'Chưa nghe thấy gì. Trên iPhone, app mở từ màn hình chính đôi khi không dùng '
+                    'được nhận giọng nói — thử mở dienham.netlify.app bằng Safari nhé.'
+                : 'Chưa nghe thấy gì, bấm mic rồi đọc to hơn chút nhé.',
             'network' => 'Nhận giọng nói cần có mạng, kiểm tra kết nối nhé.',
             'unsupported' => 'Trình duyệt này chưa hỗ trợ nhận giọng nói.',
             'aborted' => null,
@@ -108,7 +117,8 @@ class _PronouncePageState extends State<PronouncePage> with SingleTickerProvider
     });
     try {
       final take = await recordVoice(onLevel: (v) {
-        if (mounted) setState(() => _level = v);
+        // Redraw only on visible changes to keep slower phones smooth.
+        if (mounted && (v - _level).abs() > 0.06) setState(() => _level = v);
       });
       widget.zh.store.bumpActivity();
       if (!mounted) return;
