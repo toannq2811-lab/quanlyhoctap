@@ -1,0 +1,19 @@
+# Python
+backend/api/.venv/
+backend/api/dev.db
+__pycache__/
+.pytest_cache/
+
+# Flutter / Dart
+**/.dart_tool/
+**/build/
+**/.flutter-plugins-dependencies
+**/.idea/
+*.iml
+
+# Personal files and other projects kept in this folder (not part of the app)
+dien.jpg
+backend/seed/
+TinyVAD_SDK_*/
+tobi_sim/
+web-1/

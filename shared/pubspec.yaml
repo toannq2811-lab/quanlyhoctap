@@ -1,0 +1,21 @@
+name: study_shared
+description: Code shared by the Study For You learner app and admin website.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+  archive: ^4.5.2
+  google_fonts: ^8.2.1
+  syncfusion_flutter_pdf: ^35.1.41
+  xml: ^7.0.1
+  http: ^1.6.0
+
+flutter:
+  assets:
+    - assets/mascot.png
+    - assets/chinese/

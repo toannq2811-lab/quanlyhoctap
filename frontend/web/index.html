@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Study For You - Học tốt hơn, cùng nhau tiến bộ">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#FFF4F8">
+  <meta name="apple-mobile-web-app-title" content="Study For You">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png?v=3"/>
+
+  <title>Study For You</title>
+  <link rel="manifest" href="/manifest.json?v=3">
+</head>
+<body style="background:#FFF4F8">
+  <script>
+    // Install-to-home-screen support, used by the app's "Cài app" screen.
+    window.pwa = {
+      deferred: null,
+      canPrompt: function () { return !!window.pwa.deferred; },
+      isStandalone: function () {
+        return window.matchMedia('(display-mode: standalone)').matches ||
+          window.navigator.standalone === true;
+      },
+      platform: function () {
+        var ua = navigator.userAgent;
+        if (/iphone|ipad|ipod/i.test(ua) ||
+            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) return 'ios';
+        return /android/i.test(ua) ? 'android' : 'desktop';
+      },
+      prompt: async function () {
+        var e = window.pwa.deferred;
+        if (!e) return 'unavailable';
+        e.prompt();
+        var choice = await e.userChoice;
+        window.pwa.deferred = null;
+        return choice.outcome;
+      }
+    };
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      window.pwa.deferred = e;
+    });
+  </script>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="hanzi-writer.min.js"></script>
+  <script src="recorder.js"></script>
+  <script>
+    // Chinese helpers used by the app: text-to-speech and stroke-order pads.
+    window.zh = {
+      speak: function (text, rate) {
+        if (!('speechSynthesis' in window)) return false;
+        speechSynthesis.cancel();
+        var u = new SpeechSynthesisUtterance(text);
+        u.lang = 'zh-CN';
+        u.rate = rate || 0.8;
+        var voices = speechSynthesis.getVoices();
+        var v = voices.find(function (v) { return /zh[-_]CN/i.test(v.lang); }) ||
+                voices.find(function (v) { return /^zh/i.test(v.lang); });
+        if (v) u.voice = v;
+        speechSynthesis.speak(u);
+        return true;
+      },
+      writers: {},
+      mount: function (id, el, ch, size, outline) {
+        el.innerHTML = '';
+        el.style.width = size + 'px';
+        el.style.height = size + 'px';
+        el.style.backgroundImage = "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>" +
+          "<g stroke='%23F6D3E1' stroke-width='0.6' stroke-dasharray='2 2'>" +
+          "<line x1='0' y1='0' x2='100' y2='100'/><line x1='100' y1='0' x2='0' y2='100'/>" +
+          "<line x1='50' y1='0' x2='50' y2='100'/><line x1='0' y1='50' x2='100' y2='50'/></g>" +
+          "<rect x='0.5' y='0.5' width='99' height='99' fill='none' stroke='%23F9A8C4' stroke-width='1'/></svg>\")";
+        el.style.backgroundSize = '100% 100%';
+        this.writers[id] = HanziWriter.create(el, ch, {
+          width: size, height: size, padding: size * 0.06,
+          showOutline: outline, showCharacter: true,
+          strokeColor: '#3A2A33', radicalColor: '#E94E86', outlineColor: '#F3D5E1',
+          drawingColor: '#E94E86', drawingWidth: Math.max(14, size / 14),
+          highlightColor: '#3DBE7A', strokeAnimationSpeed: 1.1, delayBetweenStrokes: 180,
+          charDataLoader: function (c, onLoad, onError) {
+            fetch('https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0.1/' + encodeURIComponent(c) + '.json')
+              .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+              .then(onLoad).catch(onError);
+          }
+        });
+      },
+      setChar: function (id, ch) { var w = this.writers[id]; if (w) w.setCharacter(ch); },
+      animate: function (id) { var w = this.writers[id]; if (w) { w.cancelQuiz(); w.showCharacter(); w.animateCharacter(); } },
+      quiz: function (id, outline, onDone) {
+        var w = this.writers[id];
+        if (!w) return;
+        if (outline) w.showOutline(); else w.hideOutline();
+        w.quiz({ showHintAfterMisses: 3, highlightOnComplete: true,
+                 onComplete: function (s) { onDone(s.totalMistakes); } });
+      },
+      dispose: function (id) { var w = this.writers[id]; if (w) w.cancelQuiz(); delete this.writers[id]; },
+      canListen: function () { return !!(window.SpeechRecognition || window.webkitSpeechRecognition); },
+      // Listens once in Mandarin; onResult gets the guesses joined by newlines.
+      listen: function (onResult, onError) {
+        var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SR) { onError('unsupported'); return; }
+        if (this.rec) { try { this.rec.abort(); } catch (e) {} }
+        var r = new SR();
+        r.lang = 'zh-CN';
+        r.interimResults = false;
+        r.continuous = false;
+        r.maxAlternatives = 5;
+        var done = false;
+        r.onresult = function (e) {
+          if (done) return; done = true;
+          var res = e.results[0], alts = [];
+          for (var i = 0; i < res.length; i++) alts.push(res[i].transcript);
+          onResult(alts.join(String.fromCharCode(10)));
+        };
+        r.onerror = function (e) { if (done) return; done = true; onError(e.error || 'error'); };
+        r.onend = function () { if (done) return; done = true; onError('no-speech'); };
+        this.rec = r;
+        try { r.start(); } catch (e) { done = true; onError('busy'); }
+      },
+      stopListening: function () { if (this.rec) { try { this.rec.stop(); } catch (e) {} } }
+    };
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
