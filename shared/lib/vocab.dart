@@ -67,7 +67,7 @@ class VocabList {
   );
 }
 
-/// HSK 1 and HSK 2 lists bundled with the app (assets/chinese/*.tsv).
+/// HSK lists bundled with the app (shared/assets/chinese/*.tsv).
 Future<List<VocabList>> loadBuiltInLists() async {
   Future<VocabList> load(String id, String name) async {
     final tsv = await rootBundle.loadString('packages/study_shared/assets/chinese/$id.tsv');
@@ -82,7 +82,12 @@ Future<List<VocabList>> loadBuiltInLists() async {
     return VocabList(id: id, name: name, words: words, builtIn: true);
   }
 
-  return [await load('hsk1', 'HSK 1'), await load('hsk2', 'HSK 2')];
+  // HSK 5 first: it is the level being studied now; 1–2 stay for review.
+  return [
+    await load('hsk5', 'HSK 5'),
+    await load('hsk1', 'HSK 1'),
+    await load('hsk2', 'HSK 2'),
+  ];
 }
 
 final _cjk = RegExp(r'[㐀-鿿豈-﫿]');

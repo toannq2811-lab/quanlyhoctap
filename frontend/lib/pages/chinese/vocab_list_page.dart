@@ -51,14 +51,86 @@ class _VocabListPageState extends State<VocabListPage> {
       builder: (context, _) {
         final words = _words;
         final known = zh.knownIn(list);
+        final header = <Widget>[
+          Row(
+            children: [
+              _Mode(
+                icon: Icons.style_rounded,
+                label: 'Flashcard',
+                onTap: () => openFlashcards(
+                  context,
+                  zh,
+                  list.name,
+                  studyOrder(zh, words).take(30).toList(),
+                ),
+              ),
+              const SizedBox(width: 10),
+              _Mode(
+                icon: Icons.quiz_rounded,
+                label: 'Trắc nghiệm',
+                onTap: () => startVocabQuiz(context, zh, list.name, words),
+              ),
+              const SizedBox(width: 10),
+              _Mode(
+                icon: Icons.draw_rounded,
+                label: 'Tập viết',
+                onTap: () => openWriting(context, zh, studyOrder(zh, words)),
+              ),
+              const SizedBox(width: 10),
+              _Mode(
+                icon: Icons.mic_rounded,
+                label: 'Phát âm',
+                onTap: () => openPronounce(
+                  context,
+                  zh,
+                  studyOrder(zh, words).take(20).toList(),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 14),
+          TextField(
+            onChanged: (v) => setState(() => _query = v),
+            decoration: const InputDecoration(
+              hintText: 'Tìm chữ Hán, pinyin hoặc nghĩa...',
+              prefixIcon: Icon(Icons.search, color: AppColors.muted),
+              isDense: true,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Row(
+            children: [
+              Switch(
+                value: _onlyUnknown,
+                activeTrackColor: AppColors.pink,
+                onChanged: (v) => setState(() => _onlyUnknown = v),
+              ),
+              const Text(
+                'Chỉ hiện từ chưa thuộc',
+                style: TextStyle(color: AppColors.muted),
+              ),
+              const Spacer(),
+              Text(
+                '${words.length} từ',
+                style: const TextStyle(color: AppColors.muted),
+              ),
+            ],
+          ),
+          const SizedBox(height: 6),
+        ];
         return Scaffold(
           appBar: AppBar(
             title: Column(
               children: [
                 Text(list.name),
-                Text('${list.words.length} từ · đã thuộc $known',
-                    style: const TextStyle(
-                        fontSize: 12, color: AppColors.muted, fontWeight: FontWeight.w600)),
+                Text(
+                  '${list.words.length} từ · đã thuộc $known',
+                  style: const TextStyle(
+                    fontSize: 12,
+                    color: AppColors.muted,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
               ],
             ),
             actions: [
@@ -71,66 +143,16 @@ class _VocabListPageState extends State<VocabListPage> {
             ],
           ),
           body: PageBody(
-            child: ListView(
+            // Built lazily: a list such as HSK 5 has over a thousand words.
+            child: ListView.builder(
               padding: const EdgeInsets.fromLTRB(20, 4, 20, 24),
-              children: [
-                Row(
-                  children: [
-                    _Mode(
-                      icon: Icons.style_rounded,
-                      label: 'Flashcard',
-                      onTap: () => openFlashcards(
-                          context, zh, list.name, studyOrder(zh, words).take(30).toList()),
+              itemCount: header.length + words.length,
+              itemBuilder: (context, i) => i < header.length
+                  ? header[i]
+                  : Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: _WordTile(zh: zh, word: words[i - header.length]),
                     ),
-                    const SizedBox(width: 10),
-                    _Mode(
-                      icon: Icons.quiz_rounded,
-                      label: 'Trắc nghiệm',
-                      onTap: () => startVocabQuiz(context, zh, list.name, words),
-                    ),
-                    const SizedBox(width: 10),
-                    _Mode(
-                      icon: Icons.draw_rounded,
-                      label: 'Tập viết',
-                      onTap: () => openWriting(context, zh, studyOrder(zh, words)),
-                    ),
-                    const SizedBox(width: 10),
-                    _Mode(
-                      icon: Icons.mic_rounded,
-                      label: 'Phát âm',
-                      onTap: () => openPronounce(context, zh, studyOrder(zh, words).take(20).toList()),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 14),
-                TextField(
-                  onChanged: (v) => setState(() => _query = v),
-                  decoration: const InputDecoration(
-                    hintText: 'Tìm chữ Hán, pinyin hoặc nghĩa...',
-                    prefixIcon: Icon(Icons.search, color: AppColors.muted),
-                    isDense: true,
-                  ),
-                ),
-                const SizedBox(height: 6),
-                Row(
-                  children: [
-                    Switch(
-                      value: _onlyUnknown,
-                      activeTrackColor: AppColors.pink,
-                      onChanged: (v) => setState(() => _onlyUnknown = v),
-                    ),
-                    const Text('Chỉ hiện từ chưa thuộc',
-                        style: TextStyle(color: AppColors.muted)),
-                    const Spacer(),
-                    Text('${words.length} từ', style: const TextStyle(color: AppColors.muted)),
-                  ],
-                ),
-                const SizedBox(height: 6),
-                for (final w in words) ...[
-                  _WordTile(zh: zh, word: w),
-                  const SizedBox(height: 8),
-                ],
-              ],
             ),
           ),
         );
@@ -144,8 +166,14 @@ class _VocabListPageState extends State<VocabListPage> {
       builder: (ctx) => AlertDialog(
         content: Text('Xóa danh sách "${list.name}" cho mọi người?'),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Hủy')),
-          TextButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Xóa')),
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, false),
+            child: const Text('Hủy'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, true),
+            child: const Text('Xóa'),
+          ),
         ],
       ),
     );
@@ -156,7 +184,8 @@ class _VocabListPageState extends State<VocabListPage> {
     } catch (e) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(e.toString().replaceFirst('Exception: ', ''))));
+        SnackBar(content: Text(e.toString().replaceFirst('Exception: ', ''))),
+      );
     }
   }
 }
@@ -170,26 +199,31 @@ class _Mode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Expanded(
-        child: SoftCard(
-          padding: const EdgeInsets.symmetric(vertical: 14),
-          onTap: onTap,
-          child: Column(
-            children: [
-              Container(
-                width: 42,
-                height: 42,
-                decoration: const BoxDecoration(gradient: AppColors.gradient, shape: BoxShape.circle),
-                child: Icon(icon, color: Colors.white),
-              ),
-              const SizedBox(height: 8),
-              Text(label,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12)),
-            ],
+    child: SoftCard(
+      padding: const EdgeInsets.symmetric(vertical: 14),
+      onTap: onTap,
+      child: Column(
+        children: [
+          Container(
+            width: 42,
+            height: 42,
+            decoration: const BoxDecoration(
+              gradient: AppColors.gradient,
+              shape: BoxShape.circle,
+            ),
+            child: Icon(icon, color: Colors.white),
           ),
-        ),
-      );
+          const SizedBox(height: 8),
+          Text(
+            label,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12),
+          ),
+        ],
+      ),
+    ),
+  );
 }
 
 class _WordTile extends StatelessWidget {
@@ -208,24 +242,34 @@ class _WordTile extends StatelessWidget {
         children: [
           ConstrainedBox(
             constraints: const BoxConstraints(minWidth: 64),
-            child: Text(word.hanzi,
-                style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w600)),
+            child: Text(
+              word.hanzi,
+              style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
+            ),
           ),
           const SizedBox(width: 10),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(word.pinyin,
-                    style: const TextStyle(color: AppColors.pink, fontWeight: FontWeight.w700)),
-                Text(word.meaning,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(fontSize: 13)),
+                Text(
+                  word.pinyin,
+                  style: const TextStyle(
+                    color: AppColors.pink,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                Text(
+                  word.meaning,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(fontSize: 13),
+                ),
               ],
             ),
           ),
-          if (known) const Icon(Icons.check_circle, color: AppColors.green, size: 20),
+          if (known)
+            const Icon(Icons.check_circle, color: AppColors.green, size: 20),
           IconButton(
             tooltip: 'Nghe',
             icon: const Icon(Icons.volume_up_rounded, color: AppColors.pink),
@@ -261,15 +305,26 @@ void showWordSheet(BuildContext context, ChineseStore zh, VocabWord word) {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(word.hanzi,
-                          style: const TextStyle(fontSize: 34, fontWeight: FontWeight.w600)),
+                      Text(
+                        word.hanzi,
+                        style: const TextStyle(
+                          fontSize: 34,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                       IconButton(
-                        icon: const Icon(Icons.volume_up_rounded, color: AppColors.pink),
+                        icon: const Icon(
+                          Icons.volume_up_rounded,
+                          color: AppColors.pink,
+                        ),
                         onPressed: () => speakChinese(word.hanzi),
                       ),
                       IconButton(
                         tooltip: 'Luyện phát âm',
-                        icon: const Icon(Icons.mic_rounded, color: AppColors.pink),
+                        icon: const Icon(
+                          Icons.mic_rounded,
+                          color: AppColors.pink,
+                        ),
                         onPressed: () {
                           Navigator.pop(ctx);
                           openPronounce(context, zh, [word]);
@@ -277,11 +332,20 @@ void showWordSheet(BuildContext context, ChineseStore zh, VocabWord word) {
                       ),
                     ],
                   ),
-                  Text(word.pinyin,
-                      style: const TextStyle(
-                          color: AppColors.pink, fontSize: 18, fontWeight: FontWeight.w800)),
+                  Text(
+                    word.pinyin,
+                    style: const TextStyle(
+                      color: AppColors.pink,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
                   const SizedBox(height: 4),
-                  Text(word.meaning, textAlign: TextAlign.center, style: const TextStyle(fontSize: 16)),
+                  Text(
+                    word.meaning,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontSize: 16),
+                  ),
                   const SizedBox(height: 14),
                   if (chars.length > 1)
                     Wrap(
@@ -289,7 +353,10 @@ void showWordSheet(BuildContext context, ChineseStore zh, VocabWord word) {
                       children: [
                         for (final (i, c) in chars.indexed)
                           ChoiceChip(
-                            label: Text(c, style: const TextStyle(fontSize: 18)),
+                            label: Text(
+                              c,
+                              style: const TextStyle(fontSize: 18),
+                            ),
                             selected: i == current,
                             showCheckmark: false,
                             selectedColor: AppColors.blush,
@@ -325,10 +392,16 @@ void showWordSheet(BuildContext context, ChineseStore zh, VocabWord word) {
                   const SizedBox(height: 8),
                   TextButton.icon(
                     onPressed: () => zh.setKnown(word, !known),
-                    icon: Icon(known ? Icons.check_circle : Icons.radio_button_unchecked,
-                        color: known ? AppColors.green : AppColors.muted),
-                    label: Text(known ? 'Đã thuộc' : 'Đánh dấu đã thuộc',
-                        style: TextStyle(color: known ? AppColors.green : AppColors.muted)),
+                    icon: Icon(
+                      known ? Icons.check_circle : Icons.radio_button_unchecked,
+                      color: known ? AppColors.green : AppColors.muted,
+                    ),
+                    label: Text(
+                      known ? 'Đã thuộc' : 'Đánh dấu đã thuộc',
+                      style: TextStyle(
+                        color: known ? AppColors.green : AppColors.muted,
+                      ),
+                    ),
                   ),
                 ],
               ),
