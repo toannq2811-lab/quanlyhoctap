@@ -6,7 +6,7 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from sqlalchemy.orm import Session
 
-from .config import JWT_SECRET, TOKEN_DAYS
+from .config import JWT_SECRET, TOKEN_HOURS
 from .db import get_db
 from .models import User
 
@@ -25,7 +25,7 @@ def check_password(password: str, hashed: str) -> bool:
 
 
 def make_token(user: User) -> str:
-    exp = datetime.now(timezone.utc) + timedelta(days=TOKEN_DAYS)
+    exp = datetime.now(timezone.utc) + timedelta(hours=TOKEN_HOURS)
     return jwt.encode({'sub': user.id, 'exp': exp}, JWT_SECRET, algorithm='HS256')
 
 

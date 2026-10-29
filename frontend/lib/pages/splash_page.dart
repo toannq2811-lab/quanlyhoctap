@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../auth.dart';
 import '../db.dart';
+import '../main.dart' show appNavigator;
 import '../storage.dart';
 import 'package:study_shared/theme.dart';
 import 'login_page.dart';
@@ -37,6 +38,7 @@ class _SplashPageState extends State<SplashPage> {
       final store = profile == null ? null : await Store.load(db, auth, profile);
       await minDelay;
       if (!mounted) return;
+      auth.onExpired = _sessionExpired;
       Navigator.of(context).pushReplacement(PageRouteBuilder(
         transitionDuration: const Duration(milliseconds: 400),
         pageBuilder: (_, _, _) =>
@@ -46,6 +48,24 @@ class _SplashPageState extends State<SplashPage> {
     } catch (e) {
       setState(() => _error = e);
     }
+  }
+
+  static var _expiring = false;
+
+  /// Back to the login page (data already on screen stays cached in Isar).
+  static void _sessionExpired() {
+    final nav = appNavigator.currentState;
+    if (nav == null || _expiring) return;
+    _expiring = true;
+    nav.pushAndRemoveUntil(MaterialPageRoute(builder: (_) => const SplashPage()), (_) => false);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _expiring = false;
+      final ctx = appNavigator.currentContext;
+      if (ctx != null) {
+        ScaffoldMessenger.of(ctx).showSnackBar(const SnackBar(
+            content: Text('Phiên đăng nhập đã hết hạn, đăng nhập lại nhé 💕')));
+      }
+    });
   }
 
   @override

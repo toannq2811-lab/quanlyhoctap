@@ -72,7 +72,18 @@ class _GateState extends State<_Gate> {
   @override
   void initState() {
     super.initState();
+    api.onUnauthorized = _expired;
     _check();
+  }
+
+  /// The login ran out (or the account was removed): back to the login form.
+  void _expired() {
+    _saveToken(null);
+    if (!mounted || _admin != true) return;
+    Navigator.of(context).popUntil((r) => r.isFirst);
+    setState(() => _admin = false);
+    ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Phiên đăng nhập đã hết hạn, đăng nhập lại nhé')));
   }
 
   Future<void> _check() async {

@@ -153,3 +153,15 @@ def test_ai_explain(monkeypatch):
         assert r.status_code == 502 and r.json()['detail'] == 'hết lượt'
         monkeypatch.setattr(ai, '_gemini', None)
         assert ask(1).status_code == 503
+
+
+def test_token_expires(monkeypatch):
+    from app import security
+
+    with TestClient(app) as c:
+        t = signup(c, 'erin')['token']
+        assert c.get('/me', headers=auth(t)).status_code == 200
+        monkeypatch.setattr(security, 'TOKEN_HOURS', -1)  # issued already expired
+        old = c.post('/auth/login', json={'username': 'erin', 'password': 'secret123'}).json()['token']
+        r = c.get('/me', headers=auth(old))
+        assert r.status_code == 401 and r.json()['detail'] == 'Phiên đăng nhập hết hạn'

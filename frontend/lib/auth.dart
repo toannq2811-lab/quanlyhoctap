@@ -10,7 +10,12 @@ export 'package:study_shared/profile.dart';
 
 /// Login against the FastAPI backend, plus "Nhớ mật khẩu" kept in the local Isar DB.
 class Auth {
-  Auth(this.db) : api = ApiClient(token: db.setting(_tokenKey));
+  Auth(this.db) : api = ApiClient(token: db.setting(_tokenKey)) {
+    api.onUnauthorized = () {
+      _setToken(null);
+      onExpired?.call();
+    };
+  }
 
   static const _tokenKey = 'api_token';
   static const _userKey = 'api_user';
@@ -22,6 +27,9 @@ class Auth {
 
   /// Shared by the whole app; carries the signed-in user's token.
   final ApiClient api;
+
+  /// Runs once the server says the login has expired.
+  void Function()? onExpired;
 
   /// The user name that last logged in on this device (for the greeting).
   String? get lastUser => db.setting(_lastUserKey);
@@ -71,6 +79,7 @@ class Auth {
   }
 
   Future<String?> _signIn(String path, String user, String password) async {
+    api.token = null;
     try {
       final res = await api.post(path, {'username': user, 'password': password}) as Map<String, dynamic>;
       final profile = Profile.fromJson(res['user'] as Map<String, dynamic>);

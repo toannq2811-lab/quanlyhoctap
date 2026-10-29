@@ -26,6 +26,9 @@ class ApiClient {
   final String baseUrl;
   String? token;
 
+  /// Called when the server rejects the token (expired or revoked).
+  void Function()? onUnauthorized;
+
   // Free Render instances sleep; the first request can take ~a minute.
   static const _timeout = Duration(seconds: 75);
 
@@ -74,6 +77,7 @@ class ApiClient {
     } catch (_) {
       throw ApiException(0, 'Không kết nối được máy chủ, kiểm tra mạng nhé');
     }
+    if (res.statusCode == 401 && token != null) onUnauthorized?.call();
     if (res.statusCode >= 400) throw ApiException(res.statusCode, _detail(res));
     return res;
   }

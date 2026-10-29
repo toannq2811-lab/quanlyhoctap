@@ -7,7 +7,8 @@ DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:///./dev.db')
 
 # Long random string; tokens signed with it stay valid across restarts.
 JWT_SECRET = os.environ.get('JWT_SECRET', 'dev-secret-change-me')
-TOKEN_DAYS = int(os.environ.get('TOKEN_DAYS', '60'))
+# A login lasts this long; after that the apps ask for the password again.
+TOKEN_HOURS = float(os.environ.get('TOKEN_HOURS', '24'))
 
 # Comma-separated list of web origins allowed to call the API.
 CORS_ORIGINS = [
