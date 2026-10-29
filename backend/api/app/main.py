@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from . import models  # noqa: F401  (registers the tables)
 from .config import CORS_ORIGIN_REGEX, CORS_ORIGINS
 from .db import Base, engine
-from .routers import admin, auth, content, progress
+from .routers import admin, ai, auth, content, progress
 
 
 @asynccontextmanager
@@ -35,5 +35,5 @@ def health():
     return {'ok': True}
 
 
-for r in (auth.router, content.router, progress.router, admin.router):
+for r in (auth.router, content.router, progress.router, admin.router, ai.router):
     app.include_router(r)

@@ -1,10 +1,10 @@
 """Shared content: quiz decks / questions and imported vocabulary lists."""
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import select
+from sqlalchemy import delete, select
 from sqlalchemy.orm import Session
 
 from ..db import get_db
-from ..models import Deck, Question, User, VocabList, VocabWord
+from ..models import AiExplanation, Deck, Question, User, VocabList, VocabWord
 from ..schemas import DeckIn, DeckUpdate, QuestionUpdate, VocabListIn, WordUpdate
 from ..security import can_edit, current_user
 
@@ -77,6 +77,7 @@ def update_question(question_id: str, body: QuestionUpdate, user: User = Depends
     if body.answer is not None and not 0 <= body.answer < len(body.options):
         raise HTTPException(400, 'Đáp án không nằm trong các lựa chọn')
     q.text, q.options, q.answer, q.explanation = body.text, body.options, body.answer, body.explanation
+    db.execute(delete(AiExplanation).where(AiExplanation.question_id == q.id))  # now stale
     db.commit()
     return question_json(q)
 

@@ -111,3 +111,45 @@ def test_full_flow():
         # deleting a deck removes its questions and answers
         assert c.delete('/decks/d1', headers=auth(admin['token'])).status_code == 200
         assert c.get('/me/results', headers=auth(token)).json() == []
+
+
+def test_ai_explain(monkeypatch):
+    from app.routers import ai
+
+    calls = []
+
+    def fake_claude(q, chosen):
+        calls.append(chosen)
+        return f'Sai vì {chosen}'
+
+    def broken_gemini(q, chosen):
+        raise ai.AiUnavailable('hết lượt')
+
+    monkeypatch.setattr(ai, '_client', object())
+    monkeypatch.setattr(ai, '_ask_claude', fake_claude)
+    monkeypatch.setattr(ai, '_gemini', object())
+    monkeypatch.setattr(ai, '_ask_gemini', broken_gemini)  # Claude takes over
+    with TestClient(app) as c:
+        dana = signup(c, 'dana')
+        t = dana['token']
+        assert c.post('/decks', headers=auth(t), json={**DECK, 'id': 'd2', 'questions': [
+            {**DECK['questions'][0], 'id': 'd2-0-0'}]}).status_code == 201
+
+        ask = lambda chosen: c.post('/ai/explain', headers=auth(t),  # noqa: E731
+                                    json={'question_id': 'd2-0-0', 'chosen': chosen})
+        assert ask(2).status_code == 400  # the right answer needs no explanation
+        assert ask(9).status_code == 400
+        assert ask(0).json() == {'text': 'Sai vì 0', 'cached': False}
+        assert ask(0).json() == {'text': 'Sai vì 0', 'cached': True}
+        assert calls == [0]
+
+        # editing the question drops the stale explanation
+        c.patch('/questions/d2-0-0', headers=auth(t),
+                json={'text': 'Câu mới?', 'options': ['A', 'B', 'C', 'D'], 'answer': 2})
+        assert ask(0).json()['cached'] is False
+
+        monkeypatch.setattr(ai, '_client', None)
+        r = ask(1)
+        assert r.status_code == 502 and r.json()['detail'] == 'hết lượt'
+        monkeypatch.setattr(ai, '_gemini', None)
+        assert ask(1).status_code == 503

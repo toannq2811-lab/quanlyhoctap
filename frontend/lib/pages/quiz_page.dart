@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'package:study_shared/api.dart';
 import 'package:study_shared/models.dart';
 import '../storage.dart';
 import 'package:study_shared/theme.dart';
@@ -69,6 +70,7 @@ class QuizPage extends StatefulWidget {
 class _QuizPageState extends State<QuizPage> {
   final _chosen = <int, int>{}; // question index -> chosen option
   final _messages = <int, String>{};
+  final _ai = <int, Future<String>>{}; // question index -> AI explanation of the wrong pick
   final _random = Random();
   final _scroll = ScrollController();
   final _stopwatch = Stopwatch()..start();
@@ -105,6 +107,7 @@ class _QuizPageState extends State<QuizPage> {
       }
     });
     if (answer != null) widget.store.record(_q, option == answer);
+    if (answer != null && option != answer) _ai[_index] = widget.store.explainWrong(_q, option);
     // Bring the feedback card into view.
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_scroll.hasClients) {
@@ -347,6 +350,14 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ],
             ),
+            if (_ai[_index] case final future?) ...[
+              const SizedBox(height: 12),
+              _AiExplanation(
+                future: future,
+                onRetry: () => setState(
+                    () => _ai[_index] = widget.store.explainWrong(_q, chosen)),
+              ),
+            ],
             if (_q.explanation != null) ...[
               const SizedBox(height: 12),
               Container(
@@ -432,6 +443,62 @@ String formatDuration(Duration d) {
   final h = d.inHours;
   final m = two(d.inMinutes % 60), s = two(d.inSeconds % 60);
   return h > 0 ? '$h:$m:$s' : '$m:$s';
+}
+
+/// "🤖 AI giải thích": why the picked option is wrong, loaded as soon as it is picked.
+class _AiExplanation extends StatelessWidget {
+  const _AiExplanation({required this.future, required this.onRetry});
+
+  final Future<String> future;
+  final VoidCallback onRetry;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF3EEFF),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: const Color(0xFFD9CCFF)),
+      ),
+      child: FutureBuilder(
+        future: future,
+        builder: (_, snap) {
+          const title = Text('🤖 AI giải thích',
+              style: TextStyle(color: Color(0xFF7A5AF8), fontWeight: FontWeight.w900));
+          final Widget body;
+          if (snap.hasData) {
+            body = Text(snap.data!, style: const TextStyle(height: 1.45));
+          } else if (snap.hasError) {
+            final e = snap.error;
+            body = Row(children: [
+              Expanded(
+                child: Text(
+                  e is ApiException && !e.offline ? e.message : 'Chưa kết nối được AI',
+                  style: const TextStyle(color: AppColors.muted),
+                ),
+              ),
+              TextButton(onPressed: onRetry, child: const Text('Thử lại')),
+            ]);
+          } else {
+            body = const Row(children: [
+              SizedBox(
+                  width: 16,
+                  height: 16,
+                  child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF7A5AF8))),
+              SizedBox(width: 10),
+              Text('AI đang giải thích vì sao sai…', style: TextStyle(color: AppColors.muted)),
+            ]);
+          }
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [title, const SizedBox(height: 6), body],
+          );
+        },
+      ),
+    );
+  }
 }
 
 enum _OptionState { idle, correct, wrong, picked, dimmed }

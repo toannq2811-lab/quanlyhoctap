@@ -117,3 +117,13 @@ class VocabProgress(Base):
     correct: Mapped[int] = mapped_column(Integer, default=0)
     wrong: Mapped[int] = mapped_column(Integer, default=0)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class AiExplanation(Base):
+    """Why option `chosen` of a question is wrong, written once by Claude and reused."""
+    __tablename__ = 'ai_explanations'
+
+    question_id: Mapped[str] = mapped_column(ForeignKey('questions.id', ondelete='CASCADE'), primary_key=True)
+    chosen: Mapped[int] = mapped_column(Integer, primary_key=True)
+    text: Mapped[str] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)

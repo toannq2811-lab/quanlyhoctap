@@ -321,6 +321,20 @@ class Store extends ChangeNotifier {
   }
 
   /// Saves an answer locally right away, then on the server.
+  final Map<String, Future<String>> _aiExplanations = {};
+
+  /// Claude's explanation of why option [chosen] of [q] is wrong (the server caches it too).
+  Future<String> explainWrong(Question q, int chosen) {
+    final key = '${q.id}#$chosen';
+    return _aiExplanations[key] ??= _api
+        .post('/ai/explain', {'question_id': q.id, 'chosen': chosen})
+        .then((r) => (r as Map)['text'] as String)
+        .catchError((Object e) {
+      _aiExplanations.remove(key); // let the learner retry
+      throw e;
+    });
+  }
+
   Future<void> record(Question q, bool correct) async {
     final row = DbResult(
       id: _resultId(q.id),
