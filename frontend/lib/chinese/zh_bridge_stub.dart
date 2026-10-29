@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 /// Non-web fallback: no speech, and the pad just shows the character.
-bool speakChinese(String text, {double rate = 0.8}) => false;
+bool speakChinese(String text, {double rate = 0.8, String lang = 'zh-CN'}) => false;
 
 bool get canListenChinese => false;
 
-Future<List<String>> listenChinese() async => throw 'unsupported';
+Future<List<String>> listenChinese({String lang = 'zh-CN'}) async => throw 'unsupported';
 
 void stopListeningChinese() {}
 

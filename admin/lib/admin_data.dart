@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/painting.dart';
 
 import 'package:study_shared/profile.dart';
+import 'package:study_shared/english.dart';
 import 'package:study_shared/vocab.dart';
 import 'package:study_shared/api.dart';
 import 'package:study_shared/models.dart';
@@ -83,6 +84,9 @@ class AdminData extends ChangeNotifier {
   final Map<String, String> sectionOf = {};
   final List<Learner> learners = [];
   final List<VocabList> vocabLists = [];
+
+  /// Built-in English course (tenses + topic vocabulary).
+  EnglishCourse? english;
 
   /// Kept for the pages' notices; the API server always has every table.
   bool chineseReady = true;
@@ -196,6 +200,8 @@ class AdminData extends ChangeNotifier {
     vocabLists
       ..clear()
       ..addAll(await loadBuiltInLists());
+    english ??= await loadEnglishCourse();
+    vocabLists.addAll(english!.topics.map((t) => t.list));
     final lists = await api.get('/vocab/lists') as List;
     final words = await api.get('/vocab/words') as List;
     final byList = <String, List<Map<String, dynamic>>>{};

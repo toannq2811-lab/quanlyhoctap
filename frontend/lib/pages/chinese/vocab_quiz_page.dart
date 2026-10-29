@@ -48,21 +48,21 @@ Future<void> startVocabQuiz(
                 onChanged: (v) => set(() => mode = v!),
                 child: Column(
                   children: [
-                    for (final (m, icon, label) in const [
+                    for (final (m, icon, label) in [
                       (
                         VocabQuizMode.hanziToMeaning,
                         Icons.translate,
-                        'Nhìn chữ Hán → chọn nghĩa',
+                        words.first.isEnglish ? 'Nhìn từ → chọn nghĩa' : 'Nhìn chữ Hán → chọn nghĩa',
                       ),
                       (
                         VocabQuizMode.meaningToHanzi,
                         Icons.text_fields,
-                        'Nhìn nghĩa → chọn chữ Hán',
+                        words.first.isEnglish ? 'Nhìn nghĩa → chọn từ' : 'Nhìn nghĩa → chọn chữ Hán',
                       ),
                       (
                         VocabQuizMode.listen,
                         Icons.hearing,
-                        'Nghe → chọn chữ Hán',
+                        words.first.isEnglish ? 'Nghe → chọn từ' : 'Nghe → chọn chữ Hán',
                       ),
                     ])
                       RadioListTile<VocabQuizMode>(
@@ -188,7 +188,7 @@ class _VocabQuizPageState extends State<VocabQuizPage> {
   }
 
   void _speakCurrent() => WidgetsBinding.instance.addPostFrameCallback(
-    (_) => speakChinese(_q.word.hanzi),
+    (_) => speakChinese(_q.word.hanzi, lang: _q.word.speechLang),
   );
 
   void _choose(int i) {
@@ -196,7 +196,9 @@ class _VocabQuizPageState extends State<VocabQuizPage> {
     setState(() => _chosen[_index] = i);
     final ok = i == _q.answer;
     widget.zh.recordAnswer(_q.word, ok);
-    if (widget.mode != VocabQuizMode.listen) speakChinese(_q.word.hanzi);
+    if (widget.mode != VocabQuizMode.listen) {
+      speakChinese(_q.word.hanzi, lang: _q.word.speechLang);
+    }
   }
 
   void _next() {
@@ -312,11 +314,14 @@ class _VocabQuizPageState extends State<VocabQuizPage> {
               child: Column(
                 children: [
                   switch (widget.mode) {
-                    VocabQuizMode.hanziToMeaning => Text(
-                      w.hanzi,
-                      style: const TextStyle(
-                        fontSize: 64,
-                        fontWeight: FontWeight.w500,
+                    VocabQuizMode.hanziToMeaning => FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        w.hanzi,
+                        style: const TextStyle(
+                          fontSize: 64,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
                     VocabQuizMode.meaningToHanzi => Text(
@@ -332,7 +337,7 @@ class _VocabQuizPageState extends State<VocabQuizPage> {
                       style: IconButton.styleFrom(
                         backgroundColor: AppColors.pink,
                       ),
-                      onPressed: () => speakChinese(w.hanzi),
+                      onPressed: () => speakChinese(w.hanzi, lang: w.speechLang),
                       icon: const Icon(
                         Icons.volume_up_rounded,
                         color: Colors.white,

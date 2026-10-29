@@ -9,6 +9,7 @@ import 'add_document_page.dart';
 import 'chinese/chinese_tab.dart';
 import 'chinese/flashcard_page.dart';
 import 'chinese/writing_page.dart';
+import 'english/tense_page.dart';
 import 'deck_page.dart';
 import 'install_page.dart';
 import 'quiz_page.dart';
@@ -35,11 +36,13 @@ class HomeTab extends StatelessWidget {
     required this.store,
     required this.onOpenSettings,
     required this.onOpenChinese,
+    required this.onOpenEnglish,
   });
 
   final Store store;
   final VoidCallback onOpenSettings;
   final VoidCallback onOpenChinese;
+  final VoidCallback onOpenEnglish;
 
   @override
   Widget build(BuildContext context) {
@@ -119,6 +122,8 @@ class HomeTab extends StatelessWidget {
               const SizedBox(height: 12),
             ],
             _ChineseProgressCard(store: store, onOpenChinese: onOpenChinese),
+            const SizedBox(height: 12),
+            _EnglishProgressCard(store: store, onOpenEnglish: onOpenEnglish),
             const SizedBox(height: 24),
             const _SectionTitle('Lối tắt'),
             _Shortcuts(store: store, onOpenChinese: onOpenChinese),
@@ -616,6 +621,72 @@ class DeckTile extends StatelessWidget {
             ),
           ),
           const Icon(Icons.chevron_right, color: AppColors.muted),
+        ],
+      ),
+    );
+  }
+}
+
+class _EnglishProgressCard extends StatelessWidget {
+  const _EnglishProgressCard({required this.store, required this.onOpenEnglish});
+
+  final Store store;
+  final VoidCallback onOpenEnglish;
+
+  @override
+  Widget build(BuildContext context) {
+    final zh = store.chinese, en = store.english;
+    final total = en.topics.fold(0, (s, t) => s + t.list.words.length);
+    final known = en.topics.fold(0, (s, t) => s + zh.knownIn(t.list));
+    final done = en.tenses.fold(0, (s, t) => s + tenseDone(zh, t));
+    final next = en.tenses.firstWhere((t) => tenseDone(zh, t) < t.exercises.length,
+        orElse: () => en.tenses.first);
+    return SoftCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                width: 44,
+                height: 44,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(gradient: AppColors.gradient, borderRadius: BorderRadius.circular(12)),
+                child: const Text('En',
+                    style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w900)),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('Tiếng Anh', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16)),
+                    Text('Thuộc $known/$total từ · ngữ pháp $done/${en.allExercises.length} bài',
+                        style: const TextStyle(color: AppColors.muted, fontSize: 13)),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: [
+              Expanded(
+                child: GradientButton(
+                  label: 'Học: ${next.vi.replaceFirst('Thì ', '')}',
+                  icon: Icons.menu_book_rounded,
+                  onPressed: () => Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (_) => TensePage(zh: zh, tense: next))),
+                ),
+              ),
+              const SizedBox(width: 10),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(backgroundColor: Colors.white),
+                onPressed: onOpenEnglish,
+                child: const Text('Mở'),
+              ),
+            ],
+          ),
         ],
       ),
     );

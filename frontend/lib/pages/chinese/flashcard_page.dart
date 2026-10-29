@@ -49,7 +49,7 @@ class _FlashcardPageState extends State<FlashcardPage> with SingleTickerProvider
     if (_flip.isAnimating) return;
     if (_flip.value < 0.5) {
       _flip.forward();
-      speakChinese(_word.hanzi);
+      speakChinese(_word.hanzi, lang: _word.speechLang);
     } else {
       _flip.reverse();
     }
@@ -240,7 +240,11 @@ class _FlashcardPageState extends State<FlashcardPage> with SingleTickerProvider
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(_word.hanzi, style: const TextStyle(fontSize: 48, fontWeight: FontWeight.w500)),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(_word.hanzi,
+                    style: const TextStyle(fontSize: 48, fontWeight: FontWeight.w500)),
+              ),
               const SizedBox(height: 8),
               Text(_word.pinyin,
                   style: const TextStyle(
@@ -249,13 +253,23 @@ class _FlashcardPageState extends State<FlashcardPage> with SingleTickerProvider
               Text(_word.meaning,
                   textAlign: TextAlign.center,
                   style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, height: 1.3)),
+              if (_word.example != null) ...[
+                const SizedBox(height: 14),
+                Text(_word.example!,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontSize: 16, fontStyle: FontStyle.italic)),
+                if (_word.exampleVi != null)
+                  Text(_word.exampleVi!,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(color: AppColors.muted, fontSize: 14)),
+              ],
               const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton.filledTonal(
                     tooltip: 'Nghe lại',
-                    onPressed: () => speakChinese(_word.hanzi),
+                    onPressed: () => speakChinese(_word.hanzi, lang: _word.speechLang),
                     icon: const Icon(Icons.volume_up_rounded, color: AppColors.pink),
                   ),
                   const SizedBox(width: 12),

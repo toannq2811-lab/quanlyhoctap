@@ -8,8 +8,9 @@ import 'practice_tab.dart';
 import 'results_tab.dart';
 import 'settings_tab.dart';
 import 'chinese/chinese_tab.dart';
+import 'english/english_tab.dart';
 
-/// Bottom navigation: Trang chủ · Luyện tập · Tiếng Trung · Kết quả · Cài đặt.
+/// Bottom navigation: Trang chủ · Luyện tập · Trung · Anh · Kết quả · Cài đặt.
 class MainShell extends StatefulWidget {
   const MainShell({super.key, required this.auth, required this.store});
 
@@ -39,11 +40,13 @@ class _MainShellState extends State<MainShell> {
               children: [
                 HomeTab(
                   store: widget.store,
-                  onOpenSettings: () => _goTo(4),
+                  onOpenSettings: () => _goTo(5),
                   onOpenChinese: () => _goTo(2),
+                  onOpenEnglish: () => _goTo(3),
                 ),
                 PracticeTab(store: widget.store),
                 ChineseTab(zh: widget.store.chinese),
+                EnglishTab(zh: widget.store.chinese, en: widget.store.english),
                 ResultsTab(store: widget.store),
                 SettingsTab(auth: widget.auth, store: widget.store),
               ],
@@ -102,7 +105,26 @@ class _MainShellState extends State<MainShell> {
                   color: AppColors.pink,
                 ),
               ),
-              label: 'Tiếng Trung',
+              label: 'Trung',
+            ),
+            NavigationDestination(
+              icon: Text(
+                'En',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w900,
+                  color: AppColors.muted,
+                ),
+              ),
+              selectedIcon: Text(
+                'En',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w900,
+                  color: AppColors.pink,
+                ),
+              ),
+              label: 'Anh',
             ),
             NavigationDestination(
               icon: Icon(Icons.bar_chart_rounded),

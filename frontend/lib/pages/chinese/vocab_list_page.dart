@@ -70,12 +70,14 @@ class _VocabListPageState extends State<VocabListPage> {
                 label: 'Trắc nghiệm',
                 onTap: () => startVocabQuiz(context, zh, list.name, words),
               ),
-              const SizedBox(width: 10),
-              _Mode(
-                icon: Icons.draw_rounded,
-                label: 'Tập viết',
-                onTap: () => openWriting(context, zh, studyOrder(zh, words)),
-              ),
+              if (!list.id.startsWith('en-')) ...[
+                const SizedBox(width: 10),
+                _Mode(
+                  icon: Icons.draw_rounded,
+                  label: 'Tập viết',
+                  onTap: () => openWriting(context, zh, studyOrder(zh, words)),
+                ),
+              ],
               const SizedBox(width: 10),
               _Mode(
                 icon: Icons.mic_rounded,
@@ -91,8 +93,10 @@ class _VocabListPageState extends State<VocabListPage> {
           const SizedBox(height: 14),
           TextField(
             onChanged: (v) => setState(() => _query = v),
-            decoration: const InputDecoration(
-              hintText: 'Tìm chữ Hán, pinyin hoặc nghĩa...',
+            decoration: InputDecoration(
+              hintText: list.id.startsWith('en-')
+                  ? 'Tìm từ tiếng Anh hoặc nghĩa...'
+                  : 'Tìm chữ Hán, pinyin hoặc nghĩa...',
               prefixIcon: Icon(Icons.search, color: AppColors.muted),
               isDense: true,
             ),
@@ -273,7 +277,7 @@ class _WordTile extends StatelessWidget {
           IconButton(
             tooltip: 'Nghe',
             icon: const Icon(Icons.volume_up_rounded, color: AppColors.pink),
-            onPressed: () => speakChinese(word.hanzi),
+            onPressed: () => speakChinese(word.hanzi, lang: word.speechLang),
           ),
         ],
       ),
@@ -317,7 +321,7 @@ void showWordSheet(BuildContext context, ChineseStore zh, VocabWord word) {
                           Icons.volume_up_rounded,
                           color: AppColors.pink,
                         ),
-                        onPressed: () => speakChinese(word.hanzi),
+                        onPressed: () => speakChinese(word.hanzi, lang: word.speechLang),
                       ),
                       IconButton(
                         tooltip: 'Luyện phát âm',
@@ -347,6 +351,16 @@ void showWordSheet(BuildContext context, ChineseStore zh, VocabWord word) {
                     style: const TextStyle(fontSize: 16),
                   ),
                   const SizedBox(height: 14),
+                  if (word.isEnglish) ...[
+                    if (word.example != null)
+                      Text(word.example!,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(fontSize: 16, fontStyle: FontStyle.italic)),
+                    if (word.exampleVi != null)
+                      Text(word.exampleVi!,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(color: AppColors.muted)),
+                  ] else ...[
                   if (chars.length > 1)
                     Wrap(
                       spacing: 8,
@@ -389,6 +403,7 @@ void showWordSheet(BuildContext context, ChineseStore zh, VocabWord word) {
                       ),
                     ],
                   ),
+                  ],
                   const SizedBox(height: 8),
                   TextButton.icon(
                     onPressed: () => zh.setKnown(word, !known),

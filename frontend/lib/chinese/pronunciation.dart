@@ -43,3 +43,15 @@ PronunciationResult judgePronunciation(
   }
   return PronunciationResult.wrong;
 }
+
+/// English: the recognizer heard the target word (or phrase) among its guesses.
+PronunciationResult judgeEnglish(String target, List<String> heard) {
+  String norm(String s) => s.toLowerCase().replaceAll(RegExp(r"[^a-z' ]"), ' ').replaceAll(RegExp(r'\s+'), ' ').trim();
+  final want = norm(target);
+  if (want.isEmpty) return PronunciationResult.wrong;
+  for (final h in heard) {
+    final got = ' ${norm(h)} ';
+    if (got.contains(' $want ')) return PronunciationResult.correct;
+  }
+  return PronunciationResult.wrong;
+}

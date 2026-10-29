@@ -19,3 +19,4 @@ flutter:
   assets:
     - assets/mascot.png
     - assets/chinese/
+    - assets/english/

@@ -11,6 +11,7 @@ import 'avatar.dart';
 import 'chinese/chinese_store.dart';
 import 'db.dart';
 import 'package:study_shared/doc_reader.dart';
+import 'package:study_shared/english.dart';
 import 'package:study_shared/models.dart';
 import 'package:study_shared/parser.dart';
 import 'package:study_shared/api.dart';
@@ -41,6 +42,9 @@ class Store extends ChangeNotifier {
   /// Vocabulary lists and flashcard progress.
   late final ChineseStore chinese;
 
+  /// Beginner English course (tenses + topic vocabulary); progress is kept in [chinese].
+  late final EnglishCourse english;
+
   /// True when the last sync with the server failed.
   bool offline = false;
 
@@ -64,6 +68,7 @@ class Store extends ChangeNotifier {
     store._loadActivity();
     store.chinese = ChineseStore(store);
     await store.chinese.load();
+    store.english = await loadEnglishCourse();
     await store.sync();
     return store;
   }

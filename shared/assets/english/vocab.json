@@ -1,0 +1,4502 @@
+[
+ {
+  "id": "greetings",
+  "name": "Chào hỏi & giao tiếp cơ bản",
+  "icon": "👋",
+  "words": [
+   {
+    "w": "hello",
+    "ipa": "/həˈloʊ/",
+    "pos": "interj",
+    "vi": "xin chào",
+    "ex": "Hello, my name is Lan.",
+    "exVi": "Xin chào, tôi tên là Lan."
+   },
+   {
+    "w": "hi",
+    "ipa": "/haɪ/",
+    "pos": "interj",
+    "vi": "chào (thân mật)",
+    "ex": "Hi, how are you?",
+    "exVi": "Chào, bạn khỏe không?"
+   },
+   {
+    "w": "goodbye",
+    "ipa": "/ɡʊdˈbaɪ/",
+    "pos": "interj",
+    "vi": "tạm biệt",
+    "ex": "Goodbye, see you tomorrow.",
+    "exVi": "Tạm biệt, hẹn gặp bạn ngày mai."
+   },
+   {
+    "w": "bye",
+    "ipa": "/baɪ/",
+    "pos": "interj",
+    "vi": "tạm biệt (thân mật)",
+    "ex": "Bye, have a nice day!",
+    "exVi": "Tạm biệt, chúc một ngày tốt lành!"
+   },
+   {
+    "w": "good morning",
+    "ipa": "/ɡʊd ˈmɔːrnɪŋ/",
+    "pos": "phrase",
+    "vi": "chào buổi sáng",
+    "ex": "Good morning, teacher.",
+    "exVi": "Chào buổi sáng, thầy cô."
+   },
+   {
+    "w": "good afternoon",
+    "ipa": "/ɡʊd ˌæftərˈnuːn/",
+    "pos": "phrase",
+    "vi": "chào buổi chiều",
+    "ex": "Good afternoon, everyone.",
+    "exVi": "Chào buổi chiều mọi người."
+   },
+   {
+    "w": "good evening",
+    "ipa": "/ɡʊd ˈiːvnɪŋ/",
+    "pos": "phrase",
+    "vi": "chào buổi tối",
+    "ex": "Good evening, sir.",
+    "exVi": "Chào buổi tối, thưa ông."
+   },
+   {
+    "w": "good night",
+    "ipa": "/ɡʊd ˈnaɪt/",
+    "pos": "phrase",
+    "vi": "chúc ngủ ngon",
+    "ex": "Good night, Mom.",
+    "exVi": "Chúc mẹ ngủ ngon."
+   },
+   {
+    "w": "thank you",
+    "ipa": "/ˈθæŋk juː/",
+    "pos": "phrase",
+    "vi": "cảm ơn",
+    "ex": "Thank you for your help.",
+    "exVi": "Cảm ơn bạn đã giúp đỡ."
+   },
+   {
+    "w": "thanks",
+    "ipa": "/θæŋks/",
+    "pos": "interj",
+    "vi": "cảm ơn (thân mật)",
+    "ex": "Thanks a lot!",
+    "exVi": "Cảm ơn nhiều!"
+   },
+   {
+    "w": "please",
+    "ipa": "/pliːz/",
+    "pos": "adv",
+    "vi": "làm ơn, xin vui lòng",
+    "ex": "Please sit down.",
+    "exVi": "Xin mời ngồi."
+   },
+   {
+    "w": "sorry",
+    "ipa": "/ˈsɑːri/",
+    "pos": "adj",
+    "vi": "xin lỗi; tiếc",
+    "ex": "Sorry, I am late.",
+    "exVi": "Xin lỗi, tôi đến muộn."
+   },
+   {
+    "w": "excuse me",
+    "ipa": "/ɪkˈskjuːz miː/",
+    "pos": "phrase",
+    "vi": "xin lỗi (khi làm phiền)",
+    "ex": "Excuse me, where is the bank?",
+    "exVi": "Xin lỗi, ngân hàng ở đâu?"
+   },
+   {
+    "w": "yes",
+    "ipa": "/jes/",
+    "pos": "adv",
+    "vi": "vâng, có",
+    "ex": "Yes, I understand.",
+    "exVi": "Vâng, tôi hiểu."
+   },
+   {
+    "w": "no",
+    "ipa": "/noʊ/",
+    "pos": "adv",
+    "vi": "không",
+    "ex": "No, thank you.",
+    "exVi": "Không, cảm ơn."
+   },
+   {
+    "w": "name",
+    "ipa": "/neɪm/",
+    "pos": "n",
+    "vi": "tên",
+    "ex": "What is your name?",
+    "exVi": "Bạn tên là gì?"
+   },
+   {
+    "w": "friend",
+    "ipa": "/frend/",
+    "pos": "n",
+    "vi": "bạn, bạn bè",
+    "ex": "He is my best friend.",
+    "exVi": "Anh ấy là bạn thân nhất của tôi."
+   },
+   {
+    "w": "meet",
+    "ipa": "/miːt/",
+    "pos": "v",
+    "vi": "gặp",
+    "ex": "Nice to meet you.",
+    "exVi": "Rất vui được gặp bạn."
+   },
+   {
+    "w": "nice",
+    "ipa": "/naɪs/",
+    "pos": "adj",
+    "vi": "tốt, dễ mến",
+    "ex": "She is very nice.",
+    "exVi": "Cô ấy rất dễ mến."
+   },
+   {
+    "w": "how are you",
+    "ipa": "/ˌhaʊ ˈɑːr juː/",
+    "pos": "phrase",
+    "vi": "bạn khỏe không",
+    "ex": "Hi Tom, how are you?",
+    "exVi": "Chào Tom, bạn khỏe không?"
+   },
+   {
+    "w": "fine",
+    "ipa": "/faɪn/",
+    "pos": "adj",
+    "vi": "khỏe, ổn",
+    "ex": "I am fine, thanks.",
+    "exVi": "Tôi khỏe, cảm ơn."
+   },
+   {
+    "w": "welcome",
+    "ipa": "/ˈwelkəm/",
+    "pos": "interj",
+    "vi": "chào mừng; không có gì",
+    "ex": "Welcome to our home!",
+    "exVi": "Chào mừng đến nhà chúng tôi!"
+   },
+   {
+    "w": "see you",
+    "ipa": "/ˈsiː juː/",
+    "pos": "phrase",
+    "vi": "hẹn gặp lại",
+    "ex": "See you later!",
+    "exVi": "Hẹn gặp lại sau!"
+   },
+   {
+    "w": "help",
+    "ipa": "/help/",
+    "pos": "v",
+    "vi": "giúp đỡ",
+    "ex": "Can you help me?",
+    "exVi": "Bạn có thể giúp tôi không?"
+   },
+   {
+    "w": "understand",
+    "ipa": "/ˌʌndərˈstænd/",
+    "pos": "v",
+    "vi": "hiểu",
+    "ex": "I don't understand.",
+    "exVi": "Tôi không hiểu."
+   },
+   {
+    "w": "speak",
+    "ipa": "/spiːk/",
+    "pos": "v",
+    "vi": "nói",
+    "ex": "Do you speak English?",
+    "exVi": "Bạn có nói tiếng Anh không?"
+   },
+   {
+    "w": "again",
+    "ipa": "/əˈɡen/",
+    "pos": "adv",
+    "vi": "lại, lần nữa",
+    "ex": "Please say it again.",
+    "exVi": "Làm ơn nói lại lần nữa."
+   },
+   {
+    "w": "from",
+    "ipa": "/frʌm/",
+    "pos": "prep",
+    "vi": "từ",
+    "ex": "I am from Vietnam.",
+    "exVi": "Tôi đến từ Việt Nam."
+   },
+   {
+    "w": "live",
+    "ipa": "/lɪv/",
+    "pos": "v",
+    "vi": "sống",
+    "ex": "I live in Hanoi.",
+    "exVi": "Tôi sống ở Hà Nội."
+   },
+   {
+    "w": "okay",
+    "ipa": "/oʊˈkeɪ/",
+    "pos": "interj",
+    "vi": "được, ổn",
+    "ex": "Okay, let's go.",
+    "exVi": "Được rồi, đi thôi."
+   }
+  ]
+ },
+ {
+  "id": "numbers-time",
+  "name": "Số đếm & thời gian",
+  "icon": "🔢",
+  "words": [
+   {
+    "w": "one",
+    "ipa": "/wʌn/",
+    "pos": "num",
+    "vi": "một",
+    "ex": "I have one brother.",
+    "exVi": "Tôi có một anh trai."
+   },
+   {
+    "w": "two",
+    "ipa": "/tuː/",
+    "pos": "num",
+    "vi": "hai",
+    "ex": "I have two cats.",
+    "exVi": "Tôi có hai con mèo."
+   },
+   {
+    "w": "three",
+    "ipa": "/θriː/",
+    "pos": "num",
+    "vi": "ba",
+    "ex": "We need three chairs.",
+    "exVi": "Chúng ta cần ba cái ghế."
+   },
+   {
+    "w": "four",
+    "ipa": "/fɔːr/",
+    "pos": "num",
+    "vi": "bốn",
+    "ex": "My son is four.",
+    "exVi": "Con trai tôi bốn tuổi."
+   },
+   {
+    "w": "five",
+    "ipa": "/faɪv/",
+    "pos": "num",
+    "vi": "năm (số 5)",
+    "ex": "I work five days a week.",
+    "exVi": "Tôi làm việc năm ngày một tuần."
+   },
+   {
+    "w": "six",
+    "ipa": "/sɪks/",
+    "pos": "num",
+    "vi": "sáu",
+    "ex": "I get up at six.",
+    "exVi": "Tôi dậy lúc sáu giờ."
+   },
+   {
+    "w": "seven",
+    "ipa": "/ˈsevən/",
+    "pos": "num",
+    "vi": "bảy",
+    "ex": "A week has seven days.",
+    "exVi": "Một tuần có bảy ngày."
+   },
+   {
+    "w": "eight",
+    "ipa": "/eɪt/",
+    "pos": "num",
+    "vi": "tám",
+    "ex": "School starts at eight.",
+    "exVi": "Trường bắt đầu lúc tám giờ."
+   },
+   {
+    "w": "nine",
+    "ipa": "/naɪn/",
+    "pos": "num",
+    "vi": "chín",
+    "ex": "She is nine years old.",
+    "exVi": "Cô bé chín tuổi."
+   },
+   {
+    "w": "ten",
+    "ipa": "/ten/",
+    "pos": "num",
+    "vi": "mười",
+    "ex": "I have ten fingers.",
+    "exVi": "Tôi có mười ngón tay."
+   },
+   {
+    "w": "twenty",
+    "ipa": "/ˈtwenti/",
+    "pos": "num",
+    "vi": "hai mươi",
+    "ex": "He is twenty years old.",
+    "exVi": "Anh ấy hai mươi tuổi."
+   },
+   {
+    "w": "hundred",
+    "ipa": "/ˈhʌndrəd/",
+    "pos": "num",
+    "vi": "trăm",
+    "ex": "It costs one hundred dollars.",
+    "exVi": "Nó giá một trăm đô la."
+   },
+   {
+    "w": "thousand",
+    "ipa": "/ˈθaʊzənd/",
+    "pos": "num",
+    "vi": "nghìn",
+    "ex": "Ten thousand people live here.",
+    "exVi": "Mười nghìn người sống ở đây."
+   },
+   {
+    "w": "time",
+    "ipa": "/taɪm/",
+    "pos": "n",
+    "vi": "thời gian, giờ",
+    "ex": "What time is it?",
+    "exVi": "Mấy giờ rồi?"
+   },
+   {
+    "w": "hour",
+    "ipa": "/ˈaʊər/",
+    "pos": "n",
+    "vi": "giờ, tiếng đồng hồ",
+    "ex": "I sleep eight hours a day.",
+    "exVi": "Tôi ngủ tám tiếng một ngày."
+   },
+   {
+    "w": "minute",
+    "ipa": "/ˈmɪnɪt/",
+    "pos": "n",
+    "vi": "phút",
+    "ex": "Wait a minute, please.",
+    "exVi": "Làm ơn đợi một phút."
+   },
+   {
+    "w": "day",
+    "ipa": "/deɪ/",
+    "pos": "n",
+    "vi": "ngày",
+    "ex": "I study English every day.",
+    "exVi": "Tôi học tiếng Anh mỗi ngày."
+   },
+   {
+    "w": "week",
+    "ipa": "/wiːk/",
+    "pos": "n",
+    "vi": "tuần",
+    "ex": "I see her every week.",
+    "exVi": "Tôi gặp cô ấy mỗi tuần."
+   },
+   {
+    "w": "month",
+    "ipa": "/mʌnθ/",
+    "pos": "n",
+    "vi": "tháng",
+    "ex": "My birthday is next month.",
+    "exVi": "Sinh nhật tôi vào tháng sau."
+   },
+   {
+    "w": "year",
+    "ipa": "/jɪr/",
+    "pos": "n",
+    "vi": "năm; tuổi",
+    "ex": "I am thirty years old.",
+    "exVi": "Tôi ba mươi tuổi."
+   },
+   {
+    "w": "today",
+    "ipa": "/təˈdeɪ/",
+    "pos": "adv",
+    "vi": "hôm nay",
+    "ex": "Today is Monday.",
+    "exVi": "Hôm nay là thứ Hai."
+   },
+   {
+    "w": "tomorrow",
+    "ipa": "/təˈmɑːroʊ/",
+    "pos": "adv",
+    "vi": "ngày mai",
+    "ex": "See you tomorrow.",
+    "exVi": "Hẹn gặp bạn ngày mai."
+   },
+   {
+    "w": "yesterday",
+    "ipa": "/ˈjestərdeɪ/",
+    "pos": "adv",
+    "vi": "hôm qua",
+    "ex": "I was tired yesterday.",
+    "exVi": "Hôm qua tôi mệt."
+   },
+   {
+    "w": "morning",
+    "ipa": "/ˈmɔːrnɪŋ/",
+    "pos": "n",
+    "vi": "buổi sáng",
+    "ex": "I drink coffee in the morning.",
+    "exVi": "Tôi uống cà phê vào buổi sáng."
+   },
+   {
+    "w": "night",
+    "ipa": "/naɪt/",
+    "pos": "n",
+    "vi": "ban đêm, buổi tối",
+    "ex": "I read books at night.",
+    "exVi": "Tôi đọc sách vào buổi tối."
+   },
+   {
+    "w": "now",
+    "ipa": "/naʊ/",
+    "pos": "adv",
+    "vi": "bây giờ",
+    "ex": "I am busy now.",
+    "exVi": "Bây giờ tôi đang bận."
+   },
+   {
+    "w": "o'clock",
+    "ipa": "/əˈklɑːk/",
+    "pos": "adv",
+    "vi": "giờ (đúng)",
+    "ex": "It is three o'clock.",
+    "exVi": "Bây giờ là ba giờ."
+   },
+   {
+    "w": "Monday",
+    "ipa": "/ˈmʌndeɪ/",
+    "pos": "n",
+    "vi": "thứ Hai",
+    "ex": "I work on Monday.",
+    "exVi": "Tôi làm việc vào thứ Hai."
+   },
+   {
+    "w": "Sunday",
+    "ipa": "/ˈsʌndeɪ/",
+    "pos": "n",
+    "vi": "Chủ nhật",
+    "ex": "We rest on Sunday.",
+    "exVi": "Chúng tôi nghỉ ngơi vào Chủ nhật."
+   },
+   {
+    "w": "weekend",
+    "ipa": "/ˈwiːkend/",
+    "pos": "n",
+    "vi": "cuối tuần",
+    "ex": "What do you do on the weekend?",
+    "exVi": "Bạn làm gì vào cuối tuần?"
+   }
+  ]
+ },
+ {
+  "id": "family",
+  "name": "Gia đình",
+  "icon": "👨‍👩‍👧",
+  "words": [
+   {
+    "w": "family",
+    "ipa": "/ˈfæməli/",
+    "pos": "n",
+    "vi": "gia đình",
+    "ex": "I love my family.",
+    "exVi": "Tôi yêu gia đình tôi."
+   },
+   {
+    "w": "mother",
+    "ipa": "/ˈmʌðər/",
+    "pos": "n",
+    "vi": "mẹ",
+    "ex": "My mother is a teacher.",
+    "exVi": "Mẹ tôi là giáo viên."
+   },
+   {
+    "w": "father",
+    "ipa": "/ˈfɑːðər/",
+    "pos": "n",
+    "vi": "bố, cha",
+    "ex": "My father works in a bank.",
+    "exVi": "Bố tôi làm việc ở ngân hàng."
+   },
+   {
+    "w": "parents",
+    "ipa": "/ˈperənts/",
+    "pos": "n",
+    "vi": "bố mẹ",
+    "ex": "My parents live in Hue.",
+    "exVi": "Bố mẹ tôi sống ở Huế."
+   },
+   {
+    "w": "brother",
+    "ipa": "/ˈbrʌðər/",
+    "pos": "n",
+    "vi": "anh trai, em trai",
+    "ex": "My brother is tall.",
+    "exVi": "Anh trai tôi cao."
+   },
+   {
+    "w": "sister",
+    "ipa": "/ˈsɪstər/",
+    "pos": "n",
+    "vi": "chị gái, em gái",
+    "ex": "My sister likes music.",
+    "exVi": "Chị gái tôi thích âm nhạc."
+   },
+   {
+    "w": "son",
+    "ipa": "/sʌn/",
+    "pos": "n",
+    "vi": "con trai",
+    "ex": "Their son is five.",
+    "exVi": "Con trai họ năm tuổi."
+   },
+   {
+    "w": "daughter",
+    "ipa": "/ˈdɔːtər/",
+    "pos": "n",
+    "vi": "con gái",
+    "ex": "My daughter goes to school.",
+    "exVi": "Con gái tôi đi học."
+   },
+   {
+    "w": "child",
+    "ipa": "/tʃaɪld/",
+    "pos": "n",
+    "vi": "đứa trẻ, đứa con",
+    "ex": "She has one child.",
+    "exVi": "Cô ấy có một đứa con."
+   },
+   {
+    "w": "children",
+    "ipa": "/ˈtʃɪldrən/",
+    "pos": "n",
+    "vi": "trẻ em, các con",
+    "ex": "The children are playing.",
+    "exVi": "Bọn trẻ đang chơi."
+   },
+   {
+    "w": "baby",
+    "ipa": "/ˈbeɪbi/",
+    "pos": "n",
+    "vi": "em bé",
+    "ex": "The baby is sleeping.",
+    "exVi": "Em bé đang ngủ."
+   },
+   {
+    "w": "husband",
+    "ipa": "/ˈhʌzbənd/",
+    "pos": "n",
+    "vi": "chồng",
+    "ex": "Her husband is a doctor.",
+    "exVi": "Chồng cô ấy là bác sĩ."
+   },
+   {
+    "w": "wife",
+    "ipa": "/waɪf/",
+    "pos": "n",
+    "vi": "vợ",
+    "ex": "His wife cooks very well.",
+    "exVi": "Vợ anh ấy nấu ăn rất ngon."
+   },
+   {
+    "w": "grandmother",
+    "ipa": "/ˈɡrænmʌðər/",
+    "pos": "n",
+    "vi": "bà",
+    "ex": "My grandmother is eighty.",
+    "exVi": "Bà tôi tám mươi tuổi."
+   },
+   {
+    "w": "grandfather",
+    "ipa": "/ˈɡrænfɑːðər/",
+    "pos": "n",
+    "vi": "ông",
+    "ex": "My grandfather reads the newspaper.",
+    "exVi": "Ông tôi đọc báo."
+   },
+   {
+    "w": "grandparents",
+    "ipa": "/ˈɡrænperənts/",
+    "pos": "n",
+    "vi": "ông bà",
+    "ex": "I visit my grandparents on Sunday.",
+    "exVi": "Tôi thăm ông bà vào Chủ nhật."
+   },
+   {
+    "w": "uncle",
+    "ipa": "/ˈʌŋkəl/",
+    "pos": "n",
+    "vi": "chú, bác, cậu",
+    "ex": "My uncle lives in Da Nang.",
+    "exVi": "Chú tôi sống ở Đà Nẵng."
+   },
+   {
+    "w": "aunt",
+    "ipa": "/ænt/",
+    "pos": "n",
+    "vi": "cô, dì, bác gái",
+    "ex": "My aunt has a small shop.",
+    "exVi": "Dì tôi có một cửa hàng nhỏ."
+   },
+   {
+    "w": "cousin",
+    "ipa": "/ˈkʌzən/",
+    "pos": "n",
+    "vi": "anh chị em họ",
+    "ex": "My cousin is my age.",
+    "exVi": "Anh họ tôi bằng tuổi tôi."
+   },
+   {
+    "w": "mom",
+    "ipa": "/mɑːm/",
+    "pos": "n",
+    "vi": "mẹ (thân mật)",
+    "ex": "Mom, I am hungry.",
+    "exVi": "Mẹ ơi, con đói."
+   },
+   {
+    "w": "dad",
+    "ipa": "/dæd/",
+    "pos": "n",
+    "vi": "bố (thân mật)",
+    "ex": "Dad drives me to school.",
+    "exVi": "Bố chở tôi đến trường."
+   },
+   {
+    "w": "married",
+    "ipa": "/ˈmærid/",
+    "pos": "adj",
+    "vi": "đã kết hôn",
+    "ex": "Are you married?",
+    "exVi": "Bạn đã kết hôn chưa?"
+   },
+   {
+    "w": "single",
+    "ipa": "/ˈsɪŋɡəl/",
+    "pos": "adj",
+    "vi": "độc thân",
+    "ex": "My brother is single.",
+    "exVi": "Anh trai tôi còn độc thân."
+   },
+   {
+    "w": "old",
+    "ipa": "/oʊld/",
+    "pos": "adj",
+    "vi": "già, cũ",
+    "ex": "How old are you?",
+    "exVi": "Bạn bao nhiêu tuổi?"
+   },
+   {
+    "w": "young",
+    "ipa": "/jʌŋ/",
+    "pos": "adj",
+    "vi": "trẻ",
+    "ex": "My mother looks young.",
+    "exVi": "Mẹ tôi trông trẻ."
+   },
+   {
+    "w": "love",
+    "ipa": "/lʌv/",
+    "pos": "v",
+    "vi": "yêu, thương",
+    "ex": "I love my children.",
+    "exVi": "Tôi yêu các con tôi."
+   },
+   {
+    "w": "together",
+    "ipa": "/təˈɡeðər/",
+    "pos": "adv",
+    "vi": "cùng nhau",
+    "ex": "We eat dinner together.",
+    "exVi": "Chúng tôi ăn tối cùng nhau."
+   },
+   {
+    "w": "people",
+    "ipa": "/ˈpiːpəl/",
+    "pos": "n",
+    "vi": "người, mọi người",
+    "ex": "There are four people in my family.",
+    "exVi": "Gia đình tôi có bốn người."
+   },
+   {
+    "w": "man",
+    "ipa": "/mæn/",
+    "pos": "n",
+    "vi": "người đàn ông",
+    "ex": "That man is my uncle.",
+    "exVi": "Người đàn ông kia là chú tôi."
+   },
+   {
+    "w": "woman",
+    "ipa": "/ˈwʊmən/",
+    "pos": "n",
+    "vi": "người phụ nữ",
+    "ex": "That woman is my aunt.",
+    "exVi": "Người phụ nữ kia là dì tôi."
+   }
+  ]
+ },
+ {
+  "id": "body-health",
+  "name": "Cơ thể & sức khỏe",
+  "icon": "💪",
+  "words": [
+   {
+    "w": "head",
+    "ipa": "/hed/",
+    "pos": "n",
+    "vi": "đầu",
+    "ex": "Turn your head to the left.",
+    "exVi": "Hãy quay đầu sang trái."
+   },
+   {
+    "w": "face",
+    "ipa": "/feɪs/",
+    "pos": "n",
+    "vi": "mặt, khuôn mặt",
+    "ex": "Wash your face.",
+    "exVi": "Hãy rửa mặt."
+   },
+   {
+    "w": "eye",
+    "ipa": "/aɪ/",
+    "pos": "n",
+    "vi": "mắt",
+    "ex": "She has big eyes.",
+    "exVi": "Cô ấy có đôi mắt to."
+   },
+   {
+    "w": "ear",
+    "ipa": "/ɪr/",
+    "pos": "n",
+    "vi": "tai",
+    "ex": "My ear hurts.",
+    "exVi": "Tai tôi bị đau."
+   },
+   {
+    "w": "nose",
+    "ipa": "/noʊz/",
+    "pos": "n",
+    "vi": "mũi",
+    "ex": "He has a small nose.",
+    "exVi": "Anh ấy có cái mũi nhỏ."
+   },
+   {
+    "w": "mouth",
+    "ipa": "/maʊθ/",
+    "pos": "n",
+    "vi": "miệng",
+    "ex": "Open your mouth, please.",
+    "exVi": "Làm ơn há miệng ra."
+   },
+   {
+    "w": "tooth",
+    "ipa": "/tuːθ/",
+    "pos": "n",
+    "vi": "răng (số nhiều: teeth)",
+    "ex": "I brush my teeth every morning.",
+    "exVi": "Tôi đánh răng mỗi sáng."
+   },
+   {
+    "w": "hair",
+    "ipa": "/her/",
+    "pos": "n",
+    "vi": "tóc",
+    "ex": "She has long hair.",
+    "exVi": "Cô ấy có mái tóc dài."
+   },
+   {
+    "w": "hand",
+    "ipa": "/hænd/",
+    "pos": "n",
+    "vi": "bàn tay",
+    "ex": "Wash your hands before eating.",
+    "exVi": "Rửa tay trước khi ăn."
+   },
+   {
+    "w": "arm",
+    "ipa": "/ɑːrm/",
+    "pos": "n",
+    "vi": "cánh tay",
+    "ex": "He has strong arms.",
+    "exVi": "Anh ấy có cánh tay khỏe."
+   },
+   {
+    "w": "leg",
+    "ipa": "/leɡ/",
+    "pos": "n",
+    "vi": "chân, cẳng chân",
+    "ex": "My legs are tired.",
+    "exVi": "Chân tôi mỏi."
+   },
+   {
+    "w": "foot",
+    "ipa": "/fʊt/",
+    "pos": "n",
+    "vi": "bàn chân (số nhiều: feet)",
+    "ex": "My foot hurts.",
+    "exVi": "Bàn chân tôi bị đau."
+   },
+   {
+    "w": "finger",
+    "ipa": "/ˈfɪŋɡər/",
+    "pos": "n",
+    "vi": "ngón tay",
+    "ex": "I cut my finger.",
+    "exVi": "Tôi bị đứt tay."
+   },
+   {
+    "w": "back",
+    "ipa": "/bæk/",
+    "pos": "n",
+    "vi": "lưng",
+    "ex": "Keep your back straight.",
+    "exVi": "Hãy giữ thẳng lưng."
+   },
+   {
+    "w": "stomach",
+    "ipa": "/ˈstʌmək/",
+    "pos": "n",
+    "vi": "bụng, dạ dày",
+    "ex": "My stomach hurts.",
+    "exVi": "Tôi bị đau bụng."
+   },
+   {
+    "w": "body",
+    "ipa": "/ˈbɑːdi/",
+    "pos": "n",
+    "vi": "cơ thể",
+    "ex": "The human body is amazing.",
+    "exVi": "Cơ thể con người thật kỳ diệu."
+   },
+   {
+    "w": "health",
+    "ipa": "/helθ/",
+    "pos": "n",
+    "vi": "sức khỏe",
+    "ex": "Health is very important.",
+    "exVi": "Sức khỏe rất quan trọng."
+   },
+   {
+    "w": "healthy",
+    "ipa": "/ˈhelθi/",
+    "pos": "adj",
+    "vi": "khỏe mạnh; tốt cho sức khỏe",
+    "ex": "Fruit is healthy.",
+    "exVi": "Trái cây tốt cho sức khỏe."
+   },
+   {
+    "w": "sick",
+    "ipa": "/sɪk/",
+    "pos": "adj",
+    "vi": "ốm, bệnh",
+    "ex": "I am sick today.",
+    "exVi": "Hôm nay tôi bị ốm."
+   },
+   {
+    "w": "tired",
+    "ipa": "/ˈtaɪərd/",
+    "pos": "adj",
+    "vi": "mệt",
+    "ex": "I am very tired.",
+    "exVi": "Tôi rất mệt."
+   },
+   {
+    "w": "hurt",
+    "ipa": "/hɜːrt/",
+    "pos": "v",
+    "vi": "đau; làm đau",
+    "ex": "Where does it hurt?",
+    "exVi": "Bạn đau ở đâu?"
+   },
+   {
+    "w": "pain",
+    "ipa": "/peɪn/",
+    "pos": "n",
+    "vi": "cơn đau",
+    "ex": "I have a pain in my leg.",
+    "exVi": "Tôi bị đau ở chân."
+   },
+   {
+    "w": "headache",
+    "ipa": "/ˈhedeɪk/",
+    "pos": "n",
+    "vi": "đau đầu",
+    "ex": "I have a headache.",
+    "exVi": "Tôi bị đau đầu."
+   },
+   {
+    "w": "fever",
+    "ipa": "/ˈfiːvər/",
+    "pos": "n",
+    "vi": "sốt",
+    "ex": "The baby has a fever.",
+    "exVi": "Em bé bị sốt."
+   },
+   {
+    "w": "cold",
+    "ipa": "/koʊld/",
+    "pos": "n",
+    "vi": "cảm lạnh; lạnh",
+    "ex": "I have a cold.",
+    "exVi": "Tôi bị cảm lạnh."
+   },
+   {
+    "w": "cough",
+    "ipa": "/kɔːf/",
+    "pos": "v",
+    "vi": "ho",
+    "ex": "He coughs at night.",
+    "exVi": "Anh ấy ho vào ban đêm."
+   },
+   {
+    "w": "hospital",
+    "ipa": "/ˈhɑːspɪtl/",
+    "pos": "n",
+    "vi": "bệnh viện",
+    "ex": "He is in the hospital.",
+    "exVi": "Anh ấy đang nằm viện."
+   },
+   {
+    "w": "medicine",
+    "ipa": "/ˈmedɪsən/",
+    "pos": "n",
+    "vi": "thuốc",
+    "ex": "Take this medicine twice a day.",
+    "exVi": "Uống thuốc này hai lần một ngày."
+   },
+   {
+    "w": "rest",
+    "ipa": "/rest/",
+    "pos": "v",
+    "vi": "nghỉ ngơi",
+    "ex": "You need to rest.",
+    "exVi": "Bạn cần nghỉ ngơi."
+   },
+   {
+    "w": "exercise",
+    "ipa": "/ˈeksərsaɪz/",
+    "pos": "v",
+    "vi": "tập thể dục",
+    "ex": "I exercise every morning.",
+    "exVi": "Tôi tập thể dục mỗi sáng."
+   }
+  ]
+ },
+ {
+  "id": "colors-shapes",
+  "name": "Màu sắc & hình dạng",
+  "icon": "🎨",
+  "words": [
+   {
+    "w": "color",
+    "ipa": "/ˈkʌlər/",
+    "pos": "n",
+    "vi": "màu sắc",
+    "ex": "What is your favorite color?",
+    "exVi": "Màu yêu thích của bạn là gì?"
+   },
+   {
+    "w": "red",
+    "ipa": "/red/",
+    "pos": "adj",
+    "vi": "màu đỏ",
+    "ex": "I like red roses.",
+    "exVi": "Tôi thích hoa hồng đỏ."
+   },
+   {
+    "w": "blue",
+    "ipa": "/bluː/",
+    "pos": "adj",
+    "vi": "màu xanh dương",
+    "ex": "The sky is blue.",
+    "exVi": "Bầu trời màu xanh."
+   },
+   {
+    "w": "green",
+    "ipa": "/ɡriːn/",
+    "pos": "adj",
+    "vi": "màu xanh lá",
+    "ex": "The leaves are green.",
+    "exVi": "Lá cây màu xanh lá."
+   },
+   {
+    "w": "yellow",
+    "ipa": "/ˈjeloʊ/",
+    "pos": "adj",
+    "vi": "màu vàng",
+    "ex": "Bananas are yellow.",
+    "exVi": "Chuối màu vàng."
+   },
+   {
+    "w": "black",
+    "ipa": "/blæk/",
+    "pos": "adj",
+    "vi": "màu đen",
+    "ex": "My cat is black.",
+    "exVi": "Con mèo của tôi màu đen."
+   },
+   {
+    "w": "white",
+    "ipa": "/waɪt/",
+    "pos": "adj",
+    "vi": "màu trắng",
+    "ex": "Snow is white.",
+    "exVi": "Tuyết màu trắng."
+   },
+   {
+    "w": "orange",
+    "ipa": "/ˈɔːrɪndʒ/",
+    "pos": "adj",
+    "vi": "màu cam; quả cam",
+    "ex": "She has an orange bag.",
+    "exVi": "Cô ấy có một chiếc túi màu cam."
+   },
+   {
+    "w": "pink",
+    "ipa": "/pɪŋk/",
+    "pos": "adj",
+    "vi": "màu hồng",
+    "ex": "My daughter loves pink.",
+    "exVi": "Con gái tôi thích màu hồng."
+   },
+   {
+    "w": "purple",
+    "ipa": "/ˈpɜːrpəl/",
+    "pos": "adj",
+    "vi": "màu tím",
+    "ex": "This flower is purple.",
+    "exVi": "Bông hoa này màu tím."
+   },
+   {
+    "w": "brown",
+    "ipa": "/braʊn/",
+    "pos": "adj",
+    "vi": "màu nâu",
+    "ex": "He has brown eyes.",
+    "exVi": "Anh ấy có mắt màu nâu."
+   },
+   {
+    "w": "gray",
+    "ipa": "/ɡreɪ/",
+    "pos": "adj",
+    "vi": "màu xám",
+    "ex": "The sky is gray today.",
+    "exVi": "Hôm nay bầu trời xám xịt."
+   },
+   {
+    "w": "dark",
+    "ipa": "/dɑːrk/",
+    "pos": "adj",
+    "vi": "tối, sẫm, đậm",
+    "ex": "I like dark blue.",
+    "exVi": "Tôi thích màu xanh đậm."
+   },
+   {
+    "w": "light",
+    "ipa": "/laɪt/",
+    "pos": "adj",
+    "vi": "nhạt; sáng",
+    "ex": "She wears a light green dress.",
+    "exVi": "Cô ấy mặc váy màu xanh nhạt."
+   },
+   {
+    "w": "shape",
+    "ipa": "/ʃeɪp/",
+    "pos": "n",
+    "vi": "hình dạng",
+    "ex": "What shape is it?",
+    "exVi": "Nó có hình gì?"
+   },
+   {
+    "w": "circle",
+    "ipa": "/ˈsɜːrkəl/",
+    "pos": "n",
+    "vi": "hình tròn",
+    "ex": "Draw a circle.",
+    "exVi": "Hãy vẽ một hình tròn."
+   },
+   {
+    "w": "square",
+    "ipa": "/skwer/",
+    "pos": "n",
+    "vi": "hình vuông",
+    "ex": "The box is a square.",
+    "exVi": "Cái hộp có hình vuông."
+   },
+   {
+    "w": "triangle",
+    "ipa": "/ˈtraɪæŋɡəl/",
+    "pos": "n",
+    "vi": "hình tam giác",
+    "ex": "A triangle has three sides.",
+    "exVi": "Hình tam giác có ba cạnh."
+   },
+   {
+    "w": "rectangle",
+    "ipa": "/ˈrektæŋɡəl/",
+    "pos": "n",
+    "vi": "hình chữ nhật",
+    "ex": "The door is a rectangle.",
+    "exVi": "Cánh cửa có hình chữ nhật."
+   },
+   {
+    "w": "star",
+    "ipa": "/stɑːr/",
+    "pos": "n",
+    "vi": "ngôi sao",
+    "ex": "Draw a star.",
+    "exVi": "Hãy vẽ một ngôi sao."
+   },
+   {
+    "w": "heart",
+    "ipa": "/hɑːrt/",
+    "pos": "n",
+    "vi": "trái tim; hình trái tim",
+    "ex": "She draws a heart.",
+    "exVi": "Cô ấy vẽ một trái tim."
+   },
+   {
+    "w": "line",
+    "ipa": "/laɪn/",
+    "pos": "n",
+    "vi": "đường kẻ, đường thẳng",
+    "ex": "Draw a straight line.",
+    "exVi": "Hãy kẻ một đường thẳng."
+   },
+   {
+    "w": "round",
+    "ipa": "/raʊnd/",
+    "pos": "adj",
+    "vi": "tròn",
+    "ex": "The table is round.",
+    "exVi": "Cái bàn hình tròn."
+   },
+   {
+    "w": "big",
+    "ipa": "/bɪɡ/",
+    "pos": "adj",
+    "vi": "to, lớn",
+    "ex": "They live in a big house.",
+    "exVi": "Họ sống trong một ngôi nhà lớn."
+   },
+   {
+    "w": "small",
+    "ipa": "/smɔːl/",
+    "pos": "adj",
+    "vi": "nhỏ",
+    "ex": "This shirt is too small.",
+    "exVi": "Chiếc áo này quá nhỏ."
+   },
+   {
+    "w": "long",
+    "ipa": "/lɔːŋ/",
+    "pos": "adj",
+    "vi": "dài",
+    "ex": "The river is very long.",
+    "exVi": "Con sông rất dài."
+   },
+   {
+    "w": "short",
+    "ipa": "/ʃɔːrt/",
+    "pos": "adj",
+    "vi": "ngắn; thấp",
+    "ex": "He has short hair.",
+    "exVi": "Anh ấy có tóc ngắn."
+   },
+   {
+    "w": "tall",
+    "ipa": "/tɔːl/",
+    "pos": "adj",
+    "vi": "cao",
+    "ex": "My father is tall.",
+    "exVi": "Bố tôi cao."
+   },
+   {
+    "w": "beautiful",
+    "ipa": "/ˈbjuːtɪfəl/",
+    "pos": "adj",
+    "vi": "đẹp",
+    "ex": "What a beautiful color!",
+    "exVi": "Màu đẹp quá!"
+   },
+   {
+    "w": "same",
+    "ipa": "/seɪm/",
+    "pos": "adj",
+    "vi": "giống nhau, cùng",
+    "ex": "We have the same bag.",
+    "exVi": "Chúng tôi có chiếc túi giống nhau."
+   }
+  ]
+ },
+ {
+  "id": "food-drink",
+  "name": "Đồ ăn & thức uống",
+  "icon": "🍜",
+  "words": [
+   {
+    "w": "food",
+    "ipa": "/fuːd/",
+    "pos": "n",
+    "vi": "đồ ăn, thức ăn",
+    "ex": "I like Vietnamese food.",
+    "exVi": "Tôi thích đồ ăn Việt Nam."
+   },
+   {
+    "w": "water",
+    "ipa": "/ˈwɔːtər/",
+    "pos": "n",
+    "vi": "nước",
+    "ex": "Can I have some water?",
+    "exVi": "Cho tôi xin ít nước."
+   },
+   {
+    "w": "rice",
+    "ipa": "/raɪs/",
+    "pos": "n",
+    "vi": "cơm, gạo",
+    "ex": "We eat rice every day.",
+    "exVi": "Chúng tôi ăn cơm mỗi ngày."
+   },
+   {
+    "w": "bread",
+    "ipa": "/bred/",
+    "pos": "n",
+    "vi": "bánh mì",
+    "ex": "I eat bread for breakfast.",
+    "exVi": "Tôi ăn bánh mì vào bữa sáng."
+   },
+   {
+    "w": "meat",
+    "ipa": "/miːt/",
+    "pos": "n",
+    "vi": "thịt",
+    "ex": "He doesn't eat meat.",
+    "exVi": "Anh ấy không ăn thịt."
+   },
+   {
+    "w": "chicken",
+    "ipa": "/ˈtʃɪkɪn/",
+    "pos": "n",
+    "vi": "thịt gà; con gà",
+    "ex": "I like fried chicken.",
+    "exVi": "Tôi thích gà rán."
+   },
+   {
+    "w": "fish",
+    "ipa": "/fɪʃ/",
+    "pos": "n",
+    "vi": "cá",
+    "ex": "We have fish for dinner.",
+    "exVi": "Chúng tôi ăn cá vào bữa tối."
+   },
+   {
+    "w": "egg",
+    "ipa": "/eɡ/",
+    "pos": "n",
+    "vi": "trứng",
+    "ex": "I eat two eggs every morning.",
+    "exVi": "Tôi ăn hai quả trứng mỗi sáng."
+   },
+   {
+    "w": "vegetable",
+    "ipa": "/ˈvedʒtəbəl/",
+    "pos": "n",
+    "vi": "rau",
+    "ex": "Eat more vegetables.",
+    "exVi": "Hãy ăn nhiều rau hơn."
+   },
+   {
+    "w": "fruit",
+    "ipa": "/fruːt/",
+    "pos": "n",
+    "vi": "trái cây",
+    "ex": "I buy fruit at the market.",
+    "exVi": "Tôi mua trái cây ở chợ."
+   },
+   {
+    "w": "apple",
+    "ipa": "/ˈæpəl/",
+    "pos": "n",
+    "vi": "quả táo",
+    "ex": "An apple a day is good.",
+    "exVi": "Mỗi ngày một quả táo rất tốt."
+   },
+   {
+    "w": "banana",
+    "ipa": "/bəˈnænə/",
+    "pos": "n",
+    "vi": "quả chuối",
+    "ex": "Monkeys love bananas.",
+    "exVi": "Khỉ thích chuối."
+   },
+   {
+    "w": "milk",
+    "ipa": "/mɪlk/",
+    "pos": "n",
+    "vi": "sữa",
+    "ex": "Children drink milk.",
+    "exVi": "Trẻ em uống sữa."
+   },
+   {
+    "w": "coffee",
+    "ipa": "/ˈkɔːfi/",
+    "pos": "n",
+    "vi": "cà phê",
+    "ex": "I drink coffee every morning.",
+    "exVi": "Tôi uống cà phê mỗi sáng."
+   },
+   {
+    "w": "tea",
+    "ipa": "/tiː/",
+    "pos": "n",
+    "vi": "trà",
+    "ex": "Would you like some tea?",
+    "exVi": "Bạn có muốn uống trà không?"
+   },
+   {
+    "w": "juice",
+    "ipa": "/dʒuːs/",
+    "pos": "n",
+    "vi": "nước ép",
+    "ex": "I want orange juice.",
+    "exVi": "Tôi muốn nước cam."
+   },
+   {
+    "w": "beer",
+    "ipa": "/bɪr/",
+    "pos": "n",
+    "vi": "bia",
+    "ex": "He drinks beer with friends.",
+    "exVi": "Anh ấy uống bia với bạn bè."
+   },
+   {
+    "w": "noodles",
+    "ipa": "/ˈnuːdəlz/",
+    "pos": "n",
+    "vi": "mì, bún, phở",
+    "ex": "I love beef noodles.",
+    "exVi": "Tôi thích phở bò."
+   },
+   {
+    "w": "soup",
+    "ipa": "/suːp/",
+    "pos": "n",
+    "vi": "súp, canh",
+    "ex": "This soup is hot.",
+    "exVi": "Bát canh này nóng."
+   },
+   {
+    "w": "sugar",
+    "ipa": "/ˈʃʊɡər/",
+    "pos": "n",
+    "vi": "đường",
+    "ex": "No sugar, please.",
+    "exVi": "Làm ơn không cho đường."
+   },
+   {
+    "w": "salt",
+    "ipa": "/sɔːlt/",
+    "pos": "n",
+    "vi": "muối",
+    "ex": "Add a little salt.",
+    "exVi": "Thêm một chút muối."
+   },
+   {
+    "w": "eat",
+    "ipa": "/iːt/",
+    "pos": "v",
+    "vi": "ăn",
+    "ex": "What do you eat for lunch?",
+    "exVi": "Bạn ăn gì vào bữa trưa?"
+   },
+   {
+    "w": "drink",
+    "ipa": "/drɪŋk/",
+    "pos": "v",
+    "vi": "uống",
+    "ex": "Drink more water.",
+    "exVi": "Hãy uống nhiều nước hơn."
+   },
+   {
+    "w": "cook",
+    "ipa": "/kʊk/",
+    "pos": "v",
+    "vi": "nấu ăn",
+    "ex": "My wife cooks dinner.",
+    "exVi": "Vợ tôi nấu bữa tối."
+   },
+   {
+    "w": "breakfast",
+    "ipa": "/ˈbrekfəst/",
+    "pos": "n",
+    "vi": "bữa sáng",
+    "ex": "I have breakfast at seven.",
+    "exVi": "Tôi ăn sáng lúc bảy giờ."
+   },
+   {
+    "w": "lunch",
+    "ipa": "/lʌntʃ/",
+    "pos": "n",
+    "vi": "bữa trưa",
+    "ex": "Let's have lunch together.",
+    "exVi": "Chúng ta ăn trưa cùng nhau nhé."
+   },
+   {
+    "w": "dinner",
+    "ipa": "/ˈdɪnər/",
+    "pos": "n",
+    "vi": "bữa tối",
+    "ex": "Dinner is ready.",
+    "exVi": "Bữa tối đã sẵn sàng."
+   },
+   {
+    "w": "hungry",
+    "ipa": "/ˈhʌŋɡri/",
+    "pos": "adj",
+    "vi": "đói",
+    "ex": "I am hungry.",
+    "exVi": "Tôi đói."
+   },
+   {
+    "w": "thirsty",
+    "ipa": "/ˈθɜːrsti/",
+    "pos": "adj",
+    "vi": "khát",
+    "ex": "Are you thirsty?",
+    "exVi": "Bạn có khát không?"
+   },
+   {
+    "w": "delicious",
+    "ipa": "/dɪˈlɪʃəs/",
+    "pos": "adj",
+    "vi": "ngon",
+    "ex": "This cake is delicious.",
+    "exVi": "Cái bánh này ngon."
+   }
+  ]
+ },
+ {
+  "id": "home",
+  "name": "Nhà cửa & đồ dùng",
+  "icon": "🏠",
+  "words": [
+   {
+    "w": "house",
+    "ipa": "/haʊs/",
+    "pos": "n",
+    "vi": "ngôi nhà",
+    "ex": "My house has a garden.",
+    "exVi": "Nhà tôi có một khu vườn."
+   },
+   {
+    "w": "home",
+    "ipa": "/hoʊm/",
+    "pos": "n",
+    "vi": "nhà, tổ ấm",
+    "ex": "I go home at six.",
+    "exVi": "Tôi về nhà lúc sáu giờ."
+   },
+   {
+    "w": "room",
+    "ipa": "/ruːm/",
+    "pos": "n",
+    "vi": "phòng",
+    "ex": "My room is very small.",
+    "exVi": "Phòng tôi rất nhỏ."
+   },
+   {
+    "w": "bedroom",
+    "ipa": "/ˈbedruːm/",
+    "pos": "n",
+    "vi": "phòng ngủ",
+    "ex": "The house has two bedrooms.",
+    "exVi": "Ngôi nhà có hai phòng ngủ."
+   },
+   {
+    "w": "bathroom",
+    "ipa": "/ˈbæθruːm/",
+    "pos": "n",
+    "vi": "phòng tắm, nhà vệ sinh",
+    "ex": "Where is the bathroom?",
+    "exVi": "Nhà vệ sinh ở đâu?"
+   },
+   {
+    "w": "kitchen",
+    "ipa": "/ˈkɪtʃən/",
+    "pos": "n",
+    "vi": "nhà bếp",
+    "ex": "Mom is in the kitchen.",
+    "exVi": "Mẹ đang ở trong bếp."
+   },
+   {
+    "w": "living room",
+    "ipa": "/ˈlɪvɪŋ ruːm/",
+    "pos": "n",
+    "vi": "phòng khách",
+    "ex": "We watch TV in the living room.",
+    "exVi": "Chúng tôi xem tivi ở phòng khách."
+   },
+   {
+    "w": "door",
+    "ipa": "/dɔːr/",
+    "pos": "n",
+    "vi": "cửa ra vào",
+    "ex": "Please close the door.",
+    "exVi": "Làm ơn đóng cửa lại."
+   },
+   {
+    "w": "window",
+    "ipa": "/ˈwɪndoʊ/",
+    "pos": "n",
+    "vi": "cửa sổ",
+    "ex": "Look out of the window.",
+    "exVi": "Hãy nhìn ra ngoài cửa sổ."
+   },
+   {
+    "w": "bed",
+    "ipa": "/bed/",
+    "pos": "n",
+    "vi": "giường",
+    "ex": "I go to bed at ten.",
+    "exVi": "Tôi đi ngủ lúc mười giờ."
+   },
+   {
+    "w": "table",
+    "ipa": "/ˈteɪbəl/",
+    "pos": "n",
+    "vi": "cái bàn",
+    "ex": "The keys are on the table.",
+    "exVi": "Chìa khóa ở trên bàn."
+   },
+   {
+    "w": "chair",
+    "ipa": "/tʃer/",
+    "pos": "n",
+    "vi": "cái ghế",
+    "ex": "Sit on the chair.",
+    "exVi": "Hãy ngồi lên ghế."
+   },
+   {
+    "w": "sofa",
+    "ipa": "/ˈsoʊfə/",
+    "pos": "n",
+    "vi": "ghế sô-pha",
+    "ex": "The cat sleeps on the sofa.",
+    "exVi": "Con mèo ngủ trên ghế sô-pha."
+   },
+   {
+    "w": "lamp",
+    "ipa": "/læmp/",
+    "pos": "n",
+    "vi": "đèn",
+    "ex": "Turn on the lamp.",
+    "exVi": "Hãy bật đèn lên."
+   },
+   {
+    "w": "TV",
+    "ipa": "/ˌtiːˈviː/",
+    "pos": "n",
+    "vi": "tivi",
+    "ex": "I watch TV at night.",
+    "exVi": "Tôi xem tivi vào buổi tối."
+   },
+   {
+    "w": "fridge",
+    "ipa": "/frɪdʒ/",
+    "pos": "n",
+    "vi": "tủ lạnh",
+    "ex": "The milk is in the fridge.",
+    "exVi": "Sữa ở trong tủ lạnh."
+   },
+   {
+    "w": "key",
+    "ipa": "/kiː/",
+    "pos": "n",
+    "vi": "chìa khóa",
+    "ex": "I can't find my key.",
+    "exVi": "Tôi không tìm thấy chìa khóa."
+   },
+   {
+    "w": "floor",
+    "ipa": "/flɔːr/",
+    "pos": "n",
+    "vi": "sàn nhà; tầng",
+    "ex": "I live on the third floor.",
+    "exVi": "Tôi sống ở tầng ba."
+   },
+   {
+    "w": "wall",
+    "ipa": "/wɔːl/",
+    "pos": "n",
+    "vi": "bức tường",
+    "ex": "The wall is white.",
+    "exVi": "Bức tường màu trắng."
+   },
+   {
+    "w": "clock",
+    "ipa": "/klɑːk/",
+    "pos": "n",
+    "vi": "đồng hồ (treo tường)",
+    "ex": "The clock says nine.",
+    "exVi": "Đồng hồ chỉ chín giờ."
+   },
+   {
+    "w": "cup",
+    "ipa": "/kʌp/",
+    "pos": "n",
+    "vi": "cái cốc, cái tách",
+    "ex": "I want a cup of tea.",
+    "exVi": "Tôi muốn một tách trà."
+   },
+   {
+    "w": "glass",
+    "ipa": "/ɡlæs/",
+    "pos": "n",
+    "vi": "cái ly; thủy tinh",
+    "ex": "A glass of water, please.",
+    "exVi": "Cho tôi một ly nước."
+   },
+   {
+    "w": "plate",
+    "ipa": "/pleɪt/",
+    "pos": "n",
+    "vi": "cái đĩa",
+    "ex": "Put the plate on the table.",
+    "exVi": "Đặt cái đĩa lên bàn."
+   },
+   {
+    "w": "bowl",
+    "ipa": "/boʊl/",
+    "pos": "n",
+    "vi": "cái bát",
+    "ex": "I eat a bowl of rice.",
+    "exVi": "Tôi ăn một bát cơm."
+   },
+   {
+    "w": "spoon",
+    "ipa": "/spuːn/",
+    "pos": "n",
+    "vi": "cái thìa",
+    "ex": "Can I have a spoon?",
+    "exVi": "Cho tôi xin một cái thìa."
+   },
+   {
+    "w": "chopsticks",
+    "ipa": "/ˈtʃɑːpstɪks/",
+    "pos": "n",
+    "vi": "đôi đũa",
+    "ex": "We eat with chopsticks.",
+    "exVi": "Chúng tôi ăn bằng đũa."
+   },
+   {
+    "w": "clean",
+    "ipa": "/kliːn/",
+    "pos": "v",
+    "vi": "dọn dẹp, lau chùi",
+    "ex": "I clean my room on Sunday.",
+    "exVi": "Tôi dọn phòng vào Chủ nhật."
+   },
+   {
+    "w": "garden",
+    "ipa": "/ˈɡɑːrdən/",
+    "pos": "n",
+    "vi": "khu vườn",
+    "ex": "My grandfather works in the garden.",
+    "exVi": "Ông tôi làm việc trong vườn."
+   },
+   {
+    "w": "sleep",
+    "ipa": "/sliːp/",
+    "pos": "v",
+    "vi": "ngủ",
+    "ex": "The baby sleeps a lot.",
+    "exVi": "Em bé ngủ nhiều."
+   },
+   {
+    "w": "open",
+    "ipa": "/ˈoʊpən/",
+    "pos": "v",
+    "vi": "mở",
+    "ex": "Open the door, please.",
+    "exVi": "Làm ơn mở cửa."
+   }
+  ]
+ },
+ {
+  "id": "clothes-shopping",
+  "name": "Quần áo & mua sắm",
+  "icon": "👕",
+  "words": [
+   {
+    "w": "clothes",
+    "ipa": "/kloʊðz/",
+    "pos": "n",
+    "vi": "quần áo",
+    "ex": "I buy new clothes for Tet.",
+    "exVi": "Tôi mua quần áo mới cho Tết."
+   },
+   {
+    "w": "shirt",
+    "ipa": "/ʃɜːrt/",
+    "pos": "n",
+    "vi": "áo sơ mi",
+    "ex": "He wears a white shirt.",
+    "exVi": "Anh ấy mặc áo sơ mi trắng."
+   },
+   {
+    "w": "T-shirt",
+    "ipa": "/ˈtiː ʃɜːrt/",
+    "pos": "n",
+    "vi": "áo phông",
+    "ex": "I like this blue T-shirt.",
+    "exVi": "Tôi thích chiếc áo phông xanh này."
+   },
+   {
+    "w": "pants",
+    "ipa": "/pænts/",
+    "pos": "n",
+    "vi": "quần dài",
+    "ex": "These pants are too long.",
+    "exVi": "Cái quần này quá dài."
+   },
+   {
+    "w": "jeans",
+    "ipa": "/dʒiːnz/",
+    "pos": "n",
+    "vi": "quần bò, quần jean",
+    "ex": "She often wears jeans.",
+    "exVi": "Cô ấy thường mặc quần bò."
+   },
+   {
+    "w": "dress",
+    "ipa": "/dres/",
+    "pos": "n",
+    "vi": "váy liền",
+    "ex": "She wears a red dress.",
+    "exVi": "Cô ấy mặc một chiếc váy đỏ."
+   },
+   {
+    "w": "skirt",
+    "ipa": "/skɜːrt/",
+    "pos": "n",
+    "vi": "chân váy",
+    "ex": "Her skirt is short.",
+    "exVi": "Chân váy của cô ấy ngắn."
+   },
+   {
+    "w": "shoes",
+    "ipa": "/ʃuːz/",
+    "pos": "n",
+    "vi": "giày",
+    "ex": "Take off your shoes, please.",
+    "exVi": "Làm ơn cởi giày ra."
+   },
+   {
+    "w": "hat",
+    "ipa": "/hæt/",
+    "pos": "n",
+    "vi": "mũ, nón",
+    "ex": "Wear a hat in the sun.",
+    "exVi": "Hãy đội mũ khi đi nắng."
+   },
+   {
+    "w": "jacket",
+    "ipa": "/ˈdʒækɪt/",
+    "pos": "n",
+    "vi": "áo khoác",
+    "ex": "It's cold. Wear a jacket.",
+    "exVi": "Trời lạnh. Hãy mặc áo khoác."
+   },
+   {
+    "w": "socks",
+    "ipa": "/sɑːks/",
+    "pos": "n",
+    "vi": "tất, vớ",
+    "ex": "I need new socks.",
+    "exVi": "Tôi cần tất mới."
+   },
+   {
+    "w": "bag",
+    "ipa": "/bæɡ/",
+    "pos": "n",
+    "vi": "túi, cặp",
+    "ex": "My bag is heavy.",
+    "exVi": "Túi của tôi nặng."
+   },
+   {
+    "w": "wear",
+    "ipa": "/wer/",
+    "pos": "v",
+    "vi": "mặc, đội, đeo",
+    "ex": "I wear glasses.",
+    "exVi": "Tôi đeo kính."
+   },
+   {
+    "w": "buy",
+    "ipa": "/baɪ/",
+    "pos": "v",
+    "vi": "mua",
+    "ex": "I buy food at the market.",
+    "exVi": "Tôi mua đồ ăn ở chợ."
+   },
+   {
+    "w": "sell",
+    "ipa": "/sel/",
+    "pos": "v",
+    "vi": "bán",
+    "ex": "They sell fruit here.",
+    "exVi": "Họ bán trái cây ở đây."
+   },
+   {
+    "w": "shop",
+    "ipa": "/ʃɑːp/",
+    "pos": "n",
+    "vi": "cửa hàng",
+    "ex": "The shop opens at nine.",
+    "exVi": "Cửa hàng mở cửa lúc chín giờ."
+   },
+   {
+    "w": "market",
+    "ipa": "/ˈmɑːrkɪt/",
+    "pos": "n",
+    "vi": "chợ",
+    "ex": "My mother goes to the market.",
+    "exVi": "Mẹ tôi đi chợ."
+   },
+   {
+    "w": "money",
+    "ipa": "/ˈmʌni/",
+    "pos": "n",
+    "vi": "tiền",
+    "ex": "I don't have much money.",
+    "exVi": "Tôi không có nhiều tiền."
+   },
+   {
+    "w": "price",
+    "ipa": "/praɪs/",
+    "pos": "n",
+    "vi": "giá cả",
+    "ex": "What is the price?",
+    "exVi": "Giá bao nhiêu?"
+   },
+   {
+    "w": "how much",
+    "ipa": "/ˌhaʊ ˈmʌtʃ/",
+    "pos": "phrase",
+    "vi": "bao nhiêu (tiền)",
+    "ex": "How much is this hat?",
+    "exVi": "Cái mũ này bao nhiêu tiền?"
+   },
+   {
+    "w": "cheap",
+    "ipa": "/tʃiːp/",
+    "pos": "adj",
+    "vi": "rẻ",
+    "ex": "This bag is cheap.",
+    "exVi": "Cái túi này rẻ."
+   },
+   {
+    "w": "expensive",
+    "ipa": "/ɪkˈspensɪv/",
+    "pos": "adj",
+    "vi": "đắt",
+    "ex": "That phone is too expensive.",
+    "exVi": "Điện thoại đó quá đắt."
+   },
+   {
+    "w": "size",
+    "ipa": "/saɪz/",
+    "pos": "n",
+    "vi": "kích cỡ, cỡ",
+    "ex": "What size do you wear?",
+    "exVi": "Bạn mặc cỡ nào?"
+   },
+   {
+    "w": "try on",
+    "ipa": "/ˌtraɪ ˈɑːn/",
+    "pos": "phrase",
+    "vi": "mặc thử",
+    "ex": "Can I try on this jacket?",
+    "exVi": "Tôi mặc thử áo khoác này được không?"
+   },
+   {
+    "w": "pay",
+    "ipa": "/peɪ/",
+    "pos": "v",
+    "vi": "trả tiền",
+    "ex": "Can I pay by card?",
+    "exVi": "Tôi trả bằng thẻ được không?"
+   },
+   {
+    "w": "cash",
+    "ipa": "/kæʃ/",
+    "pos": "n",
+    "vi": "tiền mặt",
+    "ex": "I pay in cash.",
+    "exVi": "Tôi trả bằng tiền mặt."
+   },
+   {
+    "w": "new",
+    "ipa": "/nuː/",
+    "pos": "adj",
+    "vi": "mới",
+    "ex": "I have a new phone.",
+    "exVi": "Tôi có điện thoại mới."
+   },
+   {
+    "w": "want",
+    "ipa": "/wɑːnt/",
+    "pos": "v",
+    "vi": "muốn",
+    "ex": "I want this one.",
+    "exVi": "Tôi muốn cái này."
+   },
+   {
+    "w": "need",
+    "ipa": "/niːd/",
+    "pos": "v",
+    "vi": "cần",
+    "ex": "We need more rice.",
+    "exVi": "Chúng ta cần thêm gạo."
+   },
+   {
+    "w": "customer",
+    "ipa": "/ˈkʌstəmər/",
+    "pos": "n",
+    "vi": "khách hàng",
+    "ex": "The customer wants a bag.",
+    "exVi": "Khách hàng muốn mua một cái túi."
+   }
+  ]
+ },
+ {
+  "id": "school",
+  "name": "Trường học & học tập",
+  "icon": "📚",
+  "words": [
+   {
+    "w": "school",
+    "ipa": "/skuːl/",
+    "pos": "n",
+    "vi": "trường học",
+    "ex": "My son goes to school by bike.",
+    "exVi": "Con trai tôi đi học bằng xe đạp."
+   },
+   {
+    "w": "teacher",
+    "ipa": "/ˈtiːtʃər/",
+    "pos": "n",
+    "vi": "giáo viên",
+    "ex": "Our teacher is very kind.",
+    "exVi": "Cô giáo của chúng tôi rất tốt bụng."
+   },
+   {
+    "w": "student",
+    "ipa": "/ˈstuːdənt/",
+    "pos": "n",
+    "vi": "học sinh, sinh viên",
+    "ex": "She is a good student.",
+    "exVi": "Cô ấy là một học sinh giỏi."
+   },
+   {
+    "w": "class",
+    "ipa": "/klæs/",
+    "pos": "n",
+    "vi": "lớp học",
+    "ex": "Our class has thirty students.",
+    "exVi": "Lớp chúng tôi có ba mươi học sinh."
+   },
+   {
+    "w": "classroom",
+    "ipa": "/ˈklæsruːm/",
+    "pos": "n",
+    "vi": "phòng học",
+    "ex": "The classroom is big.",
+    "exVi": "Phòng học rộng."
+   },
+   {
+    "w": "book",
+    "ipa": "/bʊk/",
+    "pos": "n",
+    "vi": "quyển sách",
+    "ex": "Open your book.",
+    "exVi": "Hãy mở sách ra."
+   },
+   {
+    "w": "notebook",
+    "ipa": "/ˈnoʊtbʊk/",
+    "pos": "n",
+    "vi": "quyển vở",
+    "ex": "Write it in your notebook.",
+    "exVi": "Hãy viết vào vở."
+   },
+   {
+    "w": "pen",
+    "ipa": "/pen/",
+    "pos": "n",
+    "vi": "bút",
+    "ex": "Can I borrow your pen?",
+    "exVi": "Tôi mượn bút của bạn được không?"
+   },
+   {
+    "w": "pencil",
+    "ipa": "/ˈpensəl/",
+    "pos": "n",
+    "vi": "bút chì",
+    "ex": "I draw with a pencil.",
+    "exVi": "Tôi vẽ bằng bút chì."
+   },
+   {
+    "w": "desk",
+    "ipa": "/desk/",
+    "pos": "n",
+    "vi": "bàn học, bàn làm việc",
+    "ex": "My desk is near the window.",
+    "exVi": "Bàn học của tôi ở gần cửa sổ."
+   },
+   {
+    "w": "board",
+    "ipa": "/bɔːrd/",
+    "pos": "n",
+    "vi": "cái bảng",
+    "ex": "Look at the board.",
+    "exVi": "Hãy nhìn lên bảng."
+   },
+   {
+    "w": "lesson",
+    "ipa": "/ˈlesən/",
+    "pos": "n",
+    "vi": "bài học",
+    "ex": "Today's lesson is easy.",
+    "exVi": "Bài học hôm nay dễ."
+   },
+   {
+    "w": "homework",
+    "ipa": "/ˈhoʊmwɜːrk/",
+    "pos": "n",
+    "vi": "bài tập về nhà",
+    "ex": "I do my homework after dinner.",
+    "exVi": "Tôi làm bài tập sau bữa tối."
+   },
+   {
+    "w": "test",
+    "ipa": "/test/",
+    "pos": "n",
+    "vi": "bài kiểm tra",
+    "ex": "We have a test tomorrow.",
+    "exVi": "Ngày mai chúng tôi có bài kiểm tra."
+   },
+   {
+    "w": "question",
+    "ipa": "/ˈkwestʃən/",
+    "pos": "n",
+    "vi": "câu hỏi",
+    "ex": "Can I ask a question?",
+    "exVi": "Tôi hỏi một câu được không?"
+   },
+   {
+    "w": "answer",
+    "ipa": "/ˈænsər/",
+    "pos": "n",
+    "vi": "câu trả lời",
+    "ex": "What is the answer?",
+    "exVi": "Câu trả lời là gì?"
+   },
+   {
+    "w": "learn",
+    "ipa": "/lɜːrn/",
+    "pos": "v",
+    "vi": "học",
+    "ex": "I learn English online.",
+    "exVi": "Tôi học tiếng Anh trực tuyến."
+   },
+   {
+    "w": "study",
+    "ipa": "/ˈstʌdi/",
+    "pos": "v",
+    "vi": "học, nghiên cứu",
+    "ex": "She studies hard.",
+    "exVi": "Cô ấy học chăm chỉ."
+   },
+   {
+    "w": "read",
+    "ipa": "/riːd/",
+    "pos": "v",
+    "vi": "đọc",
+    "ex": "I read a book every week.",
+    "exVi": "Tôi đọc một cuốn sách mỗi tuần."
+   },
+   {
+    "w": "write",
+    "ipa": "/raɪt/",
+    "pos": "v",
+    "vi": "viết",
+    "ex": "Write your name here.",
+    "exVi": "Hãy viết tên bạn ở đây."
+   },
+   {
+    "w": "listen",
+    "ipa": "/ˈlɪsən/",
+    "pos": "v",
+    "vi": "nghe",
+    "ex": "Listen to the teacher.",
+    "exVi": "Hãy nghe giáo viên."
+   },
+   {
+    "w": "ask",
+    "ipa": "/æsk/",
+    "pos": "v",
+    "vi": "hỏi",
+    "ex": "Don't be afraid to ask.",
+    "exVi": "Đừng ngại hỏi."
+   },
+   {
+    "w": "English",
+    "ipa": "/ˈɪŋɡlɪʃ/",
+    "pos": "n",
+    "vi": "tiếng Anh",
+    "ex": "English is not difficult.",
+    "exVi": "Tiếng Anh không khó."
+   },
+   {
+    "w": "word",
+    "ipa": "/wɜːrd/",
+    "pos": "n",
+    "vi": "từ",
+    "ex": "I learn ten new words a day.",
+    "exVi": "Mỗi ngày tôi học mười từ mới."
+   },
+   {
+    "w": "easy",
+    "ipa": "/ˈiːzi/",
+    "pos": "adj",
+    "vi": "dễ",
+    "ex": "This exercise is easy.",
+    "exVi": "Bài tập này dễ."
+   },
+   {
+    "w": "difficult",
+    "ipa": "/ˈdɪfɪkəlt/",
+    "pos": "adj",
+    "vi": "khó",
+    "ex": "This question is difficult.",
+    "exVi": "Câu hỏi này khó."
+   },
+   {
+    "w": "math",
+    "ipa": "/mæθ/",
+    "pos": "n",
+    "vi": "môn toán",
+    "ex": "I like math.",
+    "exVi": "Tôi thích môn toán."
+   },
+   {
+    "w": "dictionary",
+    "ipa": "/ˈdɪkʃəneri/",
+    "pos": "n",
+    "vi": "từ điển",
+    "ex": "Use a dictionary.",
+    "exVi": "Hãy dùng từ điển."
+   },
+   {
+    "w": "practice",
+    "ipa": "/ˈpræktɪs/",
+    "pos": "v",
+    "vi": "luyện tập",
+    "ex": "Practice speaking every day.",
+    "exVi": "Hãy luyện nói mỗi ngày."
+   },
+   {
+    "w": "mistake",
+    "ipa": "/mɪˈsteɪk/",
+    "pos": "n",
+    "vi": "lỗi sai",
+    "ex": "Everyone makes mistakes.",
+    "exVi": "Ai cũng mắc lỗi."
+   }
+  ]
+ },
+ {
+  "id": "jobs",
+  "name": "Công việc & nghề nghiệp",
+  "icon": "💼",
+  "words": [
+   {
+    "w": "job",
+    "ipa": "/dʒɑːb/",
+    "pos": "n",
+    "vi": "công việc, nghề",
+    "ex": "What is your job?",
+    "exVi": "Bạn làm nghề gì?"
+   },
+   {
+    "w": "work",
+    "ipa": "/wɜːrk/",
+    "pos": "v",
+    "vi": "làm việc",
+    "ex": "I work from Monday to Friday.",
+    "exVi": "Tôi làm việc từ thứ Hai đến thứ Sáu."
+   },
+   {
+    "w": "doctor",
+    "ipa": "/ˈdɑːktər/",
+    "pos": "n",
+    "vi": "bác sĩ",
+    "ex": "You should see a doctor.",
+    "exVi": "Bạn nên đi khám bác sĩ."
+   },
+   {
+    "w": "nurse",
+    "ipa": "/nɜːrs/",
+    "pos": "n",
+    "vi": "y tá",
+    "ex": "My sister is a nurse.",
+    "exVi": "Chị tôi là y tá."
+   },
+   {
+    "w": "engineer",
+    "ipa": "/ˌendʒɪˈnɪr/",
+    "pos": "n",
+    "vi": "kỹ sư",
+    "ex": "He is an engineer.",
+    "exVi": "Anh ấy là kỹ sư."
+   },
+   {
+    "w": "driver",
+    "ipa": "/ˈdraɪvər/",
+    "pos": "n",
+    "vi": "tài xế",
+    "ex": "The bus driver is friendly.",
+    "exVi": "Bác tài xe buýt thân thiện."
+   },
+   {
+    "w": "farmer",
+    "ipa": "/ˈfɑːrmər/",
+    "pos": "n",
+    "vi": "nông dân",
+    "ex": "My grandfather is a farmer.",
+    "exVi": "Ông tôi là nông dân."
+   },
+   {
+    "w": "worker",
+    "ipa": "/ˈwɜːrkər/",
+    "pos": "n",
+    "vi": "công nhân",
+    "ex": "She is a factory worker.",
+    "exVi": "Cô ấy là công nhân nhà máy."
+   },
+   {
+    "w": "chef",
+    "ipa": "/ʃef/",
+    "pos": "n",
+    "vi": "đầu bếp",
+    "ex": "The chef cooks delicious food.",
+    "exVi": "Đầu bếp nấu đồ ăn ngon."
+   },
+   {
+    "w": "police officer",
+    "ipa": "/pəˈliːs ˌɔːfɪsər/",
+    "pos": "n",
+    "vi": "cảnh sát",
+    "ex": "The police officer helps people.",
+    "exVi": "Người cảnh sát giúp đỡ mọi người."
+   },
+   {
+    "w": "office",
+    "ipa": "/ˈɔːfɪs/",
+    "pos": "n",
+    "vi": "văn phòng",
+    "ex": "Our office is on the fifth floor.",
+    "exVi": "Văn phòng chúng tôi ở tầng năm."
+   },
+   {
+    "w": "company",
+    "ipa": "/ˈkʌmpəni/",
+    "pos": "n",
+    "vi": "công ty",
+    "ex": "I work for a big company.",
+    "exVi": "Tôi làm việc cho một công ty lớn."
+   },
+   {
+    "w": "boss",
+    "ipa": "/bɔːs/",
+    "pos": "n",
+    "vi": "sếp, ông chủ",
+    "ex": "My boss is very strict.",
+    "exVi": "Sếp tôi rất nghiêm khắc."
+   },
+   {
+    "w": "colleague",
+    "ipa": "/ˈkɑːliːɡ/",
+    "pos": "n",
+    "vi": "đồng nghiệp",
+    "ex": "My colleagues are friendly.",
+    "exVi": "Đồng nghiệp của tôi thân thiện."
+   },
+   {
+    "w": "salary",
+    "ipa": "/ˈsæləri/",
+    "pos": "n",
+    "vi": "tiền lương",
+    "ex": "My salary is not high.",
+    "exVi": "Lương của tôi không cao."
+   },
+   {
+    "w": "busy",
+    "ipa": "/ˈbɪzi/",
+    "pos": "adj",
+    "vi": "bận",
+    "ex": "Are you busy tomorrow?",
+    "exVi": "Ngày mai bạn có bận không?"
+   },
+   {
+    "w": "meeting",
+    "ipa": "/ˈmiːtɪŋ/",
+    "pos": "n",
+    "vi": "cuộc họp",
+    "ex": "We have a meeting at ten.",
+    "exVi": "Chúng tôi có cuộc họp lúc mười giờ."
+   },
+   {
+    "w": "computer",
+    "ipa": "/kəmˈpjuːtər/",
+    "pos": "n",
+    "vi": "máy tính",
+    "ex": "I use a computer at work.",
+    "exVi": "Tôi dùng máy tính ở chỗ làm."
+   },
+   {
+    "w": "phone",
+    "ipa": "/foʊn/",
+    "pos": "n",
+    "vi": "điện thoại",
+    "ex": "Turn off your phone, please.",
+    "exVi": "Làm ơn tắt điện thoại."
+   },
+   {
+    "w": "email",
+    "ipa": "/ˈiːmeɪl/",
+    "pos": "n",
+    "vi": "thư điện tử, email",
+    "ex": "I send emails every day.",
+    "exVi": "Tôi gửi email mỗi ngày."
+   },
+   {
+    "w": "factory",
+    "ipa": "/ˈfæktəri/",
+    "pos": "n",
+    "vi": "nhà máy",
+    "ex": "He works in a factory.",
+    "exVi": "Anh ấy làm việc trong nhà máy."
+   },
+   {
+    "w": "business",
+    "ipa": "/ˈbɪznəs/",
+    "pos": "n",
+    "vi": "việc kinh doanh",
+    "ex": "She has her own business.",
+    "exVi": "Cô ấy có công việc kinh doanh riêng."
+   },
+   {
+    "w": "start",
+    "ipa": "/stɑːrt/",
+    "pos": "v",
+    "vi": "bắt đầu",
+    "ex": "Work starts at eight.",
+    "exVi": "Công việc bắt đầu lúc tám giờ."
+   },
+   {
+    "w": "finish",
+    "ipa": "/ˈfɪnɪʃ/",
+    "pos": "v",
+    "vi": "kết thúc, làm xong",
+    "ex": "I finish work at five.",
+    "exVi": "Tôi tan làm lúc năm giờ."
+   },
+   {
+    "w": "interview",
+    "ipa": "/ˈɪntərvjuː/",
+    "pos": "n",
+    "vi": "buổi phỏng vấn",
+    "ex": "I have a job interview today.",
+    "exVi": "Hôm nay tôi có buổi phỏng vấn xin việc."
+   },
+   {
+    "w": "manager",
+    "ipa": "/ˈmænɪdʒər/",
+    "pos": "n",
+    "vi": "người quản lý",
+    "ex": "She is a hotel manager.",
+    "exVi": "Cô ấy là quản lý khách sạn."
+   },
+   {
+    "w": "waiter",
+    "ipa": "/ˈweɪtər/",
+    "pos": "n",
+    "vi": "người phục vụ, bồi bàn",
+    "ex": "The waiter brings the menu.",
+    "exVi": "Người phục vụ mang thực đơn đến."
+   },
+   {
+    "w": "lawyer",
+    "ipa": "/ˈlɔːjər/",
+    "pos": "n",
+    "vi": "luật sư",
+    "ex": "His father is a lawyer.",
+    "exVi": "Bố anh ấy là luật sư."
+   },
+   {
+    "w": "hard-working",
+    "ipa": "/ˌhɑːrdˈwɜːrkɪŋ/",
+    "pos": "adj",
+    "vi": "chăm chỉ",
+    "ex": "She is very hard-working.",
+    "exVi": "Cô ấy rất chăm chỉ."
+   },
+   {
+    "w": "call",
+    "ipa": "/kɔːl/",
+    "pos": "v",
+    "vi": "gọi điện",
+    "ex": "I call my customers every day.",
+    "exVi": "Tôi gọi cho khách hàng mỗi ngày."
+   }
+  ]
+ },
+ {
+  "id": "verbs-1",
+  "name": "Động từ thông dụng (phần 1)",
+  "icon": "🏃",
+  "words": [
+   {
+    "w": "be",
+    "ipa": "/biː/",
+    "pos": "v",
+    "vi": "thì, là, ở (quá khứ: was/were)",
+    "ex": "I am a nurse.",
+    "exVi": "Tôi là y tá."
+   },
+   {
+    "w": "have",
+    "ipa": "/hæv/",
+    "pos": "v",
+    "vi": "có (quá khứ: had)",
+    "ex": "I have two kids.",
+    "exVi": "Tôi có hai đứa con."
+   },
+   {
+    "w": "do",
+    "ipa": "/duː/",
+    "pos": "v",
+    "vi": "làm (quá khứ: did)",
+    "ex": "What do you do?",
+    "exVi": "Bạn làm nghề gì?"
+   },
+   {
+    "w": "make",
+    "ipa": "/meɪk/",
+    "pos": "v",
+    "vi": "làm, tạo ra (quá khứ: made)",
+    "ex": "She makes a cake.",
+    "exVi": "Cô ấy làm một cái bánh."
+   },
+   {
+    "w": "get",
+    "ipa": "/ɡɛt/",
+    "pos": "v",
+    "vi": "nhận được, lấy (quá khứ: got)",
+    "ex": "I get up at six.",
+    "exVi": "Tôi thức dậy lúc sáu giờ."
+   },
+   {
+    "w": "come",
+    "ipa": "/kʌm/",
+    "pos": "v",
+    "vi": "đến, tới (quá khứ: came)",
+    "ex": "Come here, please.",
+    "exVi": "Làm ơn lại đây."
+   },
+   {
+    "w": "see",
+    "ipa": "/siː/",
+    "pos": "v",
+    "vi": "nhìn thấy (quá khứ: saw)",
+    "ex": "I see a bird.",
+    "exVi": "Tôi thấy một con chim."
+   },
+   {
+    "w": "know",
+    "ipa": "/noʊ/",
+    "pos": "v",
+    "vi": "biết (quá khứ: knew)",
+    "ex": "I know his name.",
+    "exVi": "Tôi biết tên anh ấy."
+   },
+   {
+    "w": "think",
+    "ipa": "/θɪŋk/",
+    "pos": "v",
+    "vi": "nghĩ (quá khứ: thought)",
+    "ex": "I think it is good.",
+    "exVi": "Tôi nghĩ nó tốt."
+   },
+   {
+    "w": "take",
+    "ipa": "/teɪk/",
+    "pos": "v",
+    "vi": "lấy, cầm, mang đi (quá khứ: took)",
+    "ex": "Take this bag.",
+    "exVi": "Cầm cái túi này đi."
+   },
+   {
+    "w": "give",
+    "ipa": "/ɡɪv/",
+    "pos": "v",
+    "vi": "cho, đưa (quá khứ: gave)",
+    "ex": "Give me the pen.",
+    "exVi": "Đưa tôi cây bút."
+   },
+   {
+    "w": "say",
+    "ipa": "/seɪ/",
+    "pos": "v",
+    "vi": "nói (quá khứ: said)",
+    "ex": "Say it again, please.",
+    "exVi": "Làm ơn nói lại lần nữa."
+   },
+   {
+    "w": "tell",
+    "ipa": "/tɛl/",
+    "pos": "v",
+    "vi": "kể, bảo (quá khứ: told)",
+    "ex": "Tell me your name.",
+    "exVi": "Hãy cho tôi biết tên bạn."
+   },
+   {
+    "w": "like",
+    "ipa": "/laɪk/",
+    "pos": "v",
+    "vi": "thích",
+    "ex": "I like coffee.",
+    "exVi": "Tôi thích cà phê."
+   },
+   {
+    "w": "use",
+    "ipa": "/juːz/",
+    "pos": "v",
+    "vi": "sử dụng, dùng",
+    "ex": "Can I use your phone?",
+    "exVi": "Tôi dùng điện thoại của bạn được không?"
+   },
+   {
+    "w": "find",
+    "ipa": "/faɪnd/",
+    "pos": "v",
+    "vi": "tìm thấy (quá khứ: found)",
+    "ex": "I can't find my keys.",
+    "exVi": "Tôi không tìm thấy chìa khóa."
+   },
+   {
+    "w": "look",
+    "ipa": "/lʊk/",
+    "pos": "v",
+    "vi": "nhìn",
+    "ex": "Look at the board.",
+    "exVi": "Hãy nhìn lên bảng."
+   },
+   {
+    "w": "try",
+    "ipa": "/traɪ/",
+    "pos": "v",
+    "vi": "thử, cố gắng",
+    "ex": "Try again.",
+    "exVi": "Hãy thử lại."
+   }
+  ]
+ },
+ {
+  "id": "verbs-2",
+  "name": "Động từ thông dụng (phần 2)",
+  "icon": "🛠️",
+  "words": [
+   {
+    "w": "close",
+    "ipa": "/kloʊz/",
+    "pos": "v",
+    "vi": "đóng",
+    "ex": "Close the window.",
+    "exVi": "Đóng cửa sổ lại."
+   },
+   {
+    "w": "wait",
+    "ipa": "/weɪt/",
+    "pos": "v",
+    "vi": "chờ, đợi",
+    "ex": "Please wait a minute.",
+    "exVi": "Vui lòng chờ một phút."
+   },
+   {
+    "w": "walk",
+    "ipa": "/wɔːk/",
+    "pos": "v",
+    "vi": "đi bộ",
+    "ex": "I walk to the market.",
+    "exVi": "Tôi đi bộ ra chợ."
+   },
+   {
+    "w": "run",
+    "ipa": "/rʌn/",
+    "pos": "v",
+    "vi": "chạy (quá khứ: ran)",
+    "ex": "He runs every morning.",
+    "exVi": "Anh ấy chạy bộ mỗi sáng."
+   },
+   {
+    "w": "sit",
+    "ipa": "/sɪt/",
+    "pos": "v",
+    "vi": "ngồi (quá khứ: sat)",
+    "ex": "Sit down, please.",
+    "exVi": "Mời ngồi."
+   },
+   {
+    "w": "stand",
+    "ipa": "/stænd/",
+    "pos": "v",
+    "vi": "đứng (quá khứ: stood)",
+    "ex": "Please stand up.",
+    "exVi": "Vui lòng đứng dậy."
+   },
+   {
+    "w": "play",
+    "ipa": "/pleɪ/",
+    "pos": "v",
+    "vi": "chơi",
+    "ex": "The kids play outside.",
+    "exVi": "Bọn trẻ chơi ở ngoài."
+   },
+   {
+    "w": "watch",
+    "ipa": "/wɑːtʃ/",
+    "pos": "v",
+    "vi": "xem",
+    "ex": "We watch TV at night.",
+    "exVi": "Chúng tôi xem TV vào buổi tối."
+   },
+   {
+    "w": "wash",
+    "ipa": "/wɑːʃ/",
+    "pos": "v",
+    "vi": "rửa, giặt",
+    "ex": "Wash your hands.",
+    "exVi": "Hãy rửa tay."
+   },
+   {
+    "w": "drive",
+    "ipa": "/draɪv/",
+    "pos": "v",
+    "vi": "lái xe (quá khứ: drove)",
+    "ex": "Can you drive a car?",
+    "exVi": "Bạn có biết lái ô tô không?"
+   },
+   {
+    "w": "send",
+    "ipa": "/sɛnd/",
+    "pos": "v",
+    "vi": "gửi (quá khứ: sent)",
+    "ex": "Send me a message.",
+    "exVi": "Gửi tin nhắn cho tôi nhé."
+   },
+   {
+    "w": "bring",
+    "ipa": "/brɪŋ/",
+    "pos": "v",
+    "vi": "mang đến (quá khứ: brought)",
+    "ex": "Bring your ID card.",
+    "exVi": "Mang theo căn cước của bạn."
+   },
+   {
+    "w": "carry",
+    "ipa": "/ˈkæri/",
+    "pos": "v",
+    "vi": "mang, xách",
+    "ex": "I carry a heavy bag.",
+    "exVi": "Tôi xách một cái túi nặng."
+   },
+   {
+    "w": "put",
+    "ipa": "/pʊt/",
+    "pos": "v",
+    "vi": "đặt, để (quá khứ: put)",
+    "ex": "Put it on the table.",
+    "exVi": "Đặt nó lên bàn."
+   },
+   {
+    "w": "leave",
+    "ipa": "/liːv/",
+    "pos": "v",
+    "vi": "rời đi (quá khứ: left)",
+    "ex": "I leave at seven.",
+    "exVi": "Tôi rời đi lúc bảy giờ."
+   },
+   {
+    "w": "stop",
+    "ipa": "/stɑːp/",
+    "pos": "v",
+    "vi": "dừng lại",
+    "ex": "Stop the car here.",
+    "exVi": "Dừng xe ở đây."
+   },
+   {
+    "w": "remember",
+    "ipa": "/rɪˈmɛmbɚ/",
+    "pos": "v",
+    "vi": "nhớ",
+    "ex": "I remember your face.",
+    "exVi": "Tôi nhớ khuôn mặt bạn."
+   },
+   {
+    "w": "forget",
+    "ipa": "/fɚˈɡɛt/",
+    "pos": "v",
+    "vi": "quên (quá khứ: forgot)",
+    "ex": "Don't forget your keys.",
+    "exVi": "Đừng quên chìa khóa."
+   },
+   {
+    "w": "choose",
+    "ipa": "/tʃuːz/",
+    "pos": "v",
+    "vi": "chọn (quá khứ: chose)",
+    "ex": "Choose one color.",
+    "exVi": "Hãy chọn một màu."
+   }
+  ]
+ },
+ {
+  "id": "adjectives",
+  "name": "Tính từ miêu tả",
+  "icon": "📏",
+  "words": [
+   {
+    "w": "good",
+    "ipa": "/ɡʊd/",
+    "pos": "adj",
+    "vi": "tốt, giỏi",
+    "ex": "This is a good idea.",
+    "exVi": "Đây là một ý hay."
+   },
+   {
+    "w": "bad",
+    "ipa": "/bæd/",
+    "pos": "adj",
+    "vi": "xấu, tệ",
+    "ex": "The traffic is bad today.",
+    "exVi": "Hôm nay giao thông tệ quá."
+   },
+   {
+    "w": "hot",
+    "ipa": "/hɑːt/",
+    "pos": "adj",
+    "vi": "nóng",
+    "ex": "The soup is hot.",
+    "exVi": "Món súp nóng."
+   },
+   {
+    "w": "fast",
+    "ipa": "/fæst/",
+    "pos": "adj",
+    "vi": "nhanh",
+    "ex": "This train is fast.",
+    "exVi": "Chuyến tàu này nhanh."
+   },
+   {
+    "w": "slow",
+    "ipa": "/sloʊ/",
+    "pos": "adj",
+    "vi": "chậm",
+    "ex": "The internet is slow.",
+    "exVi": "Mạng internet chậm."
+   },
+   {
+    "w": "dirty",
+    "ipa": "/ˈdɝːti/",
+    "pos": "adj",
+    "vi": "bẩn",
+    "ex": "My shoes are dirty.",
+    "exVi": "Giày tôi bị bẩn."
+   },
+   {
+    "w": "full",
+    "ipa": "/fʊl/",
+    "pos": "adj",
+    "vi": "đầy, no",
+    "ex": "The bus is full.",
+    "exVi": "Xe buýt đã đầy."
+   },
+   {
+    "w": "empty",
+    "ipa": "/ˈɛmpti/",
+    "pos": "adj",
+    "vi": "trống, rỗng",
+    "ex": "The bottle is empty.",
+    "exVi": "Cái chai rỗng."
+   },
+   {
+    "w": "free",
+    "ipa": "/friː/",
+    "pos": "adj",
+    "vi": "rảnh; miễn phí",
+    "ex": "Are you free tonight?",
+    "exVi": "Tối nay bạn rảnh không?"
+   },
+   {
+    "w": "heavy",
+    "ipa": "/ˈhɛvi/",
+    "pos": "adj",
+    "vi": "nặng",
+    "ex": "This box is heavy.",
+    "exVi": "Cái hộp này nặng."
+   },
+   {
+    "w": "rich",
+    "ipa": "/rɪtʃ/",
+    "pos": "adj",
+    "vi": "giàu",
+    "ex": "He is a rich man.",
+    "exVi": "Ông ấy là người giàu."
+   },
+   {
+    "w": "poor",
+    "ipa": "/pʊr/",
+    "pos": "adj",
+    "vi": "nghèo",
+    "ex": "They are poor but happy.",
+    "exVi": "Họ nghèo nhưng hạnh phúc."
+   },
+   {
+    "w": "strong",
+    "ipa": "/strɔːŋ/",
+    "pos": "adj",
+    "vi": "khỏe, mạnh",
+    "ex": "He is very strong.",
+    "exVi": "Anh ấy rất khỏe."
+   },
+   {
+    "w": "important",
+    "ipa": "/ɪmˈpɔːrtənt/",
+    "pos": "adj",
+    "vi": "quan trọng",
+    "ex": "This is very important.",
+    "exVi": "Việc này rất quan trọng."
+   }
+  ]
+ },
+ {
+  "id": "feelings",
+  "name": "Cảm xúc & tính cách",
+  "icon": "😊",
+  "words": [
+   {
+    "w": "happy",
+    "ipa": "/ˈhæpi/",
+    "pos": "adj",
+    "vi": "vui, hạnh phúc",
+    "ex": "I am happy today.",
+    "exVi": "Hôm nay tôi vui."
+   },
+   {
+    "w": "sad",
+    "ipa": "/sæd/",
+    "pos": "adj",
+    "vi": "buồn",
+    "ex": "Why are you sad?",
+    "exVi": "Sao bạn buồn vậy?"
+   },
+   {
+    "w": "angry",
+    "ipa": "/ˈæŋɡri/",
+    "pos": "adj",
+    "vi": "tức giận",
+    "ex": "My boss is angry.",
+    "exVi": "Sếp tôi đang tức giận."
+   },
+   {
+    "w": "bored",
+    "ipa": "/bɔːrd/",
+    "pos": "adj",
+    "vi": "chán",
+    "ex": "The kids are bored.",
+    "exVi": "Bọn trẻ thấy chán."
+   },
+   {
+    "w": "excited",
+    "ipa": "/ɪkˈsaɪtɪd/",
+    "pos": "adj",
+    "vi": "hào hứng, háo hức",
+    "ex": "I am excited about the trip.",
+    "exVi": "Tôi rất háo hức về chuyến đi."
+   },
+   {
+    "w": "afraid",
+    "ipa": "/əˈfreɪd/",
+    "pos": "adj",
+    "vi": "sợ",
+    "ex": "She is afraid of dogs.",
+    "exVi": "Cô ấy sợ chó."
+   },
+   {
+    "w": "worried",
+    "ipa": "/ˈwɝːid/",
+    "pos": "adj",
+    "vi": "lo lắng",
+    "ex": "Don't be worried.",
+    "exVi": "Đừng lo lắng."
+   },
+   {
+    "w": "nervous",
+    "ipa": "/ˈnɝːvəs/",
+    "pos": "adj",
+    "vi": "hồi hộp, căng thẳng",
+    "ex": "I am nervous before the test.",
+    "exVi": "Tôi hồi hộp trước bài kiểm tra."
+   },
+   {
+    "w": "surprised",
+    "ipa": "/sɚˈpraɪzd/",
+    "pos": "adj",
+    "vi": "ngạc nhiên",
+    "ex": "I am surprised to see you.",
+    "exVi": "Tôi ngạc nhiên khi gặp bạn."
+   },
+   {
+    "w": "calm",
+    "ipa": "/kɑːm/",
+    "pos": "adj",
+    "vi": "bình tĩnh",
+    "ex": "Stay calm, please.",
+    "exVi": "Hãy bình tĩnh."
+   },
+   {
+    "w": "lonely",
+    "ipa": "/ˈloʊnli/",
+    "pos": "adj",
+    "vi": "cô đơn",
+    "ex": "He feels lonely.",
+    "exVi": "Anh ấy cảm thấy cô đơn."
+   },
+   {
+    "w": "proud",
+    "ipa": "/praʊd/",
+    "pos": "adj",
+    "vi": "tự hào",
+    "ex": "I am proud of you.",
+    "exVi": "Tôi tự hào về bạn."
+   },
+   {
+    "w": "friendly",
+    "ipa": "/ˈfrɛndli/",
+    "pos": "adj",
+    "vi": "thân thiện",
+    "ex": "Our neighbors are friendly.",
+    "exVi": "Hàng xóm của chúng tôi thân thiện."
+   },
+   {
+    "w": "kind",
+    "ipa": "/kaɪnd/",
+    "pos": "adj",
+    "vi": "tốt bụng",
+    "ex": "She is very kind.",
+    "exVi": "Cô ấy rất tốt bụng."
+   },
+   {
+    "w": "funny",
+    "ipa": "/ˈfʌni/",
+    "pos": "adj",
+    "vi": "hài hước, buồn cười",
+    "ex": "He is a funny man.",
+    "exVi": "Anh ấy là người hài hước."
+   },
+   {
+    "w": "shy",
+    "ipa": "/ʃaɪ/",
+    "pos": "adj",
+    "vi": "nhút nhát, ngại",
+    "ex": "My daughter is shy.",
+    "exVi": "Con gái tôi nhút nhát."
+   },
+   {
+    "w": "lazy",
+    "ipa": "/ˈleɪzi/",
+    "pos": "adj",
+    "vi": "lười",
+    "ex": "Don't be lazy.",
+    "exVi": "Đừng lười biếng."
+   },
+   {
+    "w": "smart",
+    "ipa": "/smɑːrt/",
+    "pos": "adj",
+    "vi": "thông minh",
+    "ex": "Your son is smart.",
+    "exVi": "Con trai bạn thông minh."
+   },
+   {
+    "w": "honest",
+    "ipa": "/ˈɑːnɪst/",
+    "pos": "adj",
+    "vi": "trung thực",
+    "ex": "He is an honest man.",
+    "exVi": "Anh ấy là người trung thực."
+   },
+   {
+    "w": "polite",
+    "ipa": "/pəˈlaɪt/",
+    "pos": "adj",
+    "vi": "lịch sự",
+    "ex": "Please be polite.",
+    "exVi": "Hãy lịch sự nhé."
+   },
+   {
+    "w": "patient",
+    "ipa": "/ˈpeɪʃənt/",
+    "pos": "adj",
+    "vi": "kiên nhẫn",
+    "ex": "A good teacher is patient.",
+    "exVi": "Một giáo viên tốt thì kiên nhẫn."
+   },
+   {
+    "w": "brave",
+    "ipa": "/breɪv/",
+    "pos": "adj",
+    "vi": "dũng cảm",
+    "ex": "You are very brave.",
+    "exVi": "Bạn rất dũng cảm."
+   },
+   {
+    "w": "careful",
+    "ipa": "/ˈkɛrfəl/",
+    "pos": "adj",
+    "vi": "cẩn thận",
+    "ex": "Be careful on the road.",
+    "exVi": "Hãy cẩn thận khi đi đường."
+   },
+   {
+    "w": "quiet",
+    "ipa": "/ˈkwaɪət/",
+    "pos": "adj",
+    "vi": "yên lặng, ít nói",
+    "ex": "He is a quiet person.",
+    "exVi": "Anh ấy là người ít nói."
+   }
+  ]
+ },
+ {
+  "id": "weather-nature",
+  "name": "Thời tiết & thiên nhiên",
+  "icon": "🌦️",
+  "words": [
+   {
+    "w": "weather",
+    "ipa": "/ˈwɛðɚ/",
+    "pos": "n",
+    "vi": "thời tiết",
+    "ex": "How is the weather today?",
+    "exVi": "Thời tiết hôm nay thế nào?"
+   },
+   {
+    "w": "sun",
+    "ipa": "/sʌn/",
+    "pos": "n",
+    "vi": "mặt trời",
+    "ex": "The sun is very hot.",
+    "exVi": "Mặt trời rất nóng."
+   },
+   {
+    "w": "rain",
+    "ipa": "/reɪn/",
+    "pos": "n",
+    "vi": "mưa",
+    "ex": "I like the rain.",
+    "exVi": "Tôi thích mưa."
+   },
+   {
+    "w": "wind",
+    "ipa": "/wɪnd/",
+    "pos": "n",
+    "vi": "gió",
+    "ex": "The wind is strong today.",
+    "exVi": "Hôm nay gió mạnh."
+   },
+   {
+    "w": "cloud",
+    "ipa": "/klaʊd/",
+    "pos": "n",
+    "vi": "mây",
+    "ex": "Look at that big cloud.",
+    "exVi": "Nhìn đám mây lớn kia kìa."
+   },
+   {
+    "w": "snow",
+    "ipa": "/snoʊ/",
+    "pos": "n",
+    "vi": "tuyết",
+    "ex": "There is no snow in Saigon.",
+    "exVi": "Ở Sài Gòn không có tuyết."
+   },
+   {
+    "w": "storm",
+    "ipa": "/stɔːrm/",
+    "pos": "n",
+    "vi": "bão",
+    "ex": "A big storm is coming.",
+    "exVi": "Một cơn bão lớn đang đến."
+   },
+   {
+    "w": "sunny",
+    "ipa": "/ˈsʌni/",
+    "pos": "adj",
+    "vi": "có nắng",
+    "ex": "It is sunny today.",
+    "exVi": "Hôm nay trời nắng."
+   },
+   {
+    "w": "rainy",
+    "ipa": "/ˈreɪni/",
+    "pos": "adj",
+    "vi": "có mưa",
+    "ex": "It is a rainy morning.",
+    "exVi": "Đó là một buổi sáng mưa."
+   },
+   {
+    "w": "windy",
+    "ipa": "/ˈwɪndi/",
+    "pos": "adj",
+    "vi": "có gió",
+    "ex": "It is windy outside.",
+    "exVi": "Ngoài trời có gió."
+   },
+   {
+    "w": "cloudy",
+    "ipa": "/ˈklaʊdi/",
+    "pos": "adj",
+    "vi": "nhiều mây",
+    "ex": "The sky is cloudy.",
+    "exVi": "Bầu trời nhiều mây."
+   },
+   {
+    "w": "warm",
+    "ipa": "/wɔːrm/",
+    "pos": "adj",
+    "vi": "ấm áp",
+    "ex": "Spring is warm.",
+    "exVi": "Mùa xuân ấm áp."
+   },
+   {
+    "w": "cool",
+    "ipa": "/kuːl/",
+    "pos": "adj",
+    "vi": "mát mẻ",
+    "ex": "It is cool in Dalat.",
+    "exVi": "Ở Đà Lạt trời mát."
+   },
+   {
+    "w": "temperature",
+    "ipa": "/ˈtɛmpɚətʃɚ/",
+    "pos": "n",
+    "vi": "nhiệt độ",
+    "ex": "The temperature is 35 degrees.",
+    "exVi": "Nhiệt độ là 35 độ."
+   },
+   {
+    "w": "season",
+    "ipa": "/ˈsiːzən/",
+    "pos": "n",
+    "vi": "mùa",
+    "ex": "What is your favorite season?",
+    "exVi": "Mùa yêu thích của bạn là gì?"
+   },
+   {
+    "w": "spring",
+    "ipa": "/sprɪŋ/",
+    "pos": "n",
+    "vi": "mùa xuân",
+    "ex": "Tet is in spring.",
+    "exVi": "Tết vào mùa xuân."
+   },
+   {
+    "w": "summer",
+    "ipa": "/ˈsʌmɚ/",
+    "pos": "n",
+    "vi": "mùa hè",
+    "ex": "Summer is very hot.",
+    "exVi": "Mùa hè rất nóng."
+   },
+   {
+    "w": "autumn",
+    "ipa": "/ˈɔːtəm/",
+    "pos": "n",
+    "vi": "mùa thu",
+    "ex": "Hanoi is beautiful in autumn.",
+    "exVi": "Hà Nội đẹp vào mùa thu."
+   },
+   {
+    "w": "winter",
+    "ipa": "/ˈwɪntɚ/",
+    "pos": "n",
+    "vi": "mùa đông",
+    "ex": "Winter is cold in the north.",
+    "exVi": "Mùa đông ở miền Bắc lạnh."
+   },
+   {
+    "w": "sky",
+    "ipa": "/skaɪ/",
+    "pos": "n",
+    "vi": "bầu trời",
+    "ex": "The sky is blue.",
+    "exVi": "Bầu trời màu xanh."
+   },
+   {
+    "w": "sea",
+    "ipa": "/siː/",
+    "pos": "n",
+    "vi": "biển",
+    "ex": "We swim in the sea.",
+    "exVi": "Chúng tôi bơi ở biển."
+   },
+   {
+    "w": "river",
+    "ipa": "/ˈrɪvɚ/",
+    "pos": "n",
+    "vi": "sông",
+    "ex": "The river is very long.",
+    "exVi": "Con sông rất dài."
+   },
+   {
+    "w": "mountain",
+    "ipa": "/ˈmaʊntən/",
+    "pos": "n",
+    "vi": "núi",
+    "ex": "We climb the mountain.",
+    "exVi": "Chúng tôi leo núi."
+   },
+   {
+    "w": "tree",
+    "ipa": "/triː/",
+    "pos": "n",
+    "vi": "cây",
+    "ex": "There is a big tree here.",
+    "exVi": "Ở đây có một cái cây lớn."
+   },
+   {
+    "w": "flower",
+    "ipa": "/ˈflaʊɚ/",
+    "pos": "n",
+    "vi": "hoa",
+    "ex": "She likes flowers.",
+    "exVi": "Cô ấy thích hoa."
+   },
+   {
+    "w": "forest",
+    "ipa": "/ˈfɔːrɪst/",
+    "pos": "n",
+    "vi": "rừng",
+    "ex": "Tigers live in the forest.",
+    "exVi": "Hổ sống trong rừng."
+   },
+   {
+    "w": "beach",
+    "ipa": "/biːtʃ/",
+    "pos": "n",
+    "vi": "bãi biển",
+    "ex": "Let's go to the beach.",
+    "exVi": "Mình đi biển nhé."
+   },
+   {
+    "w": "lake",
+    "ipa": "/leɪk/",
+    "pos": "n",
+    "vi": "hồ",
+    "ex": "There is a lake in the park.",
+    "exVi": "Có một cái hồ trong công viên."
+   },
+   {
+    "w": "island",
+    "ipa": "/ˈaɪlənd/",
+    "pos": "n",
+    "vi": "hòn đảo",
+    "ex": "Phu Quoc is a big island.",
+    "exVi": "Phú Quốc là một hòn đảo lớn."
+   },
+   {
+    "w": "grass",
+    "ipa": "/ɡræs/",
+    "pos": "n",
+    "vi": "cỏ",
+    "ex": "The grass is green.",
+    "exVi": "Cỏ màu xanh."
+   }
+  ]
+ },
+ {
+  "id": "animals",
+  "name": "Động vật",
+  "icon": "🐶",
+  "words": [
+   {
+    "w": "dog",
+    "ipa": "/dɔːɡ/",
+    "pos": "n",
+    "vi": "con chó",
+    "ex": "I have a small dog.",
+    "exVi": "Tôi có một con chó nhỏ."
+   },
+   {
+    "w": "cat",
+    "ipa": "/kæt/",
+    "pos": "n",
+    "vi": "con mèo",
+    "ex": "The cat is sleeping.",
+    "exVi": "Con mèo đang ngủ."
+   },
+   {
+    "w": "bird",
+    "ipa": "/bɝːd/",
+    "pos": "n",
+    "vi": "con chim",
+    "ex": "A bird is singing.",
+    "exVi": "Một con chim đang hót."
+   },
+   {
+    "w": "duck",
+    "ipa": "/dʌk/",
+    "pos": "n",
+    "vi": "con vịt",
+    "ex": "The ducks swim in the river.",
+    "exVi": "Đàn vịt bơi trên sông."
+   },
+   {
+    "w": "pig",
+    "ipa": "/pɪɡ/",
+    "pos": "n",
+    "vi": "con lợn (heo)",
+    "ex": "The pig is very fat.",
+    "exVi": "Con lợn rất béo."
+   },
+   {
+    "w": "cow",
+    "ipa": "/kaʊ/",
+    "pos": "n",
+    "vi": "con bò",
+    "ex": "Cows eat grass.",
+    "exVi": "Bò ăn cỏ."
+   },
+   {
+    "w": "horse",
+    "ipa": "/hɔːrs/",
+    "pos": "n",
+    "vi": "con ngựa",
+    "ex": "He can ride a horse.",
+    "exVi": "Anh ấy biết cưỡi ngựa."
+   },
+   {
+    "w": "buffalo",
+    "ipa": "/ˈbʌfəloʊ/",
+    "pos": "n",
+    "vi": "con trâu",
+    "ex": "The buffalo works in the field.",
+    "exVi": "Con trâu làm việc trên đồng."
+   },
+   {
+    "w": "goat",
+    "ipa": "/ɡoʊt/",
+    "pos": "n",
+    "vi": "con dê",
+    "ex": "The goat is on the hill.",
+    "exVi": "Con dê ở trên đồi."
+   },
+   {
+    "w": "sheep",
+    "ipa": "/ʃiːp/",
+    "pos": "n",
+    "vi": "con cừu",
+    "ex": "Sheep are white.",
+    "exVi": "Cừu có màu trắng."
+   },
+   {
+    "w": "rabbit",
+    "ipa": "/ˈræbɪt/",
+    "pos": "n",
+    "vi": "con thỏ",
+    "ex": "The rabbit runs fast.",
+    "exVi": "Con thỏ chạy nhanh."
+   },
+   {
+    "w": "mouse",
+    "ipa": "/maʊs/",
+    "pos": "n",
+    "vi": "con chuột (số nhiều: mice)",
+    "ex": "There is a mouse in the kitchen.",
+    "exVi": "Có một con chuột trong bếp."
+   },
+   {
+    "w": "monkey",
+    "ipa": "/ˈmʌŋki/",
+    "pos": "n",
+    "vi": "con khỉ",
+    "ex": "The monkey eats a banana.",
+    "exVi": "Con khỉ ăn chuối."
+   },
+   {
+    "w": "tiger",
+    "ipa": "/ˈtaɪɡɚ/",
+    "pos": "n",
+    "vi": "con hổ",
+    "ex": "The tiger is dangerous.",
+    "exVi": "Con hổ rất nguy hiểm."
+   },
+   {
+    "w": "lion",
+    "ipa": "/ˈlaɪən/",
+    "pos": "n",
+    "vi": "con sư tử",
+    "ex": "The lion is the king of animals.",
+    "exVi": "Sư tử là chúa sơn lâm."
+   },
+   {
+    "w": "elephant",
+    "ipa": "/ˈɛləfənt/",
+    "pos": "n",
+    "vi": "con voi",
+    "ex": "Elephants are very big.",
+    "exVi": "Voi rất to."
+   },
+   {
+    "w": "bear",
+    "ipa": "/bɛr/",
+    "pos": "n",
+    "vi": "con gấu",
+    "ex": "The bear likes honey.",
+    "exVi": "Con gấu thích mật ong."
+   },
+   {
+    "w": "snake",
+    "ipa": "/sneɪk/",
+    "pos": "n",
+    "vi": "con rắn",
+    "ex": "I am afraid of snakes.",
+    "exVi": "Tôi sợ rắn."
+   },
+   {
+    "w": "frog",
+    "ipa": "/frɔːɡ/",
+    "pos": "n",
+    "vi": "con ếch",
+    "ex": "Frogs live near water.",
+    "exVi": "Ếch sống gần nước."
+   },
+   {
+    "w": "bee",
+    "ipa": "/biː/",
+    "pos": "n",
+    "vi": "con ong",
+    "ex": "A bee is on the flower.",
+    "exVi": "Một con ong đậu trên bông hoa."
+   },
+   {
+    "w": "butterfly",
+    "ipa": "/ˈbʌtɚflaɪ/",
+    "pos": "n",
+    "vi": "con bướm",
+    "ex": "The butterfly is beautiful.",
+    "exVi": "Con bướm rất đẹp."
+   },
+   {
+    "w": "ant",
+    "ipa": "/ænt/",
+    "pos": "n",
+    "vi": "con kiến",
+    "ex": "There are ants on the table.",
+    "exVi": "Có kiến trên bàn."
+   },
+   {
+    "w": "mosquito",
+    "ipa": "/məˈskiːtoʊ/",
+    "pos": "n",
+    "vi": "con muỗi",
+    "ex": "Mosquitoes bite at night.",
+    "exVi": "Muỗi đốt vào ban đêm."
+   },
+   {
+    "w": "spider",
+    "ipa": "/ˈspaɪdɚ/",
+    "pos": "n",
+    "vi": "con nhện",
+    "ex": "There is a spider on the wall.",
+    "exVi": "Có một con nhện trên tường."
+   },
+   {
+    "w": "turtle",
+    "ipa": "/ˈtɝːtəl/",
+    "pos": "n",
+    "vi": "con rùa",
+    "ex": "The turtle walks slowly.",
+    "exVi": "Con rùa đi chậm."
+   },
+   {
+    "w": "shark",
+    "ipa": "/ʃɑːrk/",
+    "pos": "n",
+    "vi": "cá mập",
+    "ex": "Sharks live in the sea.",
+    "exVi": "Cá mập sống ở biển."
+   },
+   {
+    "w": "dolphin",
+    "ipa": "/ˈdɑːlfɪn/",
+    "pos": "n",
+    "vi": "cá heo",
+    "ex": "Dolphins are smart.",
+    "exVi": "Cá heo rất thông minh."
+   },
+   {
+    "w": "pet",
+    "ipa": "/pɛt/",
+    "pos": "n",
+    "vi": "thú cưng",
+    "ex": "Do you have a pet?",
+    "exVi": "Bạn có nuôi thú cưng không?"
+   }
+  ]
+ },
+ {
+  "id": "transport",
+  "name": "Giao thông & đi lại",
+  "icon": "🚗",
+  "words": [
+   {
+    "w": "car",
+    "ipa": "/kɑːr/",
+    "pos": "n",
+    "vi": "ô tô, xe hơi",
+    "ex": "My car is white.",
+    "exVi": "Xe ô tô của tôi màu trắng."
+   },
+   {
+    "w": "bus",
+    "ipa": "/bʌs/",
+    "pos": "n",
+    "vi": "xe buýt",
+    "ex": "I take the bus to work.",
+    "exVi": "Tôi đi xe buýt đi làm."
+   },
+   {
+    "w": "train",
+    "ipa": "/treɪn/",
+    "pos": "n",
+    "vi": "tàu hỏa",
+    "ex": "The train is late.",
+    "exVi": "Tàu hỏa đến muộn."
+   },
+   {
+    "w": "plane",
+    "ipa": "/pleɪn/",
+    "pos": "n",
+    "vi": "máy bay",
+    "ex": "The plane leaves at nine.",
+    "exVi": "Máy bay cất cánh lúc chín giờ."
+   },
+   {
+    "w": "bike",
+    "ipa": "/baɪk/",
+    "pos": "n",
+    "vi": "xe đạp",
+    "ex": "I ride my bike to the park.",
+    "exVi": "Tôi đạp xe đến công viên."
+   },
+   {
+    "w": "motorbike",
+    "ipa": "/ˈmoʊtɚbaɪk/",
+    "pos": "n",
+    "vi": "xe máy",
+    "ex": "Many people ride motorbikes.",
+    "exVi": "Nhiều người đi xe máy."
+   },
+   {
+    "w": "taxi",
+    "ipa": "/ˈtæksi/",
+    "pos": "n",
+    "vi": "xe taxi",
+    "ex": "Let's take a taxi.",
+    "exVi": "Mình đi taxi đi."
+   },
+   {
+    "w": "boat",
+    "ipa": "/boʊt/",
+    "pos": "n",
+    "vi": "thuyền",
+    "ex": "We go by boat.",
+    "exVi": "Chúng tôi đi bằng thuyền."
+   },
+   {
+    "w": "ship",
+    "ipa": "/ʃɪp/",
+    "pos": "n",
+    "vi": "tàu thủy",
+    "ex": "The ship is very big.",
+    "exVi": "Con tàu rất lớn."
+   },
+   {
+    "w": "subway",
+    "ipa": "/ˈsʌbweɪ/",
+    "pos": "n",
+    "vi": "tàu điện ngầm",
+    "ex": "I take the subway.",
+    "exVi": "Tôi đi tàu điện ngầm."
+   },
+   {
+    "w": "road",
+    "ipa": "/roʊd/",
+    "pos": "n",
+    "vi": "con đường",
+    "ex": "This road is very busy.",
+    "exVi": "Con đường này rất đông."
+   },
+   {
+    "w": "street",
+    "ipa": "/striːt/",
+    "pos": "n",
+    "vi": "đường phố",
+    "ex": "I live on this street.",
+    "exVi": "Tôi sống trên con phố này."
+   },
+   {
+    "w": "traffic",
+    "ipa": "/ˈtræfɪk/",
+    "pos": "n",
+    "vi": "giao thông, xe cộ",
+    "ex": "There is a lot of traffic.",
+    "exVi": "Đường rất đông xe."
+   },
+   {
+    "w": "traffic light",
+    "ipa": "/ˈtræfɪk ˌlaɪt/",
+    "pos": "n",
+    "vi": "đèn giao thông",
+    "ex": "Stop at the traffic light.",
+    "exVi": "Dừng lại ở đèn giao thông."
+   },
+   {
+    "w": "ticket",
+    "ipa": "/ˈtɪkɪt/",
+    "pos": "n",
+    "vi": "vé",
+    "ex": "I need a train ticket.",
+    "exVi": "Tôi cần một vé tàu."
+   },
+   {
+    "w": "station",
+    "ipa": "/ˈsteɪʃən/",
+    "pos": "n",
+    "vi": "nhà ga, bến",
+    "ex": "Where is the bus station?",
+    "exVi": "Bến xe buýt ở đâu?"
+   },
+   {
+    "w": "airport",
+    "ipa": "/ˈɛrpɔːrt/",
+    "pos": "n",
+    "vi": "sân bay",
+    "ex": "I am at the airport.",
+    "exVi": "Tôi đang ở sân bay."
+   },
+   {
+    "w": "passenger",
+    "ipa": "/ˈpæsɪndʒɚ/",
+    "pos": "n",
+    "vi": "hành khách",
+    "ex": "The bus has ten passengers.",
+    "exVi": "Xe buýt có mười hành khách."
+   },
+   {
+    "w": "trip",
+    "ipa": "/trɪp/",
+    "pos": "n",
+    "vi": "chuyến đi",
+    "ex": "Have a nice trip!",
+    "exVi": "Chúc chuyến đi vui vẻ!"
+   },
+   {
+    "w": "travel",
+    "ipa": "/ˈtrævəl/",
+    "pos": "v",
+    "vi": "đi du lịch, di chuyển",
+    "ex": "I love to travel.",
+    "exVi": "Tôi thích đi du lịch."
+   },
+   {
+    "w": "map",
+    "ipa": "/mæp/",
+    "pos": "n",
+    "vi": "bản đồ",
+    "ex": "Look at the map.",
+    "exVi": "Hãy xem bản đồ."
+   },
+   {
+    "w": "turn left",
+    "ipa": "/ˌtɝːn ˈlɛft/",
+    "pos": "phrase",
+    "vi": "rẽ trái",
+    "ex": "Turn left at the bank.",
+    "exVi": "Rẽ trái ở ngân hàng."
+   },
+   {
+    "w": "turn right",
+    "ipa": "/ˌtɝːn ˈraɪt/",
+    "pos": "phrase",
+    "vi": "rẽ phải",
+    "ex": "Turn right here.",
+    "exVi": "Rẽ phải ở đây."
+   },
+   {
+    "w": "helmet",
+    "ipa": "/ˈhɛlmɪt/",
+    "pos": "n",
+    "vi": "mũ bảo hiểm",
+    "ex": "Wear your helmet.",
+    "exVi": "Hãy đội mũ bảo hiểm."
+   },
+   {
+    "w": "parking lot",
+    "ipa": "/ˈpɑːrkɪŋ ˌlɑːt/",
+    "pos": "n",
+    "vi": "bãi đỗ xe",
+    "ex": "The parking lot is full.",
+    "exVi": "Bãi đỗ xe đã đầy."
+   },
+   {
+    "w": "gas station",
+    "ipa": "/ˈɡæs ˌsteɪʃən/",
+    "pos": "n",
+    "vi": "trạm xăng",
+    "ex": "Is there a gas station near here?",
+    "exVi": "Gần đây có trạm xăng không?"
+   },
+   {
+    "w": "accident",
+    "ipa": "/ˈæksɪdənt/",
+    "pos": "n",
+    "vi": "tai nạn",
+    "ex": "There was an accident.",
+    "exVi": "Đã có một vụ tai nạn."
+   },
+   {
+    "w": "ride",
+    "ipa": "/raɪd/",
+    "pos": "v",
+    "vi": "đi, cưỡi (xe đạp, xe máy) (quá khứ: rode)",
+    "ex": "I ride a motorbike.",
+    "exVi": "Tôi đi xe máy."
+   },
+   {
+    "w": "arrive",
+    "ipa": "/əˈraɪv/",
+    "pos": "v",
+    "vi": "đến nơi",
+    "ex": "The bus arrives at ten.",
+    "exVi": "Xe buýt đến lúc mười giờ."
+   }
+  ]
+ },
+ {
+  "id": "places",
+  "name": "Thành phố & địa điểm",
+  "icon": "🏙️",
+  "words": [
+   {
+    "w": "city",
+    "ipa": "/ˈsɪti/",
+    "pos": "n",
+    "vi": "thành phố",
+    "ex": "Hanoi is a big city.",
+    "exVi": "Hà Nội là một thành phố lớn."
+   },
+   {
+    "w": "town",
+    "ipa": "/taʊn/",
+    "pos": "n",
+    "vi": "thị trấn",
+    "ex": "I live in a small town.",
+    "exVi": "Tôi sống ở một thị trấn nhỏ."
+   },
+   {
+    "w": "village",
+    "ipa": "/ˈvɪlɪdʒ/",
+    "pos": "n",
+    "vi": "làng, quê",
+    "ex": "My village is very quiet.",
+    "exVi": "Làng tôi rất yên tĩnh."
+   },
+   {
+    "w": "country",
+    "ipa": "/ˈkʌntri/",
+    "pos": "n",
+    "vi": "đất nước; nông thôn",
+    "ex": "Vietnam is a beautiful country.",
+    "exVi": "Việt Nam là một đất nước xinh đẹp."
+   },
+   {
+    "w": "bank",
+    "ipa": "/bæŋk/",
+    "pos": "n",
+    "vi": "ngân hàng",
+    "ex": "The bank opens at eight.",
+    "exVi": "Ngân hàng mở cửa lúc tám giờ."
+   },
+   {
+    "w": "supermarket",
+    "ipa": "/ˈsuːpɚˌmɑːrkɪt/",
+    "pos": "n",
+    "vi": "siêu thị",
+    "ex": "The supermarket is near my house.",
+    "exVi": "Siêu thị ở gần nhà tôi."
+   },
+   {
+    "w": "store",
+    "ipa": "/stɔːr/",
+    "pos": "n",
+    "vi": "cửa hàng",
+    "ex": "This store sells shoes.",
+    "exVi": "Cửa hàng này bán giày."
+   },
+   {
+    "w": "restaurant",
+    "ipa": "/ˈrɛstərɑːnt/",
+    "pos": "n",
+    "vi": "nhà hàng",
+    "ex": "Let's have dinner at a restaurant.",
+    "exVi": "Mình ăn tối ở nhà hàng nhé."
+   },
+   {
+    "w": "cafe",
+    "ipa": "/kæˈfeɪ/",
+    "pos": "n",
+    "vi": "quán cà phê",
+    "ex": "We meet at a cafe.",
+    "exVi": "Chúng tôi gặp nhau ở quán cà phê."
+   },
+   {
+    "w": "hotel",
+    "ipa": "/hoʊˈtɛl/",
+    "pos": "n",
+    "vi": "khách sạn",
+    "ex": "Our hotel is near the beach.",
+    "exVi": "Khách sạn của chúng tôi gần biển."
+   },
+   {
+    "w": "park",
+    "ipa": "/pɑːrk/",
+    "pos": "n",
+    "vi": "công viên",
+    "ex": "I walk in the park.",
+    "exVi": "Tôi đi bộ trong công viên."
+   },
+   {
+    "w": "post office",
+    "ipa": "/ˈpoʊst ˌɔːfɪs/",
+    "pos": "n",
+    "vi": "bưu điện",
+    "ex": "Where is the post office?",
+    "exVi": "Bưu điện ở đâu?"
+   },
+   {
+    "w": "police station",
+    "ipa": "/pəˈliːs ˌsteɪʃən/",
+    "pos": "n",
+    "vi": "đồn công an",
+    "ex": "Call the police station.",
+    "exVi": "Hãy gọi cho đồn công an."
+   },
+   {
+    "w": "pagoda",
+    "ipa": "/pəˈɡoʊdə/",
+    "pos": "n",
+    "vi": "chùa",
+    "ex": "We visit the pagoda at Tet.",
+    "exVi": "Chúng tôi đi chùa vào dịp Tết."
+   },
+   {
+    "w": "temple",
+    "ipa": "/ˈtɛmpəl/",
+    "pos": "n",
+    "vi": "đền",
+    "ex": "This temple is very old.",
+    "exVi": "Ngôi đền này rất cổ."
+   },
+   {
+    "w": "museum",
+    "ipa": "/mjuˈziːəm/",
+    "pos": "n",
+    "vi": "bảo tàng",
+    "ex": "The museum is closed on Monday.",
+    "exVi": "Bảo tàng đóng cửa vào thứ Hai."
+   },
+   {
+    "w": "library",
+    "ipa": "/ˈlaɪbrɛri/",
+    "pos": "n",
+    "vi": "thư viện",
+    "ex": "I read books in the library.",
+    "exVi": "Tôi đọc sách ở thư viện."
+   },
+   {
+    "w": "cinema",
+    "ipa": "/ˈsɪnəmə/",
+    "pos": "n",
+    "vi": "rạp chiếu phim",
+    "ex": "Let's meet at the cinema.",
+    "exVi": "Hẹn gặp ở rạp chiếu phim nhé."
+   },
+   {
+    "w": "zoo",
+    "ipa": "/zuː/",
+    "pos": "n",
+    "vi": "sở thú",
+    "ex": "The kids love the zoo.",
+    "exVi": "Bọn trẻ thích sở thú."
+   },
+   {
+    "w": "stadium",
+    "ipa": "/ˈsteɪdiəm/",
+    "pos": "n",
+    "vi": "sân vận động",
+    "ex": "The stadium is very big.",
+    "exVi": "Sân vận động rất lớn."
+   },
+   {
+    "w": "pharmacy",
+    "ipa": "/ˈfɑːrməsi/",
+    "pos": "n",
+    "vi": "hiệu thuốc",
+    "ex": "I need to find a pharmacy.",
+    "exVi": "Tôi cần tìm một hiệu thuốc."
+   },
+   {
+    "w": "apartment",
+    "ipa": "/əˈpɑːrtmənt/",
+    "pos": "n",
+    "vi": "căn hộ",
+    "ex": "We live in an apartment.",
+    "exVi": "Chúng tôi sống trong một căn hộ."
+   },
+   {
+    "w": "building",
+    "ipa": "/ˈbɪldɪŋ/",
+    "pos": "n",
+    "vi": "tòa nhà",
+    "ex": "That building is very tall.",
+    "exVi": "Tòa nhà đó rất cao."
+   },
+   {
+    "w": "mall",
+    "ipa": "/mɔːl/",
+    "pos": "n",
+    "vi": "trung tâm thương mại",
+    "ex": "We go shopping at the mall.",
+    "exVi": "Chúng tôi đi mua sắm ở trung tâm thương mại."
+   },
+   {
+    "w": "bus stop",
+    "ipa": "/ˈbʌs ˌstɑːp/",
+    "pos": "n",
+    "vi": "trạm xe buýt",
+    "ex": "Wait at the bus stop.",
+    "exVi": "Hãy chờ ở trạm xe buýt."
+   },
+   {
+    "w": "university",
+    "ipa": "/ˌjuːnɪˈvɝːsəti/",
+    "pos": "n",
+    "vi": "trường đại học",
+    "ex": "My son goes to university.",
+    "exVi": "Con trai tôi học đại học."
+   }
+  ]
+ },
+ {
+  "id": "hobbies-sports",
+  "name": "Sở thích & thể thao",
+  "icon": "⚽",
+  "words": [
+   {
+    "w": "hobby",
+    "ipa": "/ˈhɑːbi/",
+    "pos": "n",
+    "vi": "sở thích",
+    "ex": "What is your hobby?",
+    "exVi": "Sở thích của bạn là gì?"
+   },
+   {
+    "w": "music",
+    "ipa": "/ˈmjuːzɪk/",
+    "pos": "n",
+    "vi": "âm nhạc",
+    "ex": "I listen to music every day.",
+    "exVi": "Tôi nghe nhạc mỗi ngày."
+   },
+   {
+    "w": "sing",
+    "ipa": "/sɪŋ/",
+    "pos": "v",
+    "vi": "hát (quá khứ: sang)",
+    "ex": "She sings very well.",
+    "exVi": "Cô ấy hát rất hay."
+   },
+   {
+    "w": "dance",
+    "ipa": "/dæns/",
+    "pos": "v",
+    "vi": "nhảy, múa",
+    "ex": "Can you dance?",
+    "exVi": "Bạn có biết nhảy không?"
+   },
+   {
+    "w": "draw",
+    "ipa": "/drɔː/",
+    "pos": "v",
+    "vi": "vẽ (quá khứ: drew)",
+    "ex": "My daughter likes to draw.",
+    "exVi": "Con gái tôi thích vẽ."
+   },
+   {
+    "w": "swim",
+    "ipa": "/swɪm/",
+    "pos": "v",
+    "vi": "bơi (quá khứ: swam)",
+    "ex": "I can swim.",
+    "exVi": "Tôi biết bơi."
+   },
+   {
+    "w": "game",
+    "ipa": "/ɡeɪm/",
+    "pos": "n",
+    "vi": "trò chơi; trận đấu",
+    "ex": "Let's play a game.",
+    "exVi": "Chúng ta chơi một trò chơi nhé."
+   },
+   {
+    "w": "football",
+    "ipa": "/ˈfʊtbɔːl/",
+    "pos": "n",
+    "vi": "bóng đá",
+    "ex": "He plays football on Sunday.",
+    "exVi": "Anh ấy chơi bóng đá vào Chủ nhật."
+   },
+   {
+    "w": "basketball",
+    "ipa": "/ˈbæskɪtbɔːl/",
+    "pos": "n",
+    "vi": "bóng rổ",
+    "ex": "Basketball players are tall.",
+    "exVi": "Cầu thủ bóng rổ rất cao."
+   },
+   {
+    "w": "tennis",
+    "ipa": "/ˈtɛnɪs/",
+    "pos": "n",
+    "vi": "quần vợt",
+    "ex": "I play tennis with my friend.",
+    "exVi": "Tôi chơi quần vợt với bạn."
+   },
+   {
+    "w": "badminton",
+    "ipa": "/ˈbædmɪntən/",
+    "pos": "n",
+    "vi": "cầu lông",
+    "ex": "We play badminton in the park.",
+    "exVi": "Chúng tôi chơi cầu lông ở công viên."
+   },
+   {
+    "w": "volleyball",
+    "ipa": "/ˈvɑːlibɔːl/",
+    "pos": "n",
+    "vi": "bóng chuyền",
+    "ex": "Volleyball is fun.",
+    "exVi": "Bóng chuyền rất vui."
+   },
+   {
+    "w": "table tennis",
+    "ipa": "/ˈteɪbəl ˌtɛnɪs/",
+    "pos": "n",
+    "vi": "bóng bàn",
+    "ex": "My dad plays table tennis.",
+    "exVi": "Bố tôi chơi bóng bàn."
+   },
+   {
+    "w": "jog",
+    "ipa": "/dʒɑːɡ/",
+    "pos": "v",
+    "vi": "chạy bộ",
+    "ex": "I jog in the morning.",
+    "exVi": "Tôi chạy bộ vào buổi sáng."
+   },
+   {
+    "w": "gym",
+    "ipa": "/dʒɪm/",
+    "pos": "n",
+    "vi": "phòng tập thể hình",
+    "ex": "He goes to the gym.",
+    "exVi": "Anh ấy đi tập gym."
+   },
+   {
+    "w": "movie",
+    "ipa": "/ˈmuːvi/",
+    "pos": "n",
+    "vi": "bộ phim",
+    "ex": "Let's watch a movie.",
+    "exVi": "Mình xem phim nhé."
+   },
+   {
+    "w": "photo",
+    "ipa": "/ˈfoʊtoʊ/",
+    "pos": "n",
+    "vi": "bức ảnh",
+    "ex": "Can you take a photo?",
+    "exVi": "Bạn chụp giúp một tấm ảnh được không?"
+   },
+   {
+    "w": "guitar",
+    "ipa": "/ɡɪˈtɑːr/",
+    "pos": "n",
+    "vi": "đàn ghi-ta",
+    "ex": "He plays the guitar.",
+    "exVi": "Anh ấy chơi đàn ghi-ta."
+   },
+   {
+    "w": "piano",
+    "ipa": "/piˈænoʊ/",
+    "pos": "n",
+    "vi": "đàn piano",
+    "ex": "She can play the piano.",
+    "exVi": "Cô ấy biết chơi piano."
+   },
+   {
+    "w": "song",
+    "ipa": "/sɔːŋ/",
+    "pos": "n",
+    "vi": "bài hát",
+    "ex": "I love this song.",
+    "exVi": "Tôi rất thích bài hát này."
+   },
+   {
+    "w": "fishing",
+    "ipa": "/ˈfɪʃɪŋ/",
+    "pos": "n",
+    "vi": "câu cá",
+    "ex": "My grandpa likes fishing.",
+    "exVi": "Ông tôi thích câu cá."
+   },
+   {
+    "w": "shopping",
+    "ipa": "/ˈʃɑːpɪŋ/",
+    "pos": "n",
+    "vi": "mua sắm",
+    "ex": "She loves shopping.",
+    "exVi": "Cô ấy thích mua sắm."
+   },
+   {
+    "w": "chess",
+    "ipa": "/tʃɛs/",
+    "pos": "n",
+    "vi": "cờ vua",
+    "ex": "Do you play chess?",
+    "exVi": "Bạn có chơi cờ vua không?"
+   },
+   {
+    "w": "yoga",
+    "ipa": "/ˈjoʊɡə/",
+    "pos": "n",
+    "vi": "yoga",
+    "ex": "My wife does yoga.",
+    "exVi": "Vợ tôi tập yoga."
+   },
+   {
+    "w": "team",
+    "ipa": "/tiːm/",
+    "pos": "n",
+    "vi": "đội",
+    "ex": "Our team is very good.",
+    "exVi": "Đội của chúng tôi rất giỏi."
+   },
+   {
+    "w": "win",
+    "ipa": "/wɪn/",
+    "pos": "v",
+    "vi": "thắng (quá khứ: won)",
+    "ex": "We won the game!",
+    "exVi": "Chúng tôi thắng trận rồi!"
+   },
+   {
+    "w": "lose",
+    "ipa": "/luːz/",
+    "pos": "v",
+    "vi": "thua; làm mất (quá khứ: lost)",
+    "ex": "Don't lose your ticket.",
+    "exVi": "Đừng làm mất vé nhé."
+   },
+   {
+    "w": "picnic",
+    "ipa": "/ˈpɪknɪk/",
+    "pos": "n",
+    "vi": "buổi dã ngoại",
+    "ex": "Let's have a picnic.",
+    "exVi": "Chúng ta đi dã ngoại nhé."
+   },
+   {
+    "w": "camping",
+    "ipa": "/ˈkæmpɪŋ/",
+    "pos": "n",
+    "vi": "cắm trại",
+    "ex": "We go camping in summer.",
+    "exVi": "Chúng tôi đi cắm trại vào mùa hè."
+   }
+  ]
+ },
+ {
+  "id": "function-words",
+  "name": "Từ để hỏi, giới từ & từ nối",
+  "icon": "❓",
+  "words": [
+   {
+    "w": "what",
+    "ipa": "/wʌt/",
+    "pos": "pron",
+    "vi": "cái gì",
+    "ex": "What is this?",
+    "exVi": "Đây là cái gì?"
+   },
+   {
+    "w": "where",
+    "ipa": "/wɛr/",
+    "pos": "adv",
+    "vi": "ở đâu",
+    "ex": "Where do you live?",
+    "exVi": "Bạn sống ở đâu?"
+   },
+   {
+    "w": "when",
+    "ipa": "/wɛn/",
+    "pos": "adv",
+    "vi": "khi nào",
+    "ex": "When is your birthday?",
+    "exVi": "Sinh nhật bạn khi nào?"
+   },
+   {
+    "w": "who",
+    "ipa": "/huː/",
+    "pos": "pron",
+    "vi": "ai",
+    "ex": "Who is that man?",
+    "exVi": "Người đàn ông đó là ai?"
+   },
+   {
+    "w": "why",
+    "ipa": "/waɪ/",
+    "pos": "adv",
+    "vi": "tại sao",
+    "ex": "Why are you late?",
+    "exVi": "Tại sao bạn đến muộn?"
+   },
+   {
+    "w": "how",
+    "ipa": "/haʊ/",
+    "pos": "adv",
+    "vi": "như thế nào, bằng cách nào",
+    "ex": "How are you?",
+    "exVi": "Bạn khỏe không?"
+   },
+   {
+    "w": "which",
+    "ipa": "/wɪtʃ/",
+    "pos": "pron",
+    "vi": "cái nào",
+    "ex": "Which one do you want?",
+    "exVi": "Bạn muốn cái nào?"
+   },
+   {
+    "w": "how many",
+    "ipa": "/ˌhaʊ ˈmɛni/",
+    "pos": "phrase",
+    "vi": "bao nhiêu (đếm được)",
+    "ex": "How many kids do you have?",
+    "exVi": "Bạn có bao nhiêu con?"
+   },
+   {
+    "w": "in",
+    "ipa": "/ɪn/",
+    "pos": "prep",
+    "vi": "ở trong",
+    "ex": "The keys are in my bag.",
+    "exVi": "Chìa khóa ở trong túi tôi."
+   },
+   {
+    "w": "on",
+    "ipa": "/ɑːn/",
+    "pos": "prep",
+    "vi": "ở trên (có tiếp xúc)",
+    "ex": "The cup is on the table.",
+    "exVi": "Cái cốc ở trên bàn."
+   },
+   {
+    "w": "at",
+    "ipa": "/æt/",
+    "pos": "prep",
+    "vi": "ở, tại; lúc",
+    "ex": "I am at the office.",
+    "exVi": "Tôi đang ở văn phòng."
+   },
+   {
+    "w": "under",
+    "ipa": "/ˈʌndɚ/",
+    "pos": "prep",
+    "vi": "ở dưới",
+    "ex": "The cat is under the bed.",
+    "exVi": "Con mèo ở dưới gầm giường."
+   },
+   {
+    "w": "next to",
+    "ipa": "/ˈnɛkst tuː/",
+    "pos": "prep",
+    "vi": "bên cạnh",
+    "ex": "The bank is next to the hotel.",
+    "exVi": "Ngân hàng ở cạnh khách sạn."
+   },
+   {
+    "w": "between",
+    "ipa": "/bɪˈtwiːn/",
+    "pos": "prep",
+    "vi": "ở giữa",
+    "ex": "I sit between Lan and Mai.",
+    "exVi": "Tôi ngồi giữa Lan và Mai."
+   },
+   {
+    "w": "behind",
+    "ipa": "/bɪˈhaɪnd/",
+    "pos": "prep",
+    "vi": "phía sau",
+    "ex": "The park is behind the hospital.",
+    "exVi": "Công viên ở phía sau bệnh viện."
+   },
+   {
+    "w": "in front of",
+    "ipa": "/ɪn ˈfrʌnt əv/",
+    "pos": "prep",
+    "vi": "phía trước",
+    "ex": "Wait in front of the bank.",
+    "exVi": "Hãy đợi trước ngân hàng."
+   },
+   {
+    "w": "near",
+    "ipa": "/nɪr/",
+    "pos": "prep",
+    "vi": "gần",
+    "ex": "I live near the market.",
+    "exVi": "Tôi sống gần chợ."
+   },
+   {
+    "w": "to",
+    "ipa": "/tuː/",
+    "pos": "prep",
+    "vi": "đến, tới",
+    "ex": "I walk to the park.",
+    "exVi": "Tôi đi bộ đến công viên."
+   },
+   {
+    "w": "with",
+    "ipa": "/wɪð/",
+    "pos": "prep",
+    "vi": "với, cùng với",
+    "ex": "I live with my parents.",
+    "exVi": "Tôi sống với bố mẹ."
+   },
+   {
+    "w": "for",
+    "ipa": "/fɔːr/",
+    "pos": "prep",
+    "vi": "cho, dành cho",
+    "ex": "This gift is for you.",
+    "exVi": "Món quà này dành cho bạn."
+   },
+   {
+    "w": "and",
+    "ipa": "/ænd/",
+    "pos": "conj",
+    "vi": "và",
+    "ex": "I like tea and coffee.",
+    "exVi": "Tôi thích trà và cà phê."
+   },
+   {
+    "w": "but",
+    "ipa": "/bʌt/",
+    "pos": "conj",
+    "vi": "nhưng",
+    "ex": "It is cheap but good.",
+    "exVi": "Nó rẻ nhưng tốt."
+   },
+   {
+    "w": "or",
+    "ipa": "/ɔːr/",
+    "pos": "conj",
+    "vi": "hoặc, hay",
+    "ex": "Tea or coffee?",
+    "exVi": "Trà hay cà phê?"
+   },
+   {
+    "w": "because",
+    "ipa": "/bɪˈkɔːz/",
+    "pos": "conj",
+    "vi": "bởi vì",
+    "ex": "I stay in bed because I am sick.",
+    "exVi": "Tôi nằm nghỉ vì tôi bị ốm."
+   },
+   {
+    "w": "so",
+    "ipa": "/soʊ/",
+    "pos": "conj",
+    "vi": "vì vậy, nên",
+    "ex": "It is raining, so I stay in.",
+    "exVi": "Trời đang mưa nên tôi ở trong nhà."
+   },
+   {
+    "w": "if",
+    "ipa": "/ɪf/",
+    "pos": "conj",
+    "vi": "nếu",
+    "ex": "Call me if you are free.",
+    "exVi": "Gọi cho tôi nếu bạn rảnh."
+   },
+   {
+    "w": "before",
+    "ipa": "/bɪˈfɔːr/",
+    "pos": "prep",
+    "vi": "trước (khi)",
+    "ex": "Wash your hands before meals.",
+    "exVi": "Rửa tay trước bữa ăn."
+   },
+   {
+    "w": "after",
+    "ipa": "/ˈæftɚ/",
+    "pos": "prep",
+    "vi": "sau (khi)",
+    "ex": "I rest after lunch.",
+    "exVi": "Tôi nghỉ ngơi sau bữa trưa."
+   }
+  ]
+ }
+]

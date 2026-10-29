@@ -156,7 +156,11 @@ class _VocabPageState extends State<VocabPage> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Text(
-                    l.builtIn ? l.name.replaceAll('HSK ', '') : '自',
+                    l.id.startsWith('en-')
+                        ? 'En'
+                        : l.builtIn
+                            ? l.name.replaceAll('HSK ', '')
+                            : '自',
                     style: TextStyle(
                       color: l.builtIn ? Colors.white : AppColors.pink,
                       fontSize: 20,

@@ -78,15 +78,18 @@
   <script>
     // Chinese helpers used by the app: text-to-speech and stroke-order pads.
     window.zh = {
-      speak: function (text, rate) {
+      // lang: 'zh-CN' (default) or 'en-US'.
+      speak: function (text, rate, lang) {
         if (!('speechSynthesis' in window)) return false;
         speechSynthesis.cancel();
+        lang = lang || 'zh-CN';
+        var base = lang.split('-')[0];
         var u = new SpeechSynthesisUtterance(text);
-        u.lang = 'zh-CN';
+        u.lang = lang;
         u.rate = rate || 0.8;
         var voices = speechSynthesis.getVoices();
-        var v = voices.find(function (v) { return /zh[-_]CN/i.test(v.lang); }) ||
-                voices.find(function (v) { return /^zh/i.test(v.lang); });
+        var v = voices.find(function (v) { return v.lang.replace('_', '-').toLowerCase() === lang.toLowerCase(); }) ||
+                voices.find(function (v) { return v.lang.toLowerCase().indexOf(base) === 0; });
         if (v) u.voice = v;
         speechSynthesis.speak(u);
         return true;
@@ -130,12 +133,12 @@
       // Listens once in Mandarin. Uses interim results because iOS Safari often never
       // sends a final one: settles 1.2 s after the last words, after 8 s at most,
       // or at once when stopListening() is called. onResult gets guesses joined by \n.
-      listen: function (onResult, onError) {
+      listen: function (onResult, onError, lang) {
         var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
         if (!SR) { onError('unsupported'); return; }
         if (this.stopNow) this.stopNow();
         var self = this, r = new SR(), done = false, best = null, quiet = null, hard = null;
-        r.lang = 'zh-CN';
+        r.lang = lang || 'zh-CN';
         r.interimResults = true;
         r.continuous = false;
         r.maxAlternatives = 5;

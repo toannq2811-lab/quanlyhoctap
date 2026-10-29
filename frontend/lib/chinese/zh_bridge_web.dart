@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:web/web.dart' as web;
 
 @JS('zh.speak')
-external bool _speak(String text, num rate);
+external bool _speak(String text, num rate, String lang);
 
 @JS('zh.mount')
 external void _mount(String id, web.HTMLElement el, String char, num size, bool outline);
@@ -27,7 +27,7 @@ external void _dispose(String id);
 external bool _canListen();
 
 @JS('zh.listen')
-external void _listen(JSFunction onResult, JSFunction onError);
+external void _listen(JSFunction onResult, JSFunction onError, String lang);
 
 @JS('zh.stopListening')
 external void _stopListening();
@@ -42,7 +42,7 @@ bool get canListenChinese {
 
 /// Listens once for Mandarin speech. Returns the recognizer's guesses, or
 /// throws the browser's error code ("not-allowed", "no-speech", ...).
-Future<List<String>> listenChinese() {
+Future<List<String>> listenChinese({String lang = 'zh-CN'}) {
   final done = Completer<List<String>>();
   _listen(
     ((JSString text) {
@@ -51,6 +51,7 @@ Future<List<String>> listenChinese() {
     ((JSString code) {
       if (!done.isCompleted) done.completeError(code.toDart);
     }).toJS,
+    lang,
   );
   return done.future;
 }
@@ -112,9 +113,9 @@ void cancelRecording() {
 void playRecording(String url) => _recPlay(url);
 
 /// Reads Chinese text aloud with the device's zh-CN voice.
-bool speakChinese(String text, {double rate = 0.8}) {
+bool speakChinese(String text, {double rate = 0.8, String lang = 'zh-CN'}) {
   try {
-    return _speak(text, rate);
+    return _speak(text, rate, lang);
   } catch (_) {
     return false;
   }

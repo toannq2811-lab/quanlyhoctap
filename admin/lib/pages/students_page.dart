@@ -277,10 +277,18 @@ class LearnerPage extends StatelessWidget {
                         ),
                       );
                       final chinese = AdminSection(
-                        title: 'Tiếng Trung',
+                        title: 'Ngoại ngữ',
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            if (data.english != null)
+                              ProgressRow(
+                                label: 'Ngữ pháp tiếng Anh (12 thì)',
+                                done: data.english!.allExercises
+                                    .where((e) => (l.words[e.id]?.correct ?? 0) > 0)
+                                    .length,
+                                total: data.english!.allExercises.length,
+                              ),
                             for (final list in data.vocabLists)
                               ProgressRow(
                                 label: list.name,

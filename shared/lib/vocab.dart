@@ -6,18 +6,29 @@ import 'package:xml/xml.dart';
 
 import 'doc_reader.dart';
 
+/// A vocabulary item. For English words (ids starting with "en-"), [hanzi]
+/// holds the English word and [pinyin] its IPA.
 class VocabWord {
   const VocabWord({
     required this.id,
     required this.hanzi,
     required this.pinyin,
     required this.meaning,
+    this.example,
+    this.exampleVi,
   });
 
   final String id;
   final String hanzi;
   final String pinyin;
   final String meaning;
+  final String? example;
+  final String? exampleVi;
+
+  bool get isEnglish => id.startsWith('en-');
+
+  /// Speech language for text-to-speech and recognition.
+  String get speechLang => isEnglish ? 'en-US' : 'zh-CN';
 
   Map<String, dynamic> toJson() => {
     'id': id,

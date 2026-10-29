@@ -70,11 +70,13 @@ class _PronouncePageState extends State<PronouncePage> with SingleTickerProvider
     try {
       // The page script settles within 8 s; this guards against a browser that
       // never calls back at all.
-      final guesses = await listenChinese().timeout(const Duration(seconds: 12), onTimeout: () {
+      final guesses = await listenChinese(lang: _w.speechLang).timeout(const Duration(seconds: 12), onTimeout: () {
         stopListeningChinese();
         throw 'no-speech';
       });
-      final result = judgePronunciation(_w.hanzi, guesses, _charPinyin);
+      final result = _w.isEnglish
+          ? judgeEnglish(_w.hanzi, guesses)
+          : judgePronunciation(_w.hanzi, guesses, _charPinyin);
       widget.zh.store.bumpActivity();
       if (!mounted) return;
       setState(() {
@@ -176,7 +178,11 @@ class _PronouncePageState extends State<PronouncePage> with SingleTickerProvider
               padding: const EdgeInsets.symmetric(vertical: 26, horizontal: 16),
               child: Column(
                 children: [
-                  Text(_w.hanzi, style: const TextStyle(fontSize: 64, fontWeight: FontWeight.w500)),
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(_w.hanzi,
+                        style: const TextStyle(fontSize: 64, fontWeight: FontWeight.w500)),
+                  ),
                   Text(_w.pinyin,
                       style: const TextStyle(
                           color: AppColors.pink, fontSize: 22, fontWeight: FontWeight.w800)),
@@ -184,7 +190,7 @@ class _PronouncePageState extends State<PronouncePage> with SingleTickerProvider
                   Text(_w.meaning, textAlign: TextAlign.center, style: const TextStyle(fontSize: 16)),
                   const SizedBox(height: 12),
                   OutlinedButton.icon(
-                    onPressed: () => speakChinese(_w.hanzi, rate: 0.7),
+                    onPressed: () => speakChinese(_w.hanzi, rate: 0.7, lang: _w.speechLang),
                     icon: const Icon(Icons.volume_up_rounded),
                     label: const Text('Nghe mẫu'),
                   ),
@@ -346,7 +352,7 @@ class _ToneCard extends StatelessWidget {
                 label: const Text('Nghe lại', style: TextStyle(color: AppColors.pink)),
               ),
               TextButton.icon(
-                onPressed: () => speakChinese(word.hanzi, rate: 0.7),
+                onPressed: () => speakChinese(word.hanzi, rate: 0.7, lang: word.speechLang),
                 icon: const Icon(Icons.volume_up_rounded, color: AppColors.muted),
                 label: const Text('Mẫu', style: TextStyle(color: AppColors.muted)),
               ),
@@ -393,7 +399,7 @@ class _ToneCard extends StatelessWidget {
                 child: Text(toneTips[expected]!,
                     style: const TextStyle(color: AppColors.muted, fontSize: 13)),
               ),
-          ] else
+          ] else if (!word.isEnglish)
             Text(
                 'Thanh điệu chuẩn: ${tones.map((t) => t == 5 ? 'nhẹ' : '$t').join(' – ')}  (${word.pinyin})',
                 style: const TextStyle(color: AppColors.muted, fontSize: 13)),
