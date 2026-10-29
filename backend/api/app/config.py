@@ -28,6 +28,6 @@ MAX_AVATAR_BYTES = 2 * 1024 * 1024
 # AI explains wrong quiz answers. Set either key (or both: Gemini is tried first,
 # Claude takes over if it fails). The feature is off while neither is set.
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', '')
-GEMINI_MODEL = os.environ.get('GEMINI_MODEL', 'gemini-flash-latest')
+GEMINI_MODEL = os.environ.get('GEMINI_MODEL', 'gemini-flash-lite-latest')
 ANTHROPIC_API_KEY = os.environ.get('ANTHROPIC_API_KEY', '')
 AI_MODEL = os.environ.get('AI_MODEL', 'claude-opus-5-5')
