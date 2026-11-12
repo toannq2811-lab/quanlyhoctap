@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Study For You",
+    "slug": "study-for-you",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#FDE4EE",
+    "ios": {
+      "bundleIdentifier": "com.toannq.studyforyou",
+      "buildNumber": "1",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Study For You dùng micro để chấm phát âm và thu âm giọng đọc của bạn.",
+        "NSSpeechRecognitionUsageDescription": "Study For You nhận dạng giọng nói để kiểm tra bạn phát âm đúng hay sai.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.toannq.studyforyou",
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      },
+      "permissions": ["android.permission.RECORD_AUDIO", "android.permission.MODIFY_AUDIO_SETTINGS"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "backgroundColor": "#FDE4EE",
+          "imageWidth": 240,
+          "resizeMode": "contain"
+        }
+      ]
+    ]
+  }
+}
