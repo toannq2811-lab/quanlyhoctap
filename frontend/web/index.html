@@ -43,8 +43,7 @@
       canPrompt: function () { return !!window.pwa.deferred; },
       isStandalone: function () {
         return window.matchMedia('(display-mode: standalone)').matches ||
-          window.navigator.standalone === true ||
-          /StudyForYouApp/.test(navigator.userAgent); // the iOS app (mobile/) wraps this site
+          window.navigator.standalone === true;
       },
       platform: function () {
         var ua = navigator.userAgent;
